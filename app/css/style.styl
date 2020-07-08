@@ -1,0 +1,1104 @@
+@import 'rupture'
+@import "variable/_function.styl"
+@import "variable/_ie.styl"
+@import "variable/_helper.styl"
+@import "variable/_default.styl"
+@import "variable/config/_color.styl"
+@import "variable/config/_typography.styl"
+@import "variable/config/_btn.styl"
+@import "variable/config/_input.styl"
+@import "../module/**/*"
+
+body
+	@extend .type--main
+	font-family $v-font
+	color $main-text-color
+	line-height 1.2
+	letter-spacing 0.01em
+
+.main-cont
+	center(1200px,10px)
+
+.page
+	f()
+	fl()
+	min-height 100vh
+
+.content
+	flex-grow 1
+	padding: 50px 0
+
+.content--mid
+	flex(mid)
+
+// animate top menu
+@keyframes slideInDown
+	from
+		transform: translate3d(0, -100%, 0)
+		visibility: visible;
+	to
+		transform: translate3d(0, 0, 0)
+
+.shrink
+	position fixed
+	top 0
+	left 0
+	background white
+	width 100%
+	margin 0
+	animation:  slideInDown  1s 1 ease-in-out;
+	z-index 10
+// animate top menu === end
+
+// error
+.page-error
+	flex(mid)
+	fl()
+	height: 100%
+.page-error__title
+	@extend .type--xl
+	margin-bottom: 30px
+	font-weight: 700
+	color $gray
+.page-error__img
+	margin-bottom: 30px
+.page-error__text
+	@extend .type--md
+	color $gray
+	margin-bottom: 30px
+.page-error__get
+	@extend .btn--md
+	@extend .btn--mark
+// error === end
+
+// modal
+.modal-layer
+	width: 100%
+	height: 100vh
+	position: fixed
+	z-index 1000
+	top 0
+	left 0
+	visibility: hidden
+	transition all 1s // duration for fade
+	opacity 0
+
+.modal-layer-show
+	visibility: visible
+	opacity 1
+
+.modal-cont
+	width: 100%
+	height: 100%
+	position: relative
+	max-height 100%
+	overflow: auto
+
+.modal-filter
+	position: absolute
+	top: 0
+	left: 0
+	background: #18191da1
+	width: 100%
+	height: 100vh
+	min-height 100vh
+
+.modal
+	+below(768px)
+		width: 100%
+		box-shadow 0 0 0
+	transform scale(.9) translateZ(0) translate3d(0, 0, 0)
+	will-change: transform, opacity;
+	backface-visibility: hidden
+	position: absolute
+	opacity 0
+	transition transform .6s, opacity .8s
+	max-width 400px
+	left -9999px
+	top -9999px
+	.order__row
+		margin-bottom: 20px
+		border-bottom 0
+
+.modal-content
+	+below(640px)
+		height: 100%
+		padding: 20px
+		overflow-y scroll
+		width: 95%!important
+		margin: 20px auto
+	background: white
+	position: relative
+	padding: 40px 45px
+	br(40px)
+
+.modal__show
+	max-height 100%
+	opacity 1
+	transform scale(1) translateZ(0) translate3d(0, 0, 0)
+	position: relative
+	z-index 1000
+	left initial
+	top initial
+	transition transform .6s, opacity .8s
+	will-change: transform, opacity
+
+.modal-close
+	+below(768px)
+		top 12px
+		right 12px
+	position: absolute
+	top: 20px
+	right: 20px
+	cp()
+	size 50px
+	br(20px)
+	flex(mid)
+	z-index 10
+	background: #f8f8f8
+	&:hover
+		.icon
+			opacity: 1
+	.icon
+		tr()
+		size 12px
+		fill black
+		opacity:.3
+
+.modal-hide-animation
+	transform scale(.9)
+	opacity 0
+	transition transform .6s, opacity .8s
+.modal-open
+	overflow: hidden
+	overflow-y: scroll
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+
+.modal-wrap
+	position: fixed
+	width: 100%
+	height: 100%
+	overflow-y auto
+	flex(mid)
+
+.modal-title
+	+below(768px)
+		font-size: 20px
+	margin-bottom: 20px
+	text-align: center
+	@extend .type--xl
+	font-weight: 700
+
+.modal-text
+	+below(768px)
+		width: 100%
+		font-size: 12px
+	text-align: center
+	margin: 20px auto
+	//width: 80%
+	line-height: 1.6
+
+
+.modal-send
+	@extend .btn--md
+	@extend .btn--mark
+	width: 100%
+// modal === end
+
+// cookie
+.cookie
+	position: fixed
+	bottom 20px
+	left 0
+	width: 100%
+	transform translateY(10px)
+	opacity: 0
+	z-index -1
+	tr()
+.cookie--active
+	z-index 20
+	opacity: 1
+	transform translateY(0)
+.cookie-wrap
+	bsh()
+	padding: 15px 20px
+	br(20px)
+	z-index 10
+	background: white
+	f()
+	justify-content: space-between
+	.icon
+		&:hover
+			fill black
+		tr()
+		size 14px
+		margin-left: 10px
+		fill $gray
+		cp()
+.cookie-text
+	width calc(100% - 30px)
+	font-size: 12px
+// cookie === end
+
+// header
+//.header
+.header-top-wrap
+	background: $dark
+	color white
+.header-top
+	f()
+	align-items center
+.header-top-nav
+	width: 65%
+	flex(between)
+.header-top-nav__el
+	color white
+	@extend .type--sm
+	opacity: .9
+	&:hover
+		color $mark
+.header-tool__el--mark
+	background: $mark
+	&:hover
+		background: lighten($mark,5)
+
+.header-tool
+	margin-left auto
+	f()
+.header-tool__el
+	padding: 15px
+	flex(between)
+	margin-left: 10px
+	cp()
+	.icon
+		size 18px
+		fill white
+	span
+		display inline-block
+		margin-left: 10px
+		color white
+.header-main
+	f()
+	align-items center
+	padding: 15px 0
+.logo
+	img
+		width: 300px
+.logo-partner
+	width: 12%
+	margin-left auto
+.header-contact
+	margin-left auto
+	margin-right: 20px
+.header-phone
+	@extend .type--md
+	margin-bottom: 5px
+	font-weight: 700
+	font-family "PT Sans"
+.header-loc
+	f()
+	cp()
+	.icon
+		size 16px
+		margin-right: 5px
+		fill $mark
+	span
+		color $dark
+		font-weight: 500
+		//text-decoration: underline
+//.header-get
+
+.header-bottom-wrap
+	padding: 15px 0
+	background: $gray
+.header-bottom
+	f()
+	position relative
+
+.navigation
+	position absolute
+	top 100%
+	left 0
+	width: 100%
+	background: white
+	z-index 10
+	padding: 20px
+	column-count 4
+	bsh()
+	z-index -1
+	opacity: 0
+	tr()
+	transform translateY(20px)
+
+
+.navigation-el
+	a
+		&:hover
+			color $mark
+	display inline-block
+
+.navigation-list
+	padding-left: 20px
+	li
+		margin-bottom: 5px
+		a
+			link(#eaeaea)
+			line-height: 1.2
+			font-size: 14px
+
+.navigation-el-title
+	font-weight: 700
+	@extend .type--md
+.get-cat
+	padding: 15px
+	background: $dark
+	color white
+	flex(mid)
+	@extend .type--md
+	cp()
+	tr()
+	width: 200px
+	font-family Roboto
+	&:hover
+		background: darken($dark,10)
+		.navigation
+			transform translateY(0)
+			z-index 10
+			opacity: 1
+
+	span
+		color white
+	.icon
+		fill white
+		size 14px
+		margin-right: 10px
+	.icon--open
+		display none
+.get-cat.active
+	.icon--open
+		display block
+	.icon--close
+		display none
+
+.search
+	width: calc(100% - 220px)
+	margin-left: 20px
+	position relative
+	.input
+		width: 100%
+	.icon
+		position absolute
+		top calc(50% - 12px)
+		right 20px
+		size 24px
+
+// header === end
+
+// footer
+.footer-wrap
+	padding: 50px 0
+	background: $dark
+//.main-cont
+.footer-top
+	flex(between)
+	margin-bottom: 30px
+.footer-logo
+	img
+		width: 350px
+.soc-row
+	f()
+	align-items center
+.soc-row__el
+	margin-left: 10px
+	img
+		size 42px
+	.icon
+		size 42px
+//.icon
+.footer-nav
+	flex(between)
+.footer-nav__el
+	color white
+	&:hover
+		color $mark
+// footer === end
+
+// grid
+.main-grid
+	display: grid
+	grid-gap 20px
+	grid-template-columns: repeat(4, 1fr)
+	margin-bottom: 60px
+.card-el
+	padding: 30px
+	//height: 270px
+	f()
+	fl()
+	justify-content space-between
+	align-items: baseline
+	bg-full()
+	border 1px solid $border-color
+	position relative
+	min-height 240px
+	&:nth-child(1)
+		grid-column 1/4
+	&:before
+		content ''
+		background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(161,161,161,0) 70%, rgba(255,255,255,0.25) 100%);
+		position absolute
+		top 0
+		left 0
+		width: 100%
+		height: 100%
+.card-el__title
+	margin-bottom: 20px
+	font-weight: 700
+	position relative
+	margin-left: -30px
+	padding: 3px 10px 3px 20px
+	background: $gray
+	display inline-block
+	@extend .type--mdx
+	font-family: "Handbook"
+.card-el__title--lg
+	@extend .type--xl
+.card-list
+	f()
+	fl()
+.card-list__el
+	color white
+	margin-bottom: 7px
+	position: relative
+	padding-left: 10px
+	&:last-child
+		margin-bottom: 0
+	&:hover
+		color $mark
+	&:before
+		content ''
+		round()
+		position absolute
+		size 6px
+		top 6px
+		left -5px
+		background: $mark
+	span
+		link(#ffffff36)
+		position relative
+		line-height: 1
+// grid === end
+
+.section
+	padding: 80px 0
+	position relative
+	overflow hidden
+.unit
+	position absolute
+	width: 15%
+	height: 200%
+	top -20%
+.unit--mark
+	background: $mark
+.unit--dark
+	background: $dark
+.unit--left
+	transform rotate(10deg)
+	left -10%
+.unit--right
+	transform rotate(10deg)
+	right -5%
+
+.section--gray
+	background: #eaebec
+.section-title
+	@extend .type--xl
+	font-weight: 700
+	font-family: "Handbook"
+	up()
+	margin-bottom: 30px
+
+// slider
+.slider-item--extend
+	.slick-slide
+		margin: 0 10px
+	.slick-list
+		margin: 0 -10px
+
+.slider-wrap--arrow
+	flex(between)
+	.slider-item
+		width: calc(100% - 100px)
+
+.slider-wrap--arrow-in
+	position relative
+	margin-bottom: 100px
+	.slider-control-wrap
+		position absolute
+		top 0
+		right 0
+.slider-control-wrap
+	f()
+	fl()
+	width: 40px
+	.slider-control
+		padding: 60px 10px
+		flex(mid)
+		cp()
+		.icon
+			size 18px
+	.slider-control--left
+		background: white
+		border 1px solid $gray
+	.slider-control--right
+		background: $mark
+		border 1px solid transparent
+		.icon
+			fill white
+
+.slick-dots
+	+below(720px)
+		bottom -20px
+	width: 100%
+	display: flex !important
+	align-items: center
+	justify-content: center
+	bottom -50px
+	li
+		+below(720px)
+			size 10px
+			flex(mid)
+	.dot
+		+below(720px)
+			flex(mid)
+			size 6px
+		background: $mark
+		width: 20px
+		height: 4px
+		display: block
+		br(3px)
+		opacity: .2
+	.slick-active
+		.dot
+			opacity: 1
+// slider === end
+
+.news-el__img
+	bg-full()
+	padding: 30% 10%
+	margin-bottom: 20px
+.news-el__title
+	@extend .type--mdx
+	display inline-block
+	margin-bottom: 5px
+	font-weight: 700
+	font-family: "Handbook"
+.news-el__date
+	color $gray--dark
+	font-size: 14px
+	margin-bottom: 10px
+.news-el__text
+	line-height: 1.4
+	margin-bottom: 20px
+	//color $text-color
+.news-el__get
+	color $mark
+
+// .knowledge
+.knowledge
+	display: grid
+	grid-gap 20px
+	grid-template-columns: repeat(5,1fr)
+.knowledge__el-img
+	padding: 20% 10%
+	flex(mid)
+	margin-bottom: 20px
+	bg-full()
+	background-color white
+	background-size 65%
+.knowledge__el-get
+	padding: 10px 20px
+	border 1px solid $border-color
+	flex(between)
+	margin-bottom: 5px
+	&:hover
+		border-color black
+
+	.icon
+		size 16px
+// .knowledge === end
+
+// slider banner
+.slider-banner__el
+	padding: 2.5%
+	max-height 500px
+	bg-full()
+	position relative
+.slider-banner-nav
+	position absolute
+	width: 100%
+	left 0
+	bottom 0
+	padding: 20px
+	flex(mid)
+.slider-banner-nav__el
+	@extend .btn--sm
+	@extend .btn--mark
+	margin: 0 5px
+// slider banner === end
+
+.info-cont
+	display: grid
+	grid-gap 30px
+	grid-template-columns: repeat(auto-fill, minmax(14rem,1fr))
+
+.info-cont__el
+	f()
+	align-items center
+	fl()
+.icon-round
+	position relative
+	margin-bottom: 20px
+	&:before
+		content ''
+		size 120px
+		round()
+		background: #ff671f1f
+		position absolute
+		left -45%
+		bottom 0
+	.icon
+		size 100px
+		fill $mark
+
+.info-cont__el-title
+	font-weight: 700
+	margin-bottom: 20px
+	width: 100%
+	@extend .type--md
+	line-height: 1.4
+.info-cont__el-text
+	color $text-color
+	line-height: 1.4
+
+.bonus
+	f()
+	justify-content space-between
+	align-items center
+.bonus-img
+	width: 45%
+	flex(mid)
+	fl()
+.bonus-info
+	width: 50%
+.bonus-title
+	font-weight: 700
+	@extend .type--xxl
+	margin-bottom:20px
+	font-family: Handbook
+.bonus-text
+	line-height: 1.4
+
+.mark-list
+	li
+		margin-bottom: 5px
+		line-height: 1.4
+		list-style none
+		position relative
+		&:before
+			content ''
+			size 8px
+			round()
+			top 8px
+			left -20px
+			background: $mark
+			position absolute
+
+.info-form-wrap
+	padding: 60px
+	flex(mid)
+	fl()
+
+.info-form-wrap--dark
+	background: $gray
+
+.info-form
+	f()
+	width: 80%
+	max-width 500px
+	.input
+		border-radius 4px 0 0 4px
+		flex-grow 1
+	.btn--sm
+		border-radius 0 4px 4px 0
+
+.subscr-text
+	text-align center
+	line-height: 1.4
+	max-width 600px
+	margin-bottom: 30px
+
+
+.bread
+	+below(640px)
+		display: none
+	f()
+	fw()
+	margin-bottom: 20px
+	a
+		color black
+		&:hover
+			color $mark
+.bread__el
+	margin-right: 15px
+	margin-bottom: 10px
+	position: relative
+	color $gray-dark
+	@extend .type--sm
+	line-height: 1
+	&:after
+		content '/'
+		position: absolute
+		right: -10px
+		top 0px
+	&:last-child
+		&:after
+			content ''
+			display: none
+
+.container
+	f()
+	justify-content: space-between
+.toolbar
+	width: 280px
+
+.info
+	width calc(100% - 320px)
+
+.menu-wrap
+	border 1px solid $border-color
+	margin-bottom: 30px
+.menu-el
+	f()
+	fw()
+	padding: 15px
+	border-bottom 1px solid $border-color
+	border-top 1px solid $border-color
+	margin-bottom: -1px
+	margin-top: -1px
+	tr()
+.menu-el--link
+	&:hover
+		background: #f9f9f9
+
+.menu-el--drop
+	cp()
+
+.menu-el-wrap.active
+	.menu-el--drop
+		.menu-el__title
+			font-weight: 700
+		.icon
+			transform rotate(90deg)
+	.menu-sub
+		display block
+.menu-el--active
+	.menu-el__title
+		font-weight: 700
+	background: #f9f9f9
+.menu-el__val
+	margin-left auto
+	color $dark-gray
+.menu-el__icon
+	margin-left auto
+	.icon
+		tr()
+		size 12px
+
+.menu-head
+	padding: 15px
+	background: $mark
+	color white
+	margin-bottom: -1px
+
+.menu-sub
+	width: 100%
+	display none
+	padding: 15px
+	.check-el
+		margin-bottom: 5px
+
+.sort
+	+below(768px)
+		margin-top: 0
+	f()
+	align-items: center
+	.nice-select
+		margin-bottom: 0
+
+.sort__name
+	+below(768px)
+		display: none
+	margin-right: 20px
+
+.catalog-sort
+	f()
+	margin-bottom: 30px
+	.sort
+		margin-right: 20px
+// nice-select
+.nice-select
+	br(5px)
+	margin-bottom: 20px
+	display: block
+	color #000000
+	font-size 14px
+	font-weight 700
+	position relative
+	float none
+	.list
+		width: calc(100% )
+		left 0
+		border-radius 0 0 5px 5px
+		border 0 solid $border-color
+		border-top 0
+		margin-top: 0
+		max-height 250px
+		overflow-y auto
+		//li
+		//	white-space: nowrap
+		//	overflow: hidden
+		//	text-overflow: ellipsis
+  .current //max width dots
+		white-space nowrap
+		overflow hidden
+		text-overflow ellipsis
+		display inline-block
+		max-width 120px
+ 
+.nice-select.open
+	border-radius 5px 5px 0 0
+ 
+select.select-beauty
+	display: none!important
+ 
+.element-select
+	padding: 20px 0
+ 
+.nice-select:active, .nice-select.open, .nice-select:focus
+	border 1px solid $border-color
+
+::webkit-scrollbar
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: rgba(255,255,255,0.2);
+// nice-select === end
+
+.type-view
+	f()
+	align-items center
+	margin-left auto
+	span
+		display inline-block
+		margin-right: 10px
+	.icon
+		size 22px
+		margin-left: 10px
+
+.type-view__el
+	flex(mid)
+	cp()
+.type-view__el--active
+	.icon
+		fill $mark
+		
+
+// items
+.item
+	f()
+	fl()
+	&:hover
+		.item-config
+			display block
+			opacity: 1
+			z-index 10
+			transform translateY(0px)
+		.like
+			display block
+.item-list
+	display: grid
+	grid-gap 20px
+	grid-template-columns: repeat(3, 1fr)
+
+.item-list--line
+	display block
+	.item
+		f()
+		flex-flow row
+		width: 100%
+		margin-bottom: 10px
+		&:hover
+			.item-info
+				bsh()
+				z-index 100
+				background: white
+				bsh()
+			.item-img
+				z-index 100
+			.item-config
+				background: white
+				bsh()
+				border-radius 0 0 10px 10px
+	.item-img
+		width: 20%
+		padding: 5%
+	.item-info
+		width: 80%
+
+.item-img
+	padding: 40% 10%
+	bg-full()
+	display block
+	transition none!important
+.item-info
+	padding: 20px 15px
+	border 1px solid $border-color
+	position relative
+	flex-grow 1
+	f()
+	fl()
+.item-title
+	font-weight: 700
+	margin: 10px 0
+	display inline-block
+.item-cost
+	margin-top: auto
+	f()
+	align-items: center
+	span
+		color $text-color
+.item-cost__val
+	font-weight: 700
+	@extend .type--lg
+	margin-right 10px
+	line-height: 1
+	font-family:Handbook
+
+.item-config
+	tr()
+	opacity: 0
+	z-index -1
+	position absolute
+	top 100%
+	width: calc(100% + 2px)
+	left -1px
+	padding: 0 15px 15px 15px
+	background: white
+	border 1px solid $border-color
+	border-top 0
+	transform translateY(-10px)
+.item-config__el
+	margin-bottom: 10px
+	&:last-child
+		margin-bottom: 0
+.item-config__title
+	font-size: 12px
+	font-weight: 700
+	color $text-color
+	margin-bottom: 10px
+.color
+	display: grid
+	grid-gap 8px
+	grid-template-columns: repeat(auto-fill, minmax(20px,22px))
+.color-el
+	size 20px
+	padding: 3px
+	position relative
+	cp()
+	&:before
+		content ''
+		position absolute
+		width 26px
+		height 26px
+		top -3px
+		left -3px
+		border 1px solid $border-color
+
+.color-el.active
+	&:before
+		content ''
+		border 1px solid black
+
+.item-get
+	margin-bottom: 10px
+.item-choose
+	display: grid
+	grid-gap 10px
+	grid-template-columns: 1fr 1fr
+
+.like
+	position absolute
+	top 15px
+	right: 15px
+	cp()
+	display none
+	.icon
+		&:hover
+			fill $mark
+		size 20px
+		fill $gray
+.like.active
+	.icon
+		fill $mark
+
+
+// items === end
+.rating
+	f()
+	.icon
+		size 14px
+		margin-right: 3px
+		fill #ffc90d
+	.icon--disable
+		fill $gray
+
+.btn-info
+	padding: 15px
+	border 1px solid $border-color
+	flex(between)
+	margin-bottom: 20px
+	tr()
+	&:hover
+		border 1px solid $mark
+
+	.icon
+		size 34px
+		fill $mark
+		margin-right: 10px
+	span
+		display inline-block
+		width calc(100% - 40px)
+		font-size: 12px
+
+.pag
+	f()
+	fw()
+	margin: 40px 0
+.pag__el
+	flex(mid)
+	cp()
+	tr()
+	margin: 10px
+	padding: 10px 15px
+	border 1px solid $border-color
+	display: inline-block
+	&:hover
+		border-color $mark
+		color $mark
+.pag__el--active
+	border-color $mark
+	color $mark

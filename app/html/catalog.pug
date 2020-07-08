@@ -1,0 +1,112 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			+bread()
+			.title.title--xxl Комплектующие компании Blum
+			.container
+				.toolbar
+					.menu-head Категория товара
+					.menu-wrap
+						- for (var i=0;i<8;i++)
+							a(href="#" class=i===3?'menu-el--active':'').menu-el.menu-el--link
+								.menu-el__title Название позиции
+								.menu-el__val 14
+					.menu-head Фильтр по параметрам
+					.menu-wrap
+						-
+							var items = ['Выдвижение','Размеры','Наличие'];
+						each item,i in items
+							.menu-el-wrap.js-drop-wrap(class=i===0?'active':'')
+								.menu-el.menu-el--drop.js-drop-toggle
+									.menu-el__title #{item}
+									.menu-el__icon
+										+icon("arrow-right","icon")
+								.menu-sub.js-drop-cont
+									+checkbox("Полное (13)")
+									+checkbox("Частичное (34)")
+									+checkbox("Активное (18)")
+									+checkbox("Адаптивное (11)")
+									+checkbox("Скошенное (38)")
+					.btn--sm.btn--light.btn--full.btn--extend Показать
+					.btn--sm.btn--empty.btn--full.btn--extend Сбросить
+					a(href="#").btn-info
+						+icon("play","icon")
+						span Монтаж и настройка подъемного механизма AVENTOS HF
+					a(href="#").btn-info
+						+icon("doc","icon")
+						span Инструкция по проектированию и установке подъемного механизма AVENTOS HF
+
+				.info
+					.catalog-sort
+						.sort
+							.sort__name Сортировка:
+							select.select-beauty
+								option(value="1" ) По умолчанию
+								option(value="2") Сначала дешевле
+								option(value="3") Сначала дороже
+						.sort
+							.sort__name Кол-во:
+							select.select-beauty
+								option(value="1" ) 10
+								option(value="2") 20
+								option(value="3") 30
+								option(value="3") 40
+						.type-view
+							span Вид каталога:
+							.type-view__el.type-view__el--active(data-type="box")
+								+icon("squer","icon ")
+							.type-view__el(data-type="line")
+								+icon("list","icon")
+					.item-list
+						- for (var i=0;i<12;i++)
+							.item
+								a(href="#" style="background-image:url('img/item-3.jpg')").item-img
+								.item-info
+									.rating
+										- for (var j=0;j<4;j++)
+											+icon("star","icon")
+										+icon("star","icon icon--disable")
+									.like.js-choose
+										+icon("heart","icon")
+									a(href="#").item-title Granite&Quartz (кварц)
+									.item-cost
+										.item-cost__val 8700
+										span руб/шт
+									.item-config
+										.item-config__el
+											.item-config__title Цвет ( Ваш Выбор)
+											.color.js-choose-group
+												.color-el.js-choose-group-el.active(style="background:#ca0088")
+												.color-el.js-choose-group-el(style="background:#6cb962")
+												.color-el.js-choose-group-el(style="background:#0026ca")
+												.color-el.js-choose-group-el(style="background:#f6c415")
+										.item-config-edit
+											.item-config__el
+												.item-config__title Тип Фасада
+												select.select-beauty
+													option Большой
+													option Средний
+													option Маленький
+											.btn--md.btn--mark.btn--full.item-get В корзину
+											.item-choose
+												.btn--xs.btn--empty Купить в 1 клик
+												.btn--xs.btn--empty Сравнить
+
+					.pag
+						.pag__el.pag__el--active 1
+						.pag__el 2
+						.pag__el 3
+						.pag__el ...
+						.pag__el 32
+		.info-form-wrap.info-form-wrap--dark
+			.title.title--xxl.type--up подпишитесь на новости
+			.subscr-text Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа форм развития. С другой стороны сложившаяся структура организации требуют от нас анализа существенных финансовых и административных условий.
+			.info-form
+				input(type="text" placeholder="Введите ваш e-mail" class="input")
+				.btn--sm.btn--mark.btn--mid Подписаться
+	+footer()
+include ./block_html/_script.pug

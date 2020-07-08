@@ -1,0 +1,231 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			.main-grid
+				.card-el(style="background-image:url('img/pm.png')")
+					.card-el__title.card-el__title--lg Blum
+					.card-list.card-list--lg
+						a(href="#").card-list__el
+							span TANDEMBOX
+						a(href="#").card-list__el
+							span AVENTOS
+						a(href="#").card-list__el
+							span LEGRABOX
+						a(href="#").card-list__el
+							span НОВИНКА: Подъемный механизм AVENTOS HK top
+						a(href="#").card-list__el
+							span Система выдвижения TANDEMBOX дизайн T
+						a(href="#").card-list__el
+							span Петли CLIP top BLUMOTION черный оникс
+				.card-el(style="background-image:url('img/card--vauth.jpg')")
+					.card-el__title Vauth-Sagel
+					.card-list
+						a(href="#").card-list__el
+							span Решения для высоких шкафов
+						a(href="#").card-list__el
+							span Решения для нижних тумб
+						a(href="#").card-list__el
+							span Решения для угловых тумб
+				.card-el(style="background-image:url('img/card--tss.jpg')")
+					.card-el__title TSS Cleaf
+					.card-list
+						a(href="#").card-list__el
+							span Решения для высоких шкафов
+						a(href="#").card-list__el
+							span Решения для нижних тумб
+						a(href="#").card-list__el
+							span Решения для угловых тумб
+				.card-el(style="background-image:url('img/card--veneto.jpg')")
+					.card-el__title VENETO
+					.card-list
+						a(href="#").card-list__el
+							span Кадоро
+						a(href="#").card-list__el
+							span Мейзон
+						a(href="#").card-list__el
+							span Венето Классико
+				.card-el(style="background-image:url('img/card--fundermax.jpg')")
+					.card-el__title FunderMax
+					.card-list
+						a(href="#").card-list__el
+							span Глянцевые LUXOS
+						a(href="#").card-list__el
+							span Матовые LOTOS
+						a(href="#").card-list__el
+							span Панели TSS Superfront
+				.card-el(style="background-image:url('img/card-hi-macs.jpg')")
+					.card-el__title HI-MACS
+					.card-list
+						a(href="#").card-list__el
+							span Aurora (новинка)
+						a(href="#").card-list__el
+							span Intense (новинка)
+						a(href="#").card-list__el
+							span Granite&Quartz (кварц и гранит)
+			.btn-row-mid
+				a(href="#").btn--md.btn--mark Смотреть весь каталог
+	.section.section--gray
+		.main-cont
+			.section-title Товар недели
+			.slider-wrap.slider-wrap--arrow.slider-wrap--arrow-out
+				.slider-item.slider-item--extend.slider-list
+					- for (var i=0;i<6;i++)
+						.slider-card-el
+							.card-el(style="background-image:url('img/card--vauth.jpg')")
+								.card-el__title Vauth-Sagel
+								.card-list
+									a(href="#").card-list__el
+										span Решения для высоких шкафов
+									a(href="#").card-list__el
+										span Решения для нижних тумб
+									a(href="#").card-list__el
+										span Решения для угловых тумб
+				.slider-control-wrap
+					.slider-control.slider-control--right
+						+icon("arrow-right","icon")
+					.slider-control.slider-control--left
+						+icon("arrow-left","icon")
+	.section
+		.unit.unit--dark.unit--left
+		.main-cont
+			.section-title акции и новости
+			.slider-wrap.slider-wrap--arrow.slider-wrap--arrow-out
+				.slider-item.slider-item--extend.slider-list
+					- for (var i=0;i<6;i++)
+						.slider-card-el
+							.news-el
+								.news-el__img(style="background-image:url('img/item-1.jpg')")
+								.news-el-wrap
+									.news-el__date 18.03.2020
+									a(href="#").news-el__title Как правильно подготовить столешницу
+									.news-el__text Рабочая поверхность кухонной зоны — одно из наиболее уязвимых мест. Мы расскажем, как выбрать столешницу
+									a(href="#").news-el__get Смотреть
+				.slider-control-wrap
+					.slider-control.slider-control--right
+						+icon("arrow-right","icon")
+					.slider-control.slider-control--left
+						+icon("arrow-left","icon")
+	.info-form-wrap.info-form-wrap--dark
+		.title.title--xxl.type--up подпишитесь на новости
+		.subscr-text Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа форм развития. С другой стороны сложившаяся структура организации требуют от нас анализа существенных финансовых и административных условий.
+		.info-form
+			input(type="text" placeholder="Введите ваш e-mail" class="input")
+			.btn--sm.btn--mark.btn--mid Подписаться
+	.section
+		.unit.unit--mark.unit--right
+		.main-cont
+			.section-title База знаний
+			.knowledge
+				- for (var i=1;i<6;i++)
+					.knowledge__el
+						.knowledge__el-img(style="background-image:url('img/partner-"+i+".png')")
+						a(href="#").knowledge__el-get
+							span Скачать каталог
+							+icon("download","icon")
+						a(href="#").knowledge__el-get
+							span Скачать прайс
+							+icon("download","icon")
+						a(href="#").knowledge__el-get
+							span Скачать прайс
+							+icon("download","icon")
+			.btn-row-mid
+				a(href="#").btn--md.btn--mark Перейти в “База знаний”
+
+	.section
+		.main-cont
+			.section-title Учебные центры
+			.slider-wrap.slider-wrap--arrow-in
+				.slider-item.slider-banner
+					- for (var i=0;i<4;i++)
+						.slider-banner__el(style="background-image:url('img/banner-lg-1.jpg')")
+							.slider-banner-nav
+								a(href="#").slider-banner-nav__el Записаться на обучения
+								a(href="#").slider-banner-nav__el Прогрмаммы обучения
+								a(href="#").slider-banner-nav__el Подробнее об УЧ
+				.slider-control-wrap
+					.slider-control.slider-control--right
+						+icon("arrow-right","icon")
+					.slider-control.slider-control--left
+						+icon("arrow-left","icon")
+			.info-cont
+				.info-cont__el
+					.icon-round
+						+icon("teach","icon")
+					.info-cont__el-title Как правильно подготовить инструменты
+					.info-cont__el-text У кухонного гарнитура есть несколько поверхностей: дверцы шкафов (фасады), мебельный каркас, полки и столешница. Разберём для общего развития какие они бывают, хотя на самом деле есть всего 1 верный вариант и его мы явно укажем.
+				.info-cont__el
+					.icon-round
+						+icon("reading","icon")
+					.info-cont__el-title Выбор правильных материалов для столешницы
+					.info-cont__el-text У кухонного гарнитура есть несколько поверхностей: дверцы шкафов (фасады), мебельный каркас, полки и столешница. Разберём для общего развития какие они бывают, хотя на самом деле есть всего 1 верный вариант и его мы явно укажем.
+				.info-cont__el
+					.icon-round
+						+icon("checklist","icon")
+					.info-cont__el-title Особенности пластиковой фурнитуры
+					.info-cont__el-text У кухонного гарнитура есть несколько поверхностей: дверцы шкафов (фасады), мебельный каркас, полки и столешница. Разберём для общего развития какие они бывают, хотя на самом деле есть всего 1 верный вариант и его мы явно укажем.
+				.info-cont__el
+					.icon-round
+						+icon("data-protection","icon")
+					.info-cont__el-title Влияние цвета фасада на долговечность
+					.info-cont__el-text У кухонного гарнитура есть несколько поверхностей: дверцы шкафов (фасады), мебельный каркас, полки и столешница. Разберём для общего развития какие они бывают, хотя на самом деле есть всего 1 верный вариант и его мы явно укажем.
+	.section.section--gray
+		.main-cont
+			.section-title “тест-драйв” кухни
+			.slider-wrap.slider-wrap--arrow-in
+				.slider-item.slider-banner
+					- for (var i=0;i<4;i++)
+						.slider-banner__el(style="background-image:url('img/banner-lg-2.jpg')")
+							.slider-banner-nav
+								a(href="#").slider-banner-nav__el Записаться на обучения
+								a(href="#").slider-banner-nav__el Прогрмаммы обучения
+								a(href="#").slider-banner-nav__el Подробнее об УЧ
+				.slider-control-wrap
+					.slider-control.slider-control--right
+						+icon("arrow-right","icon")
+					.slider-control.slider-control--left
+						+icon("arrow-left","icon")
+			.info-cont
+				.info-cont__el
+					.icon-round
+						+icon("teach","icon")
+					.info-cont__el-title Как правильно подготовить инструменты
+					.info-cont__el-text У кухонного гарнитура есть несколько поверхностей: дверцы шкафов (фасады), мебельный каркас, полки и столешница. Разберём для общего развития какие они бывают, хотя на самом деле есть всего 1 верный вариант и его мы явно укажем.
+				.info-cont__el
+					.icon-round
+						+icon("reading","icon")
+					.info-cont__el-title Выбор правильных материалов для столешницы
+					.info-cont__el-text У кухонного гарнитура есть несколько поверхностей: дверцы шкафов (фасады), мебельный каркас, полки и столешница. Разберём для общего развития какие они бывают, хотя на самом деле есть всего 1 верный вариант и его мы явно укажем.
+				.info-cont__el
+					.icon-round
+						+icon("checklist","icon")
+					.info-cont__el-title Особенности пластиковой фурнитуры
+					.info-cont__el-text У кухонного гарнитура есть несколько поверхностей: дверцы шкафов (фасады), мебельный каркас, полки и столешница. Разберём для общего развития какие они бывают, хотя на самом деле есть всего 1 верный вариант и его мы явно укажем.
+				.info-cont__el
+					.icon-round
+						+icon("data-protection","icon")
+					.info-cont__el-title Влияние цвета фасада на долговечность
+					.info-cont__el-text У кухонного гарнитура есть несколько поверхностей: дверцы шкафов (фасады), мебельный каркас, полки и столешница. Разберём для общего развития какие они бывают, хотя на самом деле есть всего 1 верный вариант и его мы явно укажем.
+
+	.section
+		.main-cont
+			.bonus
+				.bonus-img
+					img(src="img/nois-card.jpg", alt="")
+					.info-form
+						input(type="text" placeholder="Ваш номер карты" class="input")
+						.btn--sm.btn--mark.btn--mid Проверить баланс
+				.bonus-info
+					.bonus-title Бонусная программа НОИС
+					.bonus-text У кухонного гарнитура есть несколько поверхностей: дверцы шкафов (фасады), мебельный каркас, п
+					ul.mark-list
+						li  Таким образом дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание систем массового участия.
+						li  Идейные соображения высшего порядкареализации существенных финансовых и административных условий.
+						li  Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет
+
+
+	+footer()
+include ./block_html/_script.pug

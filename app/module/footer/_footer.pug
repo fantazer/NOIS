@@ -1,0 +1,24 @@
+mixin footer()
+	//block footer
+	.footer-wrap
+		.main-cont
+			.footer-top
+				a(href="/").footer-logo
+					img(src="img/logo--white.svg", alt="")
+				.soc-row
+					a(href="#").soc-row__el
+						img(src="img/inst--color.svg", alt="")
+					a(href="#").soc-row__el
+						+icon("facebook--color","icon")
+					a(href="#").soc-row__el
+						+icon("youtube--color","icon")
+			.footer-nav
+				-
+					var items = [
+						'О компании', 'Акции', 'Бонусная программа', 'Дилерская сеть', 'База знаний', 'Контакты', 'Отзывы'
+					];
+				each item in items
+					a(href = "#").footer-nav__el #{item}
+
+
+	//block footer end
