@@ -3,42 +3,46 @@ include block_html/_include.pug
 
 .page
 	+header()
-	.content
+	.content.content--clear
 		.main-cont
 			+bread()
 			.title.title--xxl Комплектующие компании Blum
 			.container
 				.toolbar
-					.menu-head Категория товара
-					.menu-wrap
-						- for (var i=0;i<8;i++)
-							a(href="#" class=i===3?'menu-el--active':'').menu-el.menu-el--link
-								.menu-el__title Название позиции
-								.menu-el__val 14
-					.menu-head Фильтр по параметрам
-					.menu-wrap
-						-
-							var items = ['Выдвижение','Размеры','Наличие'];
-						each item,i in items
-							.menu-el-wrap.js-drop-wrap(class=i===0?'active':'')
-								.menu-el.menu-el--drop.js-drop-toggle
-									.menu-el__title #{item}
-									.menu-el__icon
-										+icon("arrow-right","icon")
-								.menu-sub.js-drop-cont
-									+checkbox("Полное (13)")
-									+checkbox("Частичное (34)")
-									+checkbox("Активное (18)")
-									+checkbox("Адаптивное (11)")
-									+checkbox("Скошенное (38)")
-					.btn--sm.btn--light.btn--full.btn--extend Показать
-					.btn--sm.btn--empty.btn--full.btn--extend Сбросить
-					a(href="#").btn-info
-						+icon("play","icon")
-						span Монтаж и настройка подъемного механизма AVENTOS HF
-					a(href="#").btn-info
-						+icon("doc","icon")
-						span Инструкция по проектированию и установке подъемного механизма AVENTOS HF
+					.filter-toggle
+						+icon("filter","icon")
+						span Фильтр
+					.filter
+						.menu-head Категория товара
+						.menu-wrap
+							- for (var i=0;i<8;i++)
+								a(href="#" class=i===3?'menu-el--active':'').menu-el.menu-el--link
+									.menu-el__title Название позиции
+									.menu-el__val 14
+						.menu-head Фильтр по параметрам
+						.menu-wrap
+							-
+								var items = ['Выдвижение','Размеры','Наличие'];
+							each item,i in items
+								.menu-el-wrap.js-drop-wrap(class=i===0?'active':'')
+									.menu-el.menu-el--drop.js-drop-toggle
+										.menu-el__title #{item}
+										.menu-el__icon
+											+icon("arrow-right","icon")
+									.menu-sub.js-drop-cont
+										+checkbox("Полное (13)")
+										+checkbox("Частичное (34)")
+										+checkbox("Активное (18)")
+										+checkbox("Адаптивное (11)")
+										+checkbox("Скошенное (38)")
+						.btn--sm.btn--light.btn--full.btn--extend Показать
+						.btn--sm.btn--empty.btn--full.btn--extend Сбросить
+						a(href="#").btn-info
+							+icon("play","icon")
+							span Монтаж и настройка подъемного механизма AVENTOS HF
+						a(href="#").btn-info
+							+icon("doc","icon")
+							span Инструкция по проектированию и установке подъемного механизма AVENTOS HF
 
 				.info
 					.catalog-sort
@@ -76,7 +80,15 @@ include block_html/_include.pug
 									.item-cost
 										.item-cost__val 8700
 										span руб/шт
+
+									.item-toggle
+										span Подробнее
+										+icon("arrow-down","icon")
 									.item-config
+										.item-condition
+											//toggle class .item-condition--false есть товара нет
+											.item-condition__icon
+											span В наличии
 										.item-config__el
 											.item-config__title Цвет ( Ваш Выбор)
 											.color.js-choose-group

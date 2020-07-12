@@ -61,8 +61,17 @@
             </div>
             <div class="main-cont">
                 <div class="header-main">
+                    <div class="header-nav-toggle js-slide-block-toggle" data-menu="nav">
+                        <svg class="icon is-close">
+                            <use xlink:href="#menu"></use>
+                        </svg>
+                        <svg class="icon is-open">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
                     <a class="logo" href="/">
-                        <img src="img/logo.svg" alt="" />
+                        <img class="logo--desktop" src="img/logo.svg" alt="" />
+                        <img class="logo--mobile" src="img/logo--mobile.svg" alt="" />
                     </a>
                     <a class="logo-partner" href="#">
                         <img src="img/blum.svg" alt="" />
@@ -77,17 +86,27 @@
                         </div>
                     </div>
                     <div class="btn--sm btn--light header-get">Заказать звонок</div>
+                    <div class="catalog-mobile js-slide-block-toggle" data-menu="catalog">
+                        <svg class="icon is-close">
+                            <use xlink:href="#catalog"></use>
+                        </svg>
+                        <svg class="icon is-open">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
                 </div>
             </div>
             <div class="header-bottom-wrap">
                 <div class="main-cont">
                     <div class="header-bottom">
                         <div class="get-cat">
-                            <svg class="icon icon--close">
-                                <use xlink:href="#menu"></use>
-                            </svg>
-                            <span>Каталог</span>
-                            <div class="navigation">
+                            <div class="get-cat-wrap">
+                                <svg class="icon">
+                                    <use xlink:href="#menu"></use>
+                                </svg>
+                                <span>Каталог</span>
+                            </div>
+                            <div class="navigation slide-block slide-block--menu" data-menu="catalog">
                                 <div class="navigation-el">
                                     <a class="navigation-el-title" href="#">Мебельная фурнитура Blum</a>
                                     <ul class="navigation-list">
@@ -401,6 +420,46 @@
                                 <use xlink:href="#search"></use>
                             </svg>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-block slide-block--left slide-block--menu" data-menu="nav">
+                <div class="slide-block-wrap">
+                    <a class="slide-phone" href="tel:8 800 000 00 00">8 800 000 00 00</a>
+                    <div class="header-tool slide-cart">
+                        <a class="header-tool__el header-tool__el--mark" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#cart"></use>
+                            </svg>
+                            <span>Корзина</span>
+                        </a>
+                    </div>
+                    <div class="search">
+                        <input class="input" type="text" placeholder="Поиск" />
+                        <svg class="icon">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </div>
+                    <div class="slider-menu">
+                        <a class="slider-menu__el" href="#">О компании</a>
+                        <a class="slider-menu__el" href="#">Акции</a>
+                        <a class="slider-menu__el" href="#">Бонусная программа</a>
+                        <a class="slider-menu__el" href="#">Дилерская сеть</a>
+                        <a class="slider-menu__el" href="#">База знаний</a>
+                        <a class="slider-menu__el" href="#">Контакты</a>
+                        <a class="slider-menu__el" href="#">Отзывы</a>
+                    </div>
+                    <div class="header-tool__el slide-auth">
+                        <svg class="icon">
+                            <use xlink:href="#user"></use>
+                        </svg>
+                        <span>Войти</span>
+                    </div>
+                    <div class="header-loc">
+                        <svg class="icon">
+                            <use xlink:href="#location"></use>
+                        </svg>
+                        <span>Новосибирск</span>
                     </div>
                 </div>
             </div>

@@ -20,8 +20,12 @@ mixin header()
 							span Корзина
 		.main-cont
 			.header-main
+				.header-nav-toggle.js-slide-block-toggle(data-menu="nav")
+					+icon("menu","icon is-close")
+					+icon("close","icon is-open")
 				a(href="/").logo
-					img(src="img/logo.svg", alt="")
+					img(src="img/logo.svg", alt="").logo--desktop
+					img(src="img/logo--mobile.svg", alt="").logo--mobile
 				a(href="#").logo-partner
 					img(src="img/blum.svg", alt="")
 				.header-contact
@@ -30,14 +34,18 @@ mixin header()
 						+icon("location","icon")
 						span Новосибирск
 				.btn--sm.btn--light.header-get Заказать звонок
+				.catalog-mobile.js-slide-block-toggle(data-menu="catalog")
+					+icon("catalog","icon is-close")
+					+icon("close","icon is-open")
 		.header-bottom-wrap
 			.main-cont
 				.header-bottom
 					.get-cat
-						+icon("menu","icon icon--close")
-						span Каталог
+						.get-cat-wrap
+							+icon("menu","icon")
+							span Каталог
 
-						.navigation
+						.navigation.slide-block.slide-block--menu(data-menu="catalog")
 							-
 								var items = [
 										{
@@ -196,4 +204,27 @@ mixin header()
 					.search
 						input(type="text" placeholder="Поиск" class="input")
 						+icon("search","icon")
+		.slide-block.slide-block--left.slide-block--menu(data-menu="nav")
+			.slide-block-wrap
+				a(href="tel:8 800 000 00 00").slide-phone 8 800 000 00 00
+				.header-tool.slide-cart
+					a(href="#").header-tool__el.header-tool__el--mark
+						+icon("cart","icon")
+						span Корзина
+				.search
+					input(type="text" placeholder="Поиск" class="input")
+					+icon("search","icon")
+				.slider-menu
+						-
+							var items = [
+								'О компании', 'Акции', 'Бонусная программа', 'Дилерская сеть', 'База знаний', 'Контакты', 'Отзывы'
+							];
+						each item in items
+							a(href="#").slider-menu__el #{item}
+				.header-tool__el.slide-auth
+					+icon("user","icon")
+					span Войти
+				.header-loc
+					+icon("location","icon")
+					span Новосибирск
 	//block header end

@@ -100,7 +100,27 @@ $(document).ready(function () {
 			//autoplaySpeed: 8000, time between
 			customPaging : function(slider, i) {
 				return '<span class="dot"></span>';
-			}
+			},
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						arrows: false,
+						slidesToShow: 2,
+						dots:true,
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						arrows: false,
+						centerMode: true,
+						centerPadding: '40px',
+						slidesToShow: 1,
+						dots:true,
+					}
+				}
+			]
 		});
 
 		$('.slider-banner').slick({
@@ -129,8 +149,10 @@ $(document).ready(function () {
 	// SWITCHERS
 		// dropdown
 		$('.js-drop-toggle').click(function(){
-			$(this).closest(".js-drop-wrap").toggleClass("active")
-			$(this).closest(".js-drop-wrap").find(".js-drop-cont").slideToggle();
+			var parent = $(this).closest(".js-drop-wrap");
+			var current = parent.find(".js-drop-cont");
+			current.slideToggle();
+			parent.toggleClass("active")
 		});
 		// dropdown === end
 
@@ -172,5 +194,56 @@ $(document).ready(function () {
 		}
 	});
 	// toggle catalog view === end
+
+	// slide menu
+
+	$('.js-slide-block-toggle').click(function (event) {
+		if(!$(this).hasClass("slide-block-toggle--open")){
+				$("body").addClass("body-fix")
+			console.log(22);
+		}else{
+			$("body").removeClass("body-fix")
+		}
+		$(".js-slide-block-toggle").not(this).removeClass('slide-block-toggle--open');
+		var current = $(this).data("menu");
+		$(".slide-block").each(function () {
+			if ($(this).data("menu") === current) {
+				$(this).toggleClass("slide-block--open")
+			} else {
+				$(this).removeClass("slide-block--open")
+			}
+		})
+		$(this).toggleClass('slide-block-toggle--open');
+		event.stopPropagation();
+
+	});
+	$('.slide-block').on("click", function (event) {
+		event.stopPropagation();
+	});
+
+	$(document).on("click", function () {
+		$('.slide-block').removeClass('slide-block--open');
+		$(".js-slide-block-toggle").removeClass('slide-block-toggle--open');
+		$("body").removeClass("body-fix")
+	});
+
+	// toggle more info item
+	$('.item-toggle').click(function(){
+		var current = $(this).closest(".item").find(".item-config")
+		$(this).toggleClass("active")
+
+		$('.item-toggle').not(this).removeClass("active")
+		$(".item-config").not(current).removeClass("active");
+
+		current.toggleClass("active");
+	});
+	// toggle more info item === end
+	// slide menu === end
+
+	// toggle mobile filter
+	$('.filter-toggle').click(function(){
+			$('.filter').slideToggle();
+	});
+	// toggle mobile filter === end
 
 });

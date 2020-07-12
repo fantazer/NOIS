@@ -25,8 +25,13 @@ body
 	min-height 100vh
 
 .content
+	+below(1024px)
+		padding: 30px 0
 	flex-grow 1
 	padding: 50px 0
+
+.content--clear
+	padding-bottom: 0
 
 .content--mid
 	flex(mid)
@@ -246,10 +251,15 @@ body
 // cookie === end
 
 // header
-//.header
+.header
+	+below(1024px)
+		border-bottom 1px solid $border-color
+		height: 60px
 .header-top-wrap
 	background: $dark
 	color white
+	+below(1024px)
+		display none
 .header-top
 	f()
 	align-items center
@@ -283,19 +293,47 @@ body
 		margin-left: 10px
 		color white
 .header-main
+	+below(1024px)
+		padding: 0
+		height: 60px
 	f()
 	align-items center
 	padding: 15px 0
 .logo
+	+below(640px)
+		margin: 0 auto
 	img
 		width: 300px
+
+.logo--desktop
+	+below(1024px)
+		display none
+
+.logo--mobile
+	display none
+	max-width 100px
+	+below(1024px)
+		display block
+	+below(480px)
+		max-width 60px
+
+
 .logo-partner
+	+below(1024px)
+		display none
 	width: 12%
 	margin-left auto
 .header-contact
+	+below(1024px)
+		margin-right: 0
+	+below(640px)
+		display none
 	margin-left auto
 	margin-right: 20px
 .header-phone
+	+below(480px)
+		font-size: 14x
+		display none
 	@extend .type--md
 	margin-bottom: 5px
 	font-weight: 700
@@ -311,9 +349,19 @@ body
 		color $dark
 		font-weight: 500
 		//text-decoration: underline
-//.header-get
+.header-get
+	+below(1024px)
+		display none
 
 .header-bottom-wrap
+	+below(1024px)
+		.get-cat-wrap
+			display none
+		.get-cat
+			padding: 0
+		.search
+			display none
+		padding: 0
 	padding: 15px 0
 	background: $gray
 .header-bottom
@@ -321,6 +369,26 @@ body
 	position relative
 
 .navigation
+	+below(1024px)
+		opacity: 1
+		column-count 1!important
+		transform translateY(0) translateX(110%)
+		height: 100%
+		position: fixed
+		top 0
+		left initial
+		right: 0
+		width: 360px
+		tr(all)
+		border-right 1px solid $border-color
+		background: white
+		z-index 10
+		display: flex !important
+		fl()
+		overflow auto
+	+below(480px)
+		width: 100%
+	display block!important
 	position absolute
 	top 100%
 	left 0
@@ -341,16 +409,25 @@ body
 		&:hover
 			color $mark
 	display inline-block
-
+	+below(1024px)
+		display block
 .navigation-list
 	padding-left: 20px
 	li
+		position relative
+		&:before
+			content ''
+			position absolute
+			size 6px
+			round()
+			background: $mark
+			top 8px
+			left -15px
 		margin-bottom: 5px
 		a
 			link(#eaeaea)
-			line-height: 1.2
+			line-height: 1.6
 			font-size: 14px
-
 .navigation-el-title
 	font-weight: 700
 	@extend .type--md
@@ -363,14 +440,12 @@ body
 	cp()
 	tr()
 	width: 200px
-	font-family Roboto
 	&:hover
 		background: darken($dark,10)
 		.navigation
 			transform translateY(0)
 			z-index 10
 			opacity: 1
-
 	span
 		color white
 	.icon
@@ -379,6 +454,7 @@ body
 		margin-right: 10px
 	.icon--open
 		display none
+.get-cat-wrap
 .get-cat.active
 	.icon--open
 		display block
@@ -405,10 +481,18 @@ body
 	background: $dark
 //.main-cont
 .footer-top
+	+below(640px)
+		fw()
 	flex(between)
 	margin-bottom: 30px
 .footer-logo
+	+below(640px)
+		width: 100%
+		margin-bottom: 30px
 	img
+		+below(640px)
+			width: 100%
+			max-width 300px
 		width: 350px
 .soc-row
 	f()
@@ -421,8 +505,14 @@ body
 		size 42px
 //.icon
 .footer-nav
+	+below(640px)
+		fw()
 	flex(between)
 .footer-nav__el
+	+below(640px)
+		width: 100%
+		display inline-block
+		margin-bottom: 20px
 	color white
 	&:hover
 		color $mark
@@ -430,11 +520,25 @@ body
 
 // grid
 .main-grid
+	+below(1024px)
+		grid-template-columns: repeat(2, 1fr)
+	+below(640px)
+		display block
+		width calc(100% + 20px)
+		margin-left: -10px
+		margin-top: -30px
+		margin-bottom: 0
 	display: grid
 	grid-gap 20px
 	grid-template-columns: repeat(4, 1fr)
 	margin-bottom: 60px
 .card-el
+	+below(640px)
+		border 0
+		border-bottom 3px solid $mark
+		&:before
+			content ''
+			background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(161,161,161,0) 90%, rgba(255,255,255,0.25) 100%)!important
 	padding: 30px
 	//height: 270px
 	f()
@@ -446,6 +550,8 @@ body
 	position relative
 	min-height 240px
 	&:nth-child(1)
+		+below(1024px)
+			grid-column initial
 		grid-column 1/4
 	&:before
 		content ''
@@ -456,6 +562,8 @@ body
 		width: 100%
 		height: 100%
 .card-el__title
+	+below(768px)
+		font-size: 24px
 	margin-bottom: 20px
 	font-weight: 700
 	position relative
@@ -475,6 +583,7 @@ body
 	margin-bottom: 7px
 	position: relative
 	padding-left: 10px
+	line-height: 1.4
 	&:last-child
 		margin-bottom: 0
 	&:hover
@@ -494,10 +603,14 @@ body
 // grid === end
 
 .section
+	+below(768px)
+		padding: 30px 0
 	padding: 80px 0
 	position relative
 	overflow hidden
 .unit
+	+below(1400px)
+		display none
 	position absolute
 	width: 15%
 	height: 200%
@@ -515,6 +628,10 @@ body
 
 .section--gray
 	background: #eaebec
+.section--snow
+	background: #f7f7f7
+
+
 .section-title
 	@extend .type--xl
 	font-weight: 700
@@ -532,8 +649,9 @@ body
 .slider-wrap--arrow
 	flex(between)
 	.slider-item
+		+below(1024px)
+			width: 100%
 		width: calc(100% - 100px)
-
 .slider-wrap--arrow-in
 	position relative
 	margin-bottom: 100px
@@ -542,6 +660,8 @@ body
 		top 0
 		right 0
 .slider-control-wrap
+	+below(1024px)
+		display none
 	f()
 	fl()
 	width: 40px
@@ -610,10 +730,18 @@ body
 
 // .knowledge
 .knowledge
+	+below(1024px)
+		grid-template-columns: repeat(3,1fr)
+	+below(640px)
+		grid-template-columns: 1fr
 	display: grid
 	grid-gap 20px
 	grid-template-columns: repeat(5,1fr)
 .knowledge__el-img
+	+below(640px)
+		max-width 100px
+		padding: 10%
+		border 1px solid $border-color
 	padding: 20% 10%
 	flex(mid)
 	margin-bottom: 20px
@@ -686,14 +814,29 @@ body
 	line-height: 1.4
 
 .bonus
+	+below(1024px)
+		fl()
+		align-items: flex-start
 	f()
 	justify-content space-between
 	align-items center
 .bonus-img
+	+below(1024px)
+		width: 100%
+		margin-bottom: 20px
+		img
+			max-width 480px
+			width: 100%
+			margin-bottom: 20px
+	+below(640px)
+		.btn--sm
+			padding: 10px
 	width: 45%
 	flex(mid)
 	fl()
 .bonus-info
+	+below(1024px)
+		width: 100%
 	width: 50%
 .bonus-title
 	font-weight: 700
@@ -719,7 +862,9 @@ body
 			position absolute
 
 .info-form-wrap
-	padding: 60px
+	+below(640px)
+		display block
+	padding: 60px 10px
 	flex(mid)
 	fl()
 
@@ -727,16 +872,22 @@ body
 	background: $gray
 
 .info-form
+	+below(640px)
+		width: 100%
 	f()
 	width: 80%
 	max-width 500px
 	.input
+		+below(640px)
+			width: 60%
 		border-radius 4px 0 0 4px
 		flex-grow 1
 	.btn--sm
 		border-radius 0 4px 4px 0
 
 .subscr-text
+	+below(640px)
+		text-align: left
 	text-align center
 	line-height: 1.4
 	max-width 600px
@@ -744,8 +895,6 @@ body
 
 
 .bread
-	+below(640px)
-		display: none
 	f()
 	fw()
 	margin-bottom: 20px
@@ -771,12 +920,18 @@ body
 			display: none
 
 .container
+	+below(768px)
+		fw()
 	f()
 	justify-content: space-between
 .toolbar
+	+below(768px)
+		width: 100%
 	width: 280px
 
 .info
+	+below(768px)
+		width: 100%
 	width calc(100% - 320px)
 
 .menu-wrap
@@ -835,6 +990,8 @@ body
 .sort
 	+below(768px)
 		margin-top: 0
+		fl()
+		align-items: flex-start
 	f()
 	align-items: center
 	.nice-select
@@ -842,7 +999,7 @@ body
 
 .sort__name
 	+below(768px)
-		display: none
+		margin-bottom: 10px
 	margin-right: 20px
 
 .catalog-sort
@@ -899,6 +1056,8 @@ select.select-beauty
 // nice-select === end
 
 .type-view
+	+below(1024px)
+		display none
 	f()
 	align-items center
 	margin-left auto
@@ -921,15 +1080,25 @@ select.select-beauty
 .item
 	f()
 	fl()
-	&:hover
-		.item-config
-			display block
-			opacity: 1
-			z-index 10
-			transform translateY(0px)
-		.like
-			display block
+	+above(1025px)
+		&:hover
+			.item-config
+				display block
+				opacity: 1
+				z-index 10
+				transform translateY(0px)
+			.like
+				display block
+	+below(1024px)
+		f()
+		flex-flow row
+		width: 100%
+		margin-bottom: 0
+		position relative
 .item-list
+	+below(1024px)
+		grid-template-columns: 1fr
+		grid-gap 10px
 	display: grid
 	grid-gap 20px
 	grid-template-columns: repeat(3, 1fr)
@@ -941,18 +1110,19 @@ select.select-beauty
 		flex-flow row
 		width: 100%
 		margin-bottom: 10px
-		&:hover
-			.item-info
-				bsh()
-				z-index 100
-				background: white
-				bsh()
-			.item-img
-				z-index 100
-			.item-config
-				background: white
-				bsh()
-				border-radius 0 0 10px 10px
+		+above(1025px)
+			&:hover
+				.item-info
+					bsh()
+					z-index 100
+					background: white
+					bsh()
+				.item-img
+					z-index 100
+				.item-config
+					background: white
+					bsh()
+					border-radius 0 0 10px 10px
 	.item-img
 		width: 20%
 		padding: 5%
@@ -960,11 +1130,22 @@ select.select-beauty
 		width: 80%
 
 .item-img
+	+below(1024px)
+		padding: 0%
+		size 100px
 	padding: 40% 10%
 	bg-full()
 	display block
 	transition none!important
 .item-info
+	+below(1024px)
+		width calc(100% - 100px)
+		position: static
+		display block
+		border 0
+		padding-top: 0
+	+below(640px)
+		padding: 10px
 	padding: 20px 15px
 	border 1px solid $border-color
 	position relative
@@ -972,6 +1153,8 @@ select.select-beauty
 	f()
 	fl()
 .item-title
+	+below(1024px)
+		width: 100%
 	font-weight: 700
 	margin: 10px 0
 	display inline-block
@@ -989,6 +1172,13 @@ select.select-beauty
 	font-family:Handbook
 
 .item-config
+	+below(1024px)
+		z-index 10
+		padding: 15px
+		border-top 1px solid $border-color
+		background $snow
+		left -9999px
+		transition opacity .4s, transform .4s
 	tr()
 	opacity: 0
 	z-index -1
@@ -1001,6 +1191,13 @@ select.select-beauty
 	border 1px solid $border-color
 	border-top 0
 	transform translateY(-10px)
+
+.item-config.active
+	opacity: 1
+	z-index 10
+	left 0
+	transform translateY(0px)
+
 .item-config__el
 	margin-bottom: 10px
 	&:last-child
@@ -1041,6 +1238,10 @@ select.select-beauty
 	grid-template-columns: 1fr 1fr
 
 .like
+	+below(1024px)
+		display block
+		top 5px
+		right: 0
 	position absolute
 	top 15px
 	right: 15px
@@ -1055,6 +1256,28 @@ select.select-beauty
 	.icon
 		fill $mark
 
+.item-toggle
+	+above(1024px)
+		display none
+	flex(mid)
+	padding: 4px
+	border 1px solid $border-color
+	br(10px)
+	margin-top: 10px
+	.icon
+		size 12px
+		margin-left: 10px
+	span
+		font-size: 12px
+		font-weight: 700
+
+.item-toggle.active
+	border 1px solid $mark
+	span
+		color $mark
+	.icon
+		transform rotate(180deg)
+		fill $mark
 
 // items === end
 .rating
@@ -1089,6 +1312,9 @@ select.select-beauty
 	fw()
 	margin: 40px 0
 .pag__el
+	+below(768px)
+		margin: 5px
+		padding: 5px 10px
 	flex(mid)
 	cp()
 	tr()
@@ -1102,3 +1328,182 @@ select.select-beauty
 .pag__el--active
 	border-color $mark
 	color $mark
+
+// slide menu
+.slide-block
+	+below(1024px)
+		top: 60px //Высота хедера
+		position: fixed
+		top 60px
+		width: 360px
+		tr(all)
+		border-right 1px solid $border-color
+		height: calc(100% - 60px)
+		background: white
+		z-index 10
+		display block
+	+below(480px)
+		width: 100%
+	display none
+.slide-block-wrap
+	overflow-y auto
+	height: 100%
+	padding: 20px
+	.get-cat
+		width: 100%
+		margin-bottom: 20px
+	.search
+		width: 100%
+		margin: 0 0 20px 0
+	.header-tool__el
+		width: 100%
+		margin: 0 0 20px 0
+		flex(mid)
+	.header-loc
+		margin-bottom: 20px
+		span
+			font-size: 18px
+		.icon
+			size 20px
+.slide-auth
+	justify-content: flex-start!important
+	padding-left: 0
+	span
+		color black
+		font-size: 18px
+	.icon
+		fill black
+.slide-cart
+	span
+		font-size: 18px
+		font-weight: 700
+.slide-block--left
+	left 0
+	transform translateX(-100%)
+
+.slide-block--right
+	right 0
+	transform translateX(100%)
+
+.slide-block--open
+	transform translateX(0%)
+
+
+.body-fix
+	position: fixed!important
+	overflow-Y: scroll!important
+	width:100%!important
+
+.is-open
+	display none
+
+.slide-block-toggle--open
+	.is-close
+		display none!important
+	.is-open
+		display block!important
+	.header-cart__icon
+		.is-close
+			display none
+
+.header-nav-toggle
+	+above(1025px)
+		display none
+	flex(mid)
+	size 60px
+	margin: 0 10px 0 -10px
+	border-right 1px solid $border-color
+	.icon
+		size 24px
+
+.catalog-mobile
+	+above(1025px)
+		display none
+	flex(mid)
+	size 60px
+	height: calc(40px + 20px)
+	margin:0 -10px 0 10px
+	background: $mark
+	color white
+	font-weight: 700
+	flex(mid)
+	.icon
+		size 34px
+		fill white
+	.icon.is-open
+		size 18px
+.slider-menu
+	border-top 1px solid $border-color
+	border-bottom 1px solid $border-color
+	padding: 20px 20px
+	width calc(100% + 40px)
+	margin-left: -20px
+	background: $gray
+.slider-menu__el
+	display block
+	margin-bottom: 15px
+.slide-phone
+	margin-bottom: 20px
+	font-size: 24px
+	font-weight: 700
+	display inline-block
+// slide menu === end
+
+.show-cat
+	margin-bottom: 60px
+	+below(640px)
+		margin: 0
+		.btn--md
+			width: calc(100% + 20px)
+			margin-left: -10px
+			margin-right: -10px
+			br(0)
+			padding: 20px
+			font-size: 20px
+			font-weight: 700
+
+.section--mobile-hidden
+	+below(640px)
+		display none
+
+.item-condition
+	+above(1025px)
+		margin-top: -10px
+	f()
+	align-items center
+	margin-bottom: 10px
+	span
+		color green
+		font-weight: 700
+		font-size: 12px
+.item-condition__icon
+	size 10px
+	round()
+	background: green
+	margin-right: 5px
+
+.item-condition--false
+	span
+		color red
+	.item-condition__icon
+		background: red
+
+.filter
+	+below(768px)
+		display none
+
+.filter-toggle
+	+above(769px)
+		display none
+	flex(mid)
+	background: $mark
+	padding: 10px
+	margin-bottom: 20px
+	.icon
+		size 20px
+		fill white
+		margin-right: 10px
+	span
+		font-size: 16px
+		font-weight: 700
+		color white

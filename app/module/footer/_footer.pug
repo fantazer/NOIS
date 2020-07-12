@@ -1,6 +1,6 @@
-mixin footer()
+mixin footer(type)
 	//block footer
-	.footer-wrap
+	.footer-wrap(class=type?'footer-wrap--clear':'')
 		.main-cont
 			.footer-top
 				a(href="/").footer-logo

@@ -61,8 +61,17 @@
             </div>
             <div class="main-cont">
                 <div class="header-main">
+                    <div class="header-nav-toggle js-slide-block-toggle" data-menu="nav">
+                        <svg class="icon is-close">
+                            <use xlink:href="#menu"></use>
+                        </svg>
+                        <svg class="icon is-open">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
                     <a class="logo" href="/">
-                        <img src="img/logo.svg" alt="" />
+                        <img class="logo--desktop" src="img/logo.svg" alt="" />
+                        <img class="logo--mobile" src="img/logo--mobile.svg" alt="" />
                     </a>
                     <a class="logo-partner" href="#">
                         <img src="img/blum.svg" alt="" />
@@ -77,17 +86,27 @@
                         </div>
                     </div>
                     <div class="btn--sm btn--light header-get">Заказать звонок</div>
+                    <div class="catalog-mobile js-slide-block-toggle" data-menu="catalog">
+                        <svg class="icon is-close">
+                            <use xlink:href="#catalog"></use>
+                        </svg>
+                        <svg class="icon is-open">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
                 </div>
             </div>
             <div class="header-bottom-wrap">
                 <div class="main-cont">
                     <div class="header-bottom">
                         <div class="get-cat">
-                            <svg class="icon icon--close">
-                                <use xlink:href="#menu"></use>
-                            </svg>
-                            <span>Каталог</span>
-                            <div class="navigation">
+                            <div class="get-cat-wrap">
+                                <svg class="icon">
+                                    <use xlink:href="#menu"></use>
+                                </svg>
+                                <span>Каталог</span>
+                            </div>
+                            <div class="navigation slide-block slide-block--menu" data-menu="catalog">
                                 <div class="navigation-el">
                                     <a class="navigation-el-title" href="#">Мебельная фурнитура Blum</a>
                                     <ul class="navigation-list">
@@ -404,9 +423,49 @@
                     </div>
                 </div>
             </div>
+            <div class="slide-block slide-block--left slide-block--menu" data-menu="nav">
+                <div class="slide-block-wrap">
+                    <a class="slide-phone" href="tel:8 800 000 00 00">8 800 000 00 00</a>
+                    <div class="header-tool slide-cart">
+                        <a class="header-tool__el header-tool__el--mark" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#cart"></use>
+                            </svg>
+                            <span>Корзина</span>
+                        </a>
+                    </div>
+                    <div class="search">
+                        <input class="input" type="text" placeholder="Поиск" />
+                        <svg class="icon">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </div>
+                    <div class="slider-menu">
+                        <a class="slider-menu__el" href="#">О компании</a>
+                        <a class="slider-menu__el" href="#">Акции</a>
+                        <a class="slider-menu__el" href="#">Бонусная программа</a>
+                        <a class="slider-menu__el" href="#">Дилерская сеть</a>
+                        <a class="slider-menu__el" href="#">База знаний</a>
+                        <a class="slider-menu__el" href="#">Контакты</a>
+                        <a class="slider-menu__el" href="#">Отзывы</a>
+                    </div>
+                    <div class="header-tool__el slide-auth">
+                        <svg class="icon">
+                            <use xlink:href="#user"></use>
+                        </svg>
+                        <span>Войти</span>
+                    </div>
+                    <div class="header-loc">
+                        <svg class="icon">
+                            <use xlink:href="#location"></use>
+                        </svg>
+                        <span>Новосибирск</span>
+                    </div>
+                </div>
+            </div>
         </div>
         <!--block header end-->
-        <div class="content">
+        <div class="content content--clear">
             <div class="main-cont">
                 <div class="bread">
                     <a class="bread__el" href="#">Главная</a>
@@ -416,259 +475,267 @@
                 <div class="title title--xxl">Комплектующие компании Blum</div>
                 <div class="container">
                     <div class="toolbar">
-                        <div class="menu-head">Категория товара</div>
-                        <div class="menu-wrap">
-                            <a class="menu-el menu-el--link" href="#">
-                                <div class="menu-el__title">Название позиции</div>
-                                <div class="menu-el__val">14</div>
+                        <div class="filter-toggle">
+                            <svg class="icon">
+                                <use xlink:href="#filter"></use>
+                            </svg>
+                            <span>Фильтр</span>
+                        </div>
+                        <div class="filter">
+                            <div class="menu-head">Категория товара</div>
+                            <div class="menu-wrap">
+                                <a class="menu-el menu-el--link" href="#">
+                                    <div class="menu-el__title">Название позиции</div>
+                                    <div class="menu-el__val">14</div>
+                                </a>
+                                <a class="menu-el menu-el--link" href="#">
+                                    <div class="menu-el__title">Название позиции</div>
+                                    <div class="menu-el__val">14</div>
+                                </a>
+                                <a class="menu-el menu-el--link" href="#">
+                                    <div class="menu-el__title">Название позиции</div>
+                                    <div class="menu-el__val">14</div>
+                                </a>
+                                <a class="menu-el--active menu-el menu-el--link" href="#">
+                                    <div class="menu-el__title">Название позиции</div>
+                                    <div class="menu-el__val">14</div>
+                                </a>
+                                <a class="menu-el menu-el--link" href="#">
+                                    <div class="menu-el__title">Название позиции</div>
+                                    <div class="menu-el__val">14</div>
+                                </a>
+                                <a class="menu-el menu-el--link" href="#">
+                                    <div class="menu-el__title">Название позиции</div>
+                                    <div class="menu-el__val">14</div>
+                                </a>
+                                <a class="menu-el menu-el--link" href="#">
+                                    <div class="menu-el__title">Название позиции</div>
+                                    <div class="menu-el__val">14</div>
+                                </a>
+                                <a class="menu-el menu-el--link" href="#">
+                                    <div class="menu-el__title">Название позиции</div>
+                                    <div class="menu-el__val">14</div>
+                                </a>
+                            </div>
+                            <div class="menu-head">Фильтр по параметрам</div>
+                            <div class="menu-wrap">
+                                <div class="menu-el-wrap js-drop-wrap active">
+                                    <div class="menu-el menu-el--drop js-drop-toggle">
+                                        <div class="menu-el__title">Выдвижение</div>
+                                        <div class="menu-el__icon">
+                                            <svg class="icon">
+                                                <use xlink:href="#arrow-right"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="menu-sub js-drop-cont">
+                                        <div class="check-el">
+                                            <label class="style-label style-label--checkbox">
+                                                <input class="style-input" type="checkbox" />
+                                                <div class="style-input-element">
+                                                    <svg class="icon-check">
+                                                        <use xlink:href="#checked"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="style-input-text">Полное (13)</div>
+                                            </label>
+                                        </div>
+                                        <div class="check-el">
+                                            <label class="style-label style-label--checkbox">
+                                                <input class="style-input" type="checkbox" />
+                                                <div class="style-input-element">
+                                                    <svg class="icon-check">
+                                                        <use xlink:href="#checked"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="style-input-text">Частичное (34)</div>
+                                            </label>
+                                        </div>
+                                        <div class="check-el">
+                                            <label class="style-label style-label--checkbox">
+                                                <input class="style-input" type="checkbox" />
+                                                <div class="style-input-element">
+                                                    <svg class="icon-check">
+                                                        <use xlink:href="#checked"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="style-input-text">Активное (18)</div>
+                                            </label>
+                                        </div>
+                                        <div class="check-el">
+                                            <label class="style-label style-label--checkbox">
+                                                <input class="style-input" type="checkbox" />
+                                                <div class="style-input-element">
+                                                    <svg class="icon-check">
+                                                        <use xlink:href="#checked"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="style-input-text">Адаптивное (11)</div>
+                                            </label>
+                                        </div>
+                                        <div class="check-el">
+                                            <label class="style-label style-label--checkbox">
+                                                <input class="style-input" type="checkbox" />
+                                                <div class="style-input-element">
+                                                    <svg class="icon-check">
+                                                        <use xlink:href="#checked"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="style-input-text">Скошенное (38)</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-el-wrap js-drop-wrap">
+                                    <div class="menu-el menu-el--drop js-drop-toggle">
+                                        <div class="menu-el__title">Размеры</div>
+                                        <div class="menu-el__icon">
+                                            <svg class="icon">
+                                                <use xlink:href="#arrow-right"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="menu-sub js-drop-cont">
+                                        <div class="check-el">
+                                            <label class="style-label style-label--checkbox">
+                                                <input class="style-input" type="checkbox" />
+                                                <div class="style-input-element">
+                                                    <svg class="icon-check">
+                                                        <use xlink:href="#checked"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="style-input-text">Полное (13)</div>
+                                            </label>
+                                        </div>
+                                        <div class="check-el">
+                                            <label class="style-label style-label--checkbox">
+                                                <input class="style-input" type="checkbox" />
+                                                <div class="style-input-element">
+                                                    <svg class="icon-check">
+                                                        <use xlink:href="#checked"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="style-input-text">Частичное (34)</div>
+                                            </label>
+                                        </div>
+                                        <div class="check-el">
+                                            <label class="style-label style-label--checkbox">
+                                                <input class="style-input" type="checkbox" />
+                                                <div class="style-input-element">
+                                                    <svg class="icon-check">
+                                                        <use xlink:href="#checked"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="style-input-text">Активное (18)</div>
+                                            </label>
+                                        </div>
+                                        <div class="check-el">
+                                            <label class="style-label style-label--checkbox">
+                                                <input class="style-input" type="checkbox" />
+                                                <div class="style-input-element">
+                                                    <svg class="icon-check">
+                                                        <use xlink:href="#checked"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="style-input-text">Адаптивное (11)</div>
+                                            </label>
+                                        </div>
+                                        <div class="check-el">
+                                            <label class="style-label style-label--checkbox">
+                                                <input class="style-input" type="checkbox" />
+                                                <div class="style-input-element">
+                                                    <svg class="icon-check">
+                                                        <use xlink:href="#checked"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="style-input-text">Скошенное (38)</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-el-wrap js-drop-wrap">
+                                    <div class="menu-el menu-el--drop js-drop-toggle">
+                                        <div class="menu-el__title">Наличие</div>
+                                        <div class="menu-el__icon">
+                                            <svg class="icon">
+                                                <use xlink:href="#arrow-right"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="menu-sub js-drop-cont">
+                                        <div class="check-el">
+                                            <label class="style-label style-label--checkbox">
+                                                <input class="style-input" type="checkbox" />
+                                                <div class="style-input-element">
+                                                    <svg class="icon-check">
+                                                        <use xlink:href="#checked"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="style-input-text">Полное (13)</div>
+                                            </label>
+                                        </div>
+                                        <div class="check-el">
+                                            <label class="style-label style-label--checkbox">
+                                                <input class="style-input" type="checkbox" />
+                                                <div class="style-input-element">
+                                                    <svg class="icon-check">
+                                                        <use xlink:href="#checked"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="style-input-text">Частичное (34)</div>
+                                            </label>
+                                        </div>
+                                        <div class="check-el">
+                                            <label class="style-label style-label--checkbox">
+                                                <input class="style-input" type="checkbox" />
+                                                <div class="style-input-element">
+                                                    <svg class="icon-check">
+                                                        <use xlink:href="#checked"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="style-input-text">Активное (18)</div>
+                                            </label>
+                                        </div>
+                                        <div class="check-el">
+                                            <label class="style-label style-label--checkbox">
+                                                <input class="style-input" type="checkbox" />
+                                                <div class="style-input-element">
+                                                    <svg class="icon-check">
+                                                        <use xlink:href="#checked"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="style-input-text">Адаптивное (11)</div>
+                                            </label>
+                                        </div>
+                                        <div class="check-el">
+                                            <label class="style-label style-label--checkbox">
+                                                <input class="style-input" type="checkbox" />
+                                                <div class="style-input-element">
+                                                    <svg class="icon-check">
+                                                        <use xlink:href="#checked"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="style-input-text">Скошенное (38)</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn--sm btn--light btn--full btn--extend">Показать</div>
+                            <div class="btn--sm btn--empty btn--full btn--extend">Сбросить</div>
+                            <a class="btn-info" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#play"></use>
+                                </svg>
+                                <span>Монтаж и настройка подъемного механизма AVENTOS HF</span>
                             </a>
-                            <a class="menu-el menu-el--link" href="#">
-                                <div class="menu-el__title">Название позиции</div>
-                                <div class="menu-el__val">14</div>
-                            </a>
-                            <a class="menu-el menu-el--link" href="#">
-                                <div class="menu-el__title">Название позиции</div>
-                                <div class="menu-el__val">14</div>
-                            </a>
-                            <a class="menu-el--active menu-el menu-el--link" href="#">
-                                <div class="menu-el__title">Название позиции</div>
-                                <div class="menu-el__val">14</div>
-                            </a>
-                            <a class="menu-el menu-el--link" href="#">
-                                <div class="menu-el__title">Название позиции</div>
-                                <div class="menu-el__val">14</div>
-                            </a>
-                            <a class="menu-el menu-el--link" href="#">
-                                <div class="menu-el__title">Название позиции</div>
-                                <div class="menu-el__val">14</div>
-                            </a>
-                            <a class="menu-el menu-el--link" href="#">
-                                <div class="menu-el__title">Название позиции</div>
-                                <div class="menu-el__val">14</div>
-                            </a>
-                            <a class="menu-el menu-el--link" href="#">
-                                <div class="menu-el__title">Название позиции</div>
-                                <div class="menu-el__val">14</div>
+                            <a class="btn-info" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#doc"></use>
+                                </svg>
+                                <span>Инструкция по проектированию и установке подъемного механизма AVENTOS HF</span>
                             </a>
                         </div>
-                        <div class="menu-head">Фильтр по параметрам</div>
-                        <div class="menu-wrap">
-                            <div class="menu-el-wrap js-drop-wrap active">
-                                <div class="menu-el menu-el--drop js-drop-toggle">
-                                    <div class="menu-el__title">Выдвижение</div>
-                                    <div class="menu-el__icon">
-                                        <svg class="icon">
-                                            <use xlink:href="#arrow-right"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="menu-sub js-drop-cont">
-                                    <div class="check-el">
-                                        <label class="style-label style-label--checkbox">
-                                            <input class="style-input" type="checkbox" />
-                                            <div class="style-input-element">
-                                                <svg class="icon-check">
-                                                    <use xlink:href="#checked"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="style-input-text">Полное (13)</div>
-                                        </label>
-                                    </div>
-                                    <div class="check-el">
-                                        <label class="style-label style-label--checkbox">
-                                            <input class="style-input" type="checkbox" />
-                                            <div class="style-input-element">
-                                                <svg class="icon-check">
-                                                    <use xlink:href="#checked"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="style-input-text">Частичное (34)</div>
-                                        </label>
-                                    </div>
-                                    <div class="check-el">
-                                        <label class="style-label style-label--checkbox">
-                                            <input class="style-input" type="checkbox" />
-                                            <div class="style-input-element">
-                                                <svg class="icon-check">
-                                                    <use xlink:href="#checked"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="style-input-text">Активное (18)</div>
-                                        </label>
-                                    </div>
-                                    <div class="check-el">
-                                        <label class="style-label style-label--checkbox">
-                                            <input class="style-input" type="checkbox" />
-                                            <div class="style-input-element">
-                                                <svg class="icon-check">
-                                                    <use xlink:href="#checked"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="style-input-text">Адаптивное (11)</div>
-                                        </label>
-                                    </div>
-                                    <div class="check-el">
-                                        <label class="style-label style-label--checkbox">
-                                            <input class="style-input" type="checkbox" />
-                                            <div class="style-input-element">
-                                                <svg class="icon-check">
-                                                    <use xlink:href="#checked"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="style-input-text">Скошенное (38)</div>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-el-wrap js-drop-wrap">
-                                <div class="menu-el menu-el--drop js-drop-toggle">
-                                    <div class="menu-el__title">Размеры</div>
-                                    <div class="menu-el__icon">
-                                        <svg class="icon">
-                                            <use xlink:href="#arrow-right"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="menu-sub js-drop-cont">
-                                    <div class="check-el">
-                                        <label class="style-label style-label--checkbox">
-                                            <input class="style-input" type="checkbox" />
-                                            <div class="style-input-element">
-                                                <svg class="icon-check">
-                                                    <use xlink:href="#checked"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="style-input-text">Полное (13)</div>
-                                        </label>
-                                    </div>
-                                    <div class="check-el">
-                                        <label class="style-label style-label--checkbox">
-                                            <input class="style-input" type="checkbox" />
-                                            <div class="style-input-element">
-                                                <svg class="icon-check">
-                                                    <use xlink:href="#checked"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="style-input-text">Частичное (34)</div>
-                                        </label>
-                                    </div>
-                                    <div class="check-el">
-                                        <label class="style-label style-label--checkbox">
-                                            <input class="style-input" type="checkbox" />
-                                            <div class="style-input-element">
-                                                <svg class="icon-check">
-                                                    <use xlink:href="#checked"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="style-input-text">Активное (18)</div>
-                                        </label>
-                                    </div>
-                                    <div class="check-el">
-                                        <label class="style-label style-label--checkbox">
-                                            <input class="style-input" type="checkbox" />
-                                            <div class="style-input-element">
-                                                <svg class="icon-check">
-                                                    <use xlink:href="#checked"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="style-input-text">Адаптивное (11)</div>
-                                        </label>
-                                    </div>
-                                    <div class="check-el">
-                                        <label class="style-label style-label--checkbox">
-                                            <input class="style-input" type="checkbox" />
-                                            <div class="style-input-element">
-                                                <svg class="icon-check">
-                                                    <use xlink:href="#checked"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="style-input-text">Скошенное (38)</div>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-el-wrap js-drop-wrap">
-                                <div class="menu-el menu-el--drop js-drop-toggle">
-                                    <div class="menu-el__title">Наличие</div>
-                                    <div class="menu-el__icon">
-                                        <svg class="icon">
-                                            <use xlink:href="#arrow-right"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="menu-sub js-drop-cont">
-                                    <div class="check-el">
-                                        <label class="style-label style-label--checkbox">
-                                            <input class="style-input" type="checkbox" />
-                                            <div class="style-input-element">
-                                                <svg class="icon-check">
-                                                    <use xlink:href="#checked"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="style-input-text">Полное (13)</div>
-                                        </label>
-                                    </div>
-                                    <div class="check-el">
-                                        <label class="style-label style-label--checkbox">
-                                            <input class="style-input" type="checkbox" />
-                                            <div class="style-input-element">
-                                                <svg class="icon-check">
-                                                    <use xlink:href="#checked"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="style-input-text">Частичное (34)</div>
-                                        </label>
-                                    </div>
-                                    <div class="check-el">
-                                        <label class="style-label style-label--checkbox">
-                                            <input class="style-input" type="checkbox" />
-                                            <div class="style-input-element">
-                                                <svg class="icon-check">
-                                                    <use xlink:href="#checked"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="style-input-text">Активное (18)</div>
-                                        </label>
-                                    </div>
-                                    <div class="check-el">
-                                        <label class="style-label style-label--checkbox">
-                                            <input class="style-input" type="checkbox" />
-                                            <div class="style-input-element">
-                                                <svg class="icon-check">
-                                                    <use xlink:href="#checked"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="style-input-text">Адаптивное (11)</div>
-                                        </label>
-                                    </div>
-                                    <div class="check-el">
-                                        <label class="style-label style-label--checkbox">
-                                            <input class="style-input" type="checkbox" />
-                                            <div class="style-input-element">
-                                                <svg class="icon-check">
-                                                    <use xlink:href="#checked"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="style-input-text">Скошенное (38)</div>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="btn--sm btn--light btn--full btn--extend">Показать</div>
-                        <div class="btn--sm btn--empty btn--full btn--extend">Сбросить</div>
-                        <a class="btn-info" href="#">
-                            <svg class="icon">
-                                <use xlink:href="#play"></use>
-                            </svg>
-                            <span>Монтаж и настройка подъемного механизма AVENTOS HF</span>
-                        </a>
-                        <a class="btn-info" href="#">
-                            <svg class="icon">
-                                <use xlink:href="#doc"></use>
-                            </svg>
-                            <span>Инструкция по проектированию и установке подъемного механизма AVENTOS HF</span>
-                        </a>
                     </div>
                     <div class="info">
                         <div class="catalog-sort">
@@ -734,7 +801,18 @@
                                         <div class="item-cost__val">8700</div>
                                         <span>руб/шт</span>
                                     </div>
+                                    <div class="item-toggle">
+                                        <span>Подробнее</span>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                    </div>
                                     <div class="item-config">
+                                        <div class="item-condition">
+                                            <!--toggle class .item-condition--false есть товара нет-->
+                                            <div class="item-condition__icon"></div>
+                                            <span>В наличии</span>
+                                        </div>
                                         <div class="item-config__el">
                                             <div class="item-config__title">Цвет ( Ваш Выбор)</div>
                                             <div class="color js-choose-group">
@@ -792,7 +870,18 @@
                                         <div class="item-cost__val">8700</div>
                                         <span>руб/шт</span>
                                     </div>
+                                    <div class="item-toggle">
+                                        <span>Подробнее</span>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                    </div>
                                     <div class="item-config">
+                                        <div class="item-condition">
+                                            <!--toggle class .item-condition--false есть товара нет-->
+                                            <div class="item-condition__icon"></div>
+                                            <span>В наличии</span>
+                                        </div>
                                         <div class="item-config__el">
                                             <div class="item-config__title">Цвет ( Ваш Выбор)</div>
                                             <div class="color js-choose-group">
@@ -850,7 +939,18 @@
                                         <div class="item-cost__val">8700</div>
                                         <span>руб/шт</span>
                                     </div>
+                                    <div class="item-toggle">
+                                        <span>Подробнее</span>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                    </div>
                                     <div class="item-config">
+                                        <div class="item-condition">
+                                            <!--toggle class .item-condition--false есть товара нет-->
+                                            <div class="item-condition__icon"></div>
+                                            <span>В наличии</span>
+                                        </div>
                                         <div class="item-config__el">
                                             <div class="item-config__title">Цвет ( Ваш Выбор)</div>
                                             <div class="color js-choose-group">
@@ -908,7 +1008,18 @@
                                         <div class="item-cost__val">8700</div>
                                         <span>руб/шт</span>
                                     </div>
+                                    <div class="item-toggle">
+                                        <span>Подробнее</span>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                    </div>
                                     <div class="item-config">
+                                        <div class="item-condition">
+                                            <!--toggle class .item-condition--false есть товара нет-->
+                                            <div class="item-condition__icon"></div>
+                                            <span>В наличии</span>
+                                        </div>
                                         <div class="item-config__el">
                                             <div class="item-config__title">Цвет ( Ваш Выбор)</div>
                                             <div class="color js-choose-group">
@@ -966,7 +1077,18 @@
                                         <div class="item-cost__val">8700</div>
                                         <span>руб/шт</span>
                                     </div>
+                                    <div class="item-toggle">
+                                        <span>Подробнее</span>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                    </div>
                                     <div class="item-config">
+                                        <div class="item-condition">
+                                            <!--toggle class .item-condition--false есть товара нет-->
+                                            <div class="item-condition__icon"></div>
+                                            <span>В наличии</span>
+                                        </div>
                                         <div class="item-config__el">
                                             <div class="item-config__title">Цвет ( Ваш Выбор)</div>
                                             <div class="color js-choose-group">
@@ -1024,7 +1146,18 @@
                                         <div class="item-cost__val">8700</div>
                                         <span>руб/шт</span>
                                     </div>
+                                    <div class="item-toggle">
+                                        <span>Подробнее</span>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                    </div>
                                     <div class="item-config">
+                                        <div class="item-condition">
+                                            <!--toggle class .item-condition--false есть товара нет-->
+                                            <div class="item-condition__icon"></div>
+                                            <span>В наличии</span>
+                                        </div>
                                         <div class="item-config__el">
                                             <div class="item-config__title">Цвет ( Ваш Выбор)</div>
                                             <div class="color js-choose-group">
@@ -1082,7 +1215,18 @@
                                         <div class="item-cost__val">8700</div>
                                         <span>руб/шт</span>
                                     </div>
+                                    <div class="item-toggle">
+                                        <span>Подробнее</span>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                    </div>
                                     <div class="item-config">
+                                        <div class="item-condition">
+                                            <!--toggle class .item-condition--false есть товара нет-->
+                                            <div class="item-condition__icon"></div>
+                                            <span>В наличии</span>
+                                        </div>
                                         <div class="item-config__el">
                                             <div class="item-config__title">Цвет ( Ваш Выбор)</div>
                                             <div class="color js-choose-group">
@@ -1140,7 +1284,18 @@
                                         <div class="item-cost__val">8700</div>
                                         <span>руб/шт</span>
                                     </div>
+                                    <div class="item-toggle">
+                                        <span>Подробнее</span>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                    </div>
                                     <div class="item-config">
+                                        <div class="item-condition">
+                                            <!--toggle class .item-condition--false есть товара нет-->
+                                            <div class="item-condition__icon"></div>
+                                            <span>В наличии</span>
+                                        </div>
                                         <div class="item-config__el">
                                             <div class="item-config__title">Цвет ( Ваш Выбор)</div>
                                             <div class="color js-choose-group">
@@ -1198,7 +1353,18 @@
                                         <div class="item-cost__val">8700</div>
                                         <span>руб/шт</span>
                                     </div>
+                                    <div class="item-toggle">
+                                        <span>Подробнее</span>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                    </div>
                                     <div class="item-config">
+                                        <div class="item-condition">
+                                            <!--toggle class .item-condition--false есть товара нет-->
+                                            <div class="item-condition__icon"></div>
+                                            <span>В наличии</span>
+                                        </div>
                                         <div class="item-config__el">
                                             <div class="item-config__title">Цвет ( Ваш Выбор)</div>
                                             <div class="color js-choose-group">
@@ -1256,7 +1422,18 @@
                                         <div class="item-cost__val">8700</div>
                                         <span>руб/шт</span>
                                     </div>
+                                    <div class="item-toggle">
+                                        <span>Подробнее</span>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                    </div>
                                     <div class="item-config">
+                                        <div class="item-condition">
+                                            <!--toggle class .item-condition--false есть товара нет-->
+                                            <div class="item-condition__icon"></div>
+                                            <span>В наличии</span>
+                                        </div>
                                         <div class="item-config__el">
                                             <div class="item-config__title">Цвет ( Ваш Выбор)</div>
                                             <div class="color js-choose-group">
@@ -1314,7 +1491,18 @@
                                         <div class="item-cost__val">8700</div>
                                         <span>руб/шт</span>
                                     </div>
+                                    <div class="item-toggle">
+                                        <span>Подробнее</span>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                    </div>
                                     <div class="item-config">
+                                        <div class="item-condition">
+                                            <!--toggle class .item-condition--false есть товара нет-->
+                                            <div class="item-condition__icon"></div>
+                                            <span>В наличии</span>
+                                        </div>
                                         <div class="item-config__el">
                                             <div class="item-config__title">Цвет ( Ваш Выбор)</div>
                                             <div class="color js-choose-group">
@@ -1372,7 +1560,18 @@
                                         <div class="item-cost__val">8700</div>
                                         <span>руб/шт</span>
                                     </div>
+                                    <div class="item-toggle">
+                                        <span>Подробнее</span>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                    </div>
                                     <div class="item-config">
+                                        <div class="item-condition">
+                                            <!--toggle class .item-condition--false есть товара нет-->
+                                            <div class="item-condition__icon"></div>
+                                            <span>В наличии</span>
+                                        </div>
                                         <div class="item-config__el">
                                             <div class="item-config__title">Цвет ( Ваш Выбор)</div>
                                             <div class="color js-choose-group">
