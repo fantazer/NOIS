@@ -564,6 +564,7 @@ body
 .card-el__title
 	+below(768px)
 		font-size: 24px
+		min-width 150px
 	margin-bottom: 20px
 	font-weight: 700
 	position relative
@@ -573,6 +574,8 @@ body
 	display inline-block
 	@extend .type--mdx
 	font-family: "Handbook"
+	min-width 120px
+
 .card-el__title--lg
 	@extend .type--xl
 .card-list
@@ -648,6 +651,7 @@ body
 
 .slider-wrap--arrow
 	flex(between)
+	position relative
 	.slider-item
 		+below(1024px)
 			width: 100%
@@ -682,7 +686,7 @@ body
 
 .slick-dots
 	+below(720px)
-		bottom -20px
+		bottom 0
 	width: 100%
 	display: flex !important
 	align-items: center
