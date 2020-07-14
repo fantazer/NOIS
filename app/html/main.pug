@@ -109,12 +109,7 @@ include block_html/_include.pug
 							+icon("arrow-right","icon")
 						.slider-control.slider-control--left
 							+icon("arrow-left","icon")
-		.info-form-wrap.info-form-wrap--dark
-			.title.title--xxl.type--up подпишитесь на новости
-			.subscr-text Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа форм развития. С другой стороны сложившаяся структура организации требуют от нас анализа существенных финансовых и административных условий.
-			.info-form
-				input(type="text" placeholder="Введите ваш e-mail" class="input")
-				.btn--sm.btn--mark.btn--mid Подписаться
+		+orderForm()
 		.section.section--snow
 			.unit.unit--mark.unit--right
 			.main-cont
@@ -134,14 +129,14 @@ include block_html/_include.pug
 								+icon("download","icon")
 				.btn-row-mid
 					a(href="#").btn--md.btn--mark Перейти в “База знаний”
-
 		.section.section--mobile-hidden
 			.main-cont
 				.section-title Учебные центры
-				.slider-wrap.slider-wrap--arrow-in
+				.slider-wrap.slider-wrap--arrow-in.slider-wrap--extend
 					.slider-item.slider-banner
 						- for (var i=0;i<4;i++)
-							.slider-banner__el(style="background-image:url('img/banner-lg-1.jpg')")
+							.slider-banner__el
+								.slider-banner__el-img(style="background-image:url('img/banner-lg-1.jpg')")
 								.slider-banner-nav
 									a(href="#").slider-banner-nav__el Записаться на обучения
 									a(href="#").slider-banner-nav__el Прогрмаммы обучения
@@ -172,13 +167,14 @@ include block_html/_include.pug
 							+icon("data-protection","icon")
 						.info-cont__el-title Влияние цвета фасада на долговечность
 						.info-cont__el-text У кухонного гарнитура есть несколько поверхностей: дверцы шкафов (фасады), мебельный каркас, полки и столешница. Разберём для общего развития какие они бывают, хотя на самом деле есть всего 1 верный вариант и его мы явно укажем.
-		.section.section--gray.section--mobile-hidden
+		.section.section--gray.section--mobile-hidden.slider-wrap--extend
 			.main-cont
 				.section-title “тест-драйв” кухни
 				.slider-wrap.slider-wrap--arrow-in
 					.slider-item.slider-banner
 						- for (var i=0;i<4;i++)
-							.slider-banner__el(style="background-image:url('img/banner-lg-2.jpg')")
+							.slider-banner__el
+								.slider-banner__el-img(style="background-image:url('img/banner-lg-2.jpg')")
 								.slider-banner-nav
 									a(href="#").slider-banner-nav__el Записаться на обучения
 									a(href="#").slider-banner-nav__el Прогрмаммы обучения

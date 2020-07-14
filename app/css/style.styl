@@ -611,6 +611,8 @@ body
 	padding: 80px 0
 	position relative
 	overflow hidden
+.section--sm
+	padding: 30px 0
 .unit
 	+below(1400px)
 		display none
@@ -643,6 +645,8 @@ body
 	margin-bottom: 30px
 
 // slider
+.slider-item
+	position relative
 .slider-item--extend
 	.slick-slide
 		margin: 0 10px
@@ -658,11 +662,14 @@ body
 		width: calc(100% - 100px)
 .slider-wrap--arrow-in
 	position relative
-	margin-bottom: 100px
+	margin-bottom: 70px
 	.slider-control-wrap
 		position absolute
 		top 0
 		right 0
+.slider-wrap--extend
+	margin-bottom: 100px
+
 .slider-control-wrap
 	+below(1024px)
 		display none
@@ -692,10 +699,12 @@ body
 	align-items: center
 	justify-content: center
 	bottom -50px
+	margin-bottom: 0!important
 	li
 		+below(720px)
 			size 10px
 			flex(mid)
+		margin: 0 5px!important
 	.dot
 		+below(720px)
 			flex(mid)
@@ -766,10 +775,12 @@ body
 
 // slider banner
 .slider-banner__el
-	padding: 2.5%
+	position relative
+.slider-banner__el-img
 	max-height 500px
 	bg-full()
-	position relative
+	padding: 25%
+
 .slider-banner-nav
 	position absolute
 	width: 100%
@@ -969,6 +980,10 @@ body
 	.menu-el__title
 		font-weight: 700
 	background: #f9f9f9
+.menu-el--mark
+	background: $mark
+	color white
+	border 1px solid $mark
 .menu-el__val
 	margin-left auto
 	color $dark-gray
@@ -1511,3 +1526,16 @@ select.select-beauty
 		font-size: 16px
 		font-weight: 700
 		color white
+
+.row
+	display: grid
+	grid-gap 30px
+.row--3
+	grid-template-columns: repeat(auto-fill, minmax(16rem,1fr))
+
+.partner-img
+	padding: 20px
+	background: white
+	border 1px solid $border-color
+	min-height 110px
+	flex(mid)

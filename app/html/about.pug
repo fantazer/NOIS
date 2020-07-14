@@ -1,0 +1,75 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.content--clear
+		.main-cont
+			+bread()
+			.container
+				.toolbar
+					.menu-wrap
+						a(href="#").menu-el.menu-el--mark.menu-el--link
+							.menu-el__title О компании Ноис
+						a(href="#").menu-el.menu-el--link
+							.menu-el__title История компании Ноис
+				.info
+					.title.title--xxl О компании
+					.text
+						p Компания НОИС была основана в 1992 году и является одним из крупнейших поставщиков мебельной фурнитуры премиум класса по Сибири и Дальнему Востоку.
+
+						p Каждый клиент компании НОИС ежедневно выбирает высококачественную продукцию для своих изделий. Благодаря этому они получают мебель, которая служит годами.
+
+						p В наших офисах широко представлены бренды, которым доверяют миллионы людей во всем мире.
+						.section--sm
+							.row.row--3
+								.partner-img
+									img(src="img/partner-1.png", alt="")
+								.partner-img
+									img(src="img/partner-2.png", alt="")
+								.partner-img
+									img(src="img/partner-3.png", alt="")
+								.partner-img
+									img(src="img/partner-4.png", alt="")
+								.partner-img
+									img(src="img/partner-4.png", alt="")
+								.partner-img
+									img(src="img/partner-5.png", alt="")
+						p Ассортимент компании насчитывает более 3 000 позиций, которые обеспечивают нашим клиентам возможность приобрести все комплектующие в одном месте.
+
+						p Общая площадь наших складов более 2 000 кв.м, что гарантирует стабильное наличие самых востребованных позиций мебельной фурнитуры.
+
+						.slider-wrap.slider-wrap--arrow-in
+							.slider-item.slider-banner
+								- for (var i=0;i<4;i++)
+									.slider-banner__el
+										.slider-banner__el-img(style="background-image:url('img/banner-lg-1.jpg')")
+							.slider-control-wrap
+								.slider-control.slider-control--right
+									+icon("arrow-right","icon")
+								.slider-control.slider-control--left
+									+icon("arrow-left","icon")
+
+						p Наша команда ежедневно предоставляет клиентам информационную и техническую поддержку, именно для этого у нашей компании открыты учебные центры в Новосибирске, Иркутске и Владивостоке.
+
+						.slider-wrap.slider-wrap--arrow-in
+							.slider-item.slider-banner
+								- for (var i=0;i<3;i++)
+									.slider-banner__el
+										.slider-banner__el-img(style="background-image:url('img/banner-lg-2.jpg')")
+							.slider-control-wrap
+								.slider-control.slider-control--right
+									+icon("arrow-right","icon")
+								.slider-control.slider-control--left
+									+icon("arrow-left","icon")
+
+						p Компания НОИС стремится сотрудничать с каждым производителем мебели на территории Сибири и Дальнего Востока, поэтому мы развиваем нашу дилерскую сеть, которая уже насчитывает 13 регионов.
+
+						img(src="img/map.jpg", alt="").img
+
+						p Мы всегда рады помочь Вам в выборе фурнитуры для качественной мебели!
+
+						p Свяжитесь с нами по указанным <a href="#">контактам</a>.
+		+orderForm()
++footer()
+include ./block_html/_script.pug

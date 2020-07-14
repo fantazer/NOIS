@@ -345,6 +345,13 @@ a:visiter {
 .text ul li:last-child {
   margin-bottom: 0;
 }
+.text a {
+  color: #ff671f;
+  text-decoration: underline;
+}
+.text .img {
+  margin: 30px 0;
+}
 .icon-row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1976,6 +1983,9 @@ body {
     padding: 30px 0;
   }
 }
+.section--sm {
+  padding: 30px 0;
+}
 .unit {
   position: absolute;
   width: 15%;
@@ -2017,6 +2027,9 @@ body {
   text-transform: uppercase;
   margin-bottom: 30px;
 }
+.slider-item {
+  position: relative;
+}
 .slider-item--extend .slick-slide {
   margin: 0 10px;
 }
@@ -2049,12 +2062,15 @@ body {
 }
 .slider-wrap--arrow-in {
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
 }
 .slider-wrap--arrow-in .slider-control-wrap {
   position: absolute;
   top: 0;
   right: 0;
+}
+.slider-wrap--extend {
+  margin-bottom: 100px;
 }
 .slider-control-wrap {
   display: -webkit-box;
@@ -2119,11 +2135,15 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   bottom: -50px;
+  margin-bottom: 0 !important;
 }
 @media only screen and (max-width: 720px) {
   .slick-dots {
     bottom: 0;
   }
+}
+.slick-dots li {
+  margin: 0 5px !important;
 }
 @media only screen and (max-width: 720px) {
   .slick-dots li {
@@ -2265,12 +2285,14 @@ body {
   height: 16px;
 }
 .slider-banner__el {
-  padding: 2.5%;
+  position: relative;
+}
+.slider-banner__el-img {
   max-height: 500px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  position: relative;
+  padding: 25%;
 }
 .slider-banner-nav {
   position: absolute;
@@ -2606,6 +2628,11 @@ body {
 }
 .menu-el--active .menu-el__title {
   font-weight: 700;
+}
+.menu-el--mark {
+  background: #ff671f;
+  color: #fff;
+  border: 1px solid #ff671f;
 }
 .menu-el__val {
   margin-left: auto;
@@ -3481,6 +3508,31 @@ select.select-beauty {
   font-size: 16px;
   font-weight: 700;
   color: #fff;
+}
+.row {
+  display: grid;
+  grid-gap: 30px;
+}
+.row--3 {
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+.partner-img {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  min-height: 110px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @-webkit-keyframes slideInDown {
   from {
