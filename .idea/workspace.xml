@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33fc4985-0812-4917-a972-022b8742b981" name="Default" comment="add fix title cat">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="33fc4985-0812-4917-a972-022b8742b981" name="Default" comment="add deploy folder DIST">
+      <change afterPath="$PROJECT_DIR$/app/fonts/PTSans-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/fonts/PTSans-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/fonts/PTSans-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/fonts/PTSans-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/variable/config/_typography.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/config/_typography.styl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,17 +33,17 @@
     <property name="SearchEverywhereHistoryKey" value="clone&#9;ACTION&#9;Git.Clone" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="add_unversioned_files" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/img/svg" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/fonts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\PROJECT\WORK\NOIS\app\fonts" />
       <recent name="E:\PROJECT\WORK\NOIS\app\img\svg" />
       <recent name="E:\PROJECT\WORK\NOIS\app\img" />
       <recent name="E:\PROJECT\WORK\NOIS\app\bower" />
       <recent name="E:\PROJECT\WORK\NOIS\dist\img" />
-      <recent name="E:\PROJECT\WORK\NOIS" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -134,7 +138,7 @@
       <workItem from="1594372483083" duration="2226000" />
       <workItem from="1594543250672" duration="19821000" />
       <workItem from="1594640764559" duration="1464000" />
-      <workItem from="1594714915157" duration="1929000" />
+      <workItem from="1594714915157" duration="2095000" />
     </task>
     <task id="LOCAL-00001" summary="fix browsersynk">
       <created>1515935102048</created>
@@ -430,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594717191280</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="add deploy folder DIST">
+      <created>1594717272717</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1594717272717</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,7 +479,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="fix include style files" />
     <MESSAGE value="fix typography" />
     <MESSAGE value="add modal + bsh-hover()" />
     <MESSAGE value="add mixin font()" />
@@ -493,13 +503,14 @@
     <MESSAGE value="migrate to node v11.6" />
     <MESSAGE value="add mobile version" />
     <MESSAGE value="add fix title cat" />
-    <option name="LAST_COMMIT_MESSAGE" value="add fix title cat" />
+    <MESSAGE value="add deploy folder DIST" />
+    <option name="LAST_COMMIT_MESSAGE" value="add deploy folder DIST" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1753" y="-103" key="CommitChangelistDialog2" timestamp="1594717187690">
+    <state x="-1753" y="-103" key="CommitChangelistDialog2" timestamp="1594717270989">
       <screen x="-2560" y="-256" width="2560" height="1400" />
     </state>
-    <state x="-1753" y="-103" key="CommitChangelistDialog2/-2560.-256.2560.1400/0.0.1920.1040/1920.166.1280.984@-2560.-256.2560.1400" timestamp="1594717187690" />
+    <state x="-1753" y="-103" key="CommitChangelistDialog2/-2560.-256.2560.1400/0.0.1920.1040/1920.166.1280.984@-2560.-256.2560.1400" timestamp="1594717270989" />
     <state x="-1753" y="-103" key="CommitChangelistDialog2/0.0.1920.1040/1920.166.1280.984/-2560.-256.2560.1400@-2560.-256.2560.1400" timestamp="1590600228007" />
     <state x="-1500" y="199" key="FileChooserDialogImpl" timestamp="1589364217162">
       <screen x="-2560" y="-256" width="2560" height="1400" />
@@ -518,10 +529,10 @@
     </state>
     <state x="-1779" y="87" key="SettingsEditor/-2560.-256.2560.1400/0.0.1920.1040/1920.166.1280.984@-2560.-256.2560.1400" timestamp="1594225450501" />
     <state x="-1779" y="87" key="SettingsEditor/0.0.1920.1040/1920.166.1280.984/-2560.-256.2560.1400@-2560.-256.2560.1400" timestamp="1593963689771" />
-    <state x="-2560" y="-256" key="Vcs.Push.Dialog.v2" timestamp="1594717193080">
+    <state x="-2560" y="-256" key="Vcs.Push.Dialog.v2" timestamp="1594717282630">
       <screen x="-2560" y="-256" width="2560" height="1400" />
     </state>
-    <state x="-2560" y="-256" key="Vcs.Push.Dialog.v2/-2560.-256.2560.1400/0.0.1920.1040/1920.166.1280.984@-2560.-256.2560.1400" timestamp="1594717193080" />
+    <state x="-2560" y="-256" key="Vcs.Push.Dialog.v2/-2560.-256.2560.1400/0.0.1920.1040/1920.166.1280.984@-2560.-256.2560.1400" timestamp="1594717282630" />
     <state x="-2560" y="-256" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.166.1280.984/-2560.-256.2560.1400@-2560.-256.2560.1400" timestamp="1590600294109" />
     <state x="-1478" y="353" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594213757910">
       <screen x="-2560" y="-256" width="2560" height="1400" />
@@ -531,10 +542,10 @@
       <screen x="-2560" y="-256" width="2560" height="1400" />
     </state>
     <state x="-1566" y="181" width="571" height="526" key="find.popup/-2560.-256.2560.1400/0.0.1920.1040/1920.166.1280.984@-2560.-256.2560.1400" timestamp="1594559801357" />
-    <state x="-1617" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1594562784992">
+    <state x="-1617" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1594717357508">
       <screen x="-2560" y="-256" width="2560" height="1400" />
     </state>
-    <state x="-1617" y="59" width="672" height="678" key="search.everywhere.popup/-2560.-256.2560.1400/0.0.1920.1040/1920.166.1280.984@-2560.-256.2560.1400" timestamp="1594562784992" />
+    <state x="-1617" y="59" width="672" height="678" key="search.everywhere.popup/-2560.-256.2560.1400/0.0.1920.1040/1920.166.1280.984@-2560.-256.2560.1400" timestamp="1594717357508" />
     <state x="-1617" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.166.1280.984/-2560.-256.2560.1400@-2560.-256.2560.1400" timestamp="1593978796438" />
   </component>
 </project>
