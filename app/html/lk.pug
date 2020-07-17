@@ -1,0 +1,138 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.content--gray.content--clear
+		.main-cont
+			+bread()
+			.lk
+				.lk-toolbar
+					.profile
+						.profile__img
+							.profile__img-el(style="background-image:url('img/user.jpg')").hidden
+							.profile__img-icon
+								+icon("user","icon")
+							.profile__img-load
+								.profile__img-load-icon
+									+icon("upload","icon")
+						.profile-wrap
+							.profile__name ООО "Вектор"
+							.profile-row
+								.profile-row__name ИНН
+								.profile-row__val 12392293
+							.profile-row
+								.profile-row__name ОГРН
+								.profile-row__val 2134 32023 03230 3233
+							.profile-row
+								.profile-row__name КПП
+								.profile-row__val 032303233
+							.profile-row
+								.profile-row__name Юр.Адрес
+								.profile-row__val ул Ленина д82
+							.profile-row
+								.profile-row__name Сотрудники компании
+								.profile-row__val Ольга Иванова
+								.profile-row__val Виктор Смирнов
+								.profile-row__val Антон Повоп
+							a(href="#").profile-change
+								+icon("edit","icon")
+								span изменить информацию
+							.profile-footer
+								.profile-footer-info
+									.profile-footer__text.hidden у вас нет бонусов
+										// for bonus = 0
+									.profile-footer__text мои бонусы:
+									.profile-footer__val 2500
+								.profile-footer__icon
+									+icon("info","icon")
+					a(href="#").exit
+						.icon-block.icon-block--mark
+							+icon("exit","icon")
+						span Выйти
+
+				.lk-info
+					.lk-info__el
+						.title.title--lg История заказов
+						.search
+							input(type="text" placeholder="Поиск по заказам" class="input")
+							+icon("search","icon")
+						.history
+							- for (var j=0;j<5;j++)
+								.history-card(class=j===0?'history-card--active':'')
+									.history-card__wrap
+										.history-card__info
+											.history-card__numb № 43576
+											.history-card__date 28 Сентября, 2017
+										if(j!==1 && j!==2)
+											.history-card__state.history-card__state--true Оплачен
+										else
+											.history-card__state В обработке
+										// add class .history-card__state--true for delivered
+										.history-card__condition
+											.history-card__size 3 товара
+											.history-card__price_val 5430 р
+									.history-info(class=j===0?'show':'')
+										.history-info-wrap
+											.history-info__el
+												.history-info__el-title Состав заказа
+												.goods-list
+													- for (var i=0;i<4;i++)
+														.goods-list__el
+															.goods-list__el-name San Benedetto Aquavitamin an Benedetto
+															.goods-list__el-val x 2
+															.goods-list__el-cost 1003 р.
+
+												//.history-info-total
+													.history-info-total__text Сумма:
+													.history-info-total__val 1 184р
+
+							.history-more
+								+icon("refresh","icon")
+								span показать еще
+							.order-empty.hidden
+								.order-empty-title Ваша история пуста =(
+								.order-empty-text Сделайте заказ
+								.btn--md.btn--mark Посмотреть каталог
+
+					.lk-info__el
+						.title.title--lg Мои персональные скидки
+						.lk-sale
+							.lk-sale__el
+								.lk-sale__val -5%
+								.lk-sale__name На столешницы из искусственного камня
+							.lk-sale__el
+								.lk-sale__val -25%
+								.lk-sale__name На петли фирмы Bulma
+							.lk-sale__el
+								.lk-sale__val -40%
+								.lk-sale__name На фасады ручной работы из Италии
+
+					.lk-info__el
+						.title.title--lg История списания баллов
+						.bonus-condition
+							- for (var i=0;i<6;i++)
+								.bonus-condition__el
+									.bonus-condition__date
+										+icon("checked","icon icon--sm icon--mark")
+										span 12.06.2020
+									a(href="#").bonus-condition__type №129329
+									.bonus-condition__val 23 000 руб
+
+
+					.lk-info__el
+						.title.title--lg Мои менеджеры
+						.manager-list
+							- for (var i=0;i<3;i++)
+								.manager__el
+									.manager__el-photo(style="background-image:url('img/manager.jpg')")
+									.manager__el-cont
+										.manager__el-name Ольга Иванова
+										.manager__el-staff Менеджер производства
+										.manager__el-info тел: +7(925)123-43-24
+										.manager__el-info info@mail.ru
+
+
+		+orderForm()
++footer()
+include ./block_html/_script.pug

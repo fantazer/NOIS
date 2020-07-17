@@ -67,27 +67,6 @@ $(document).ready(function () {
 	});
 	//modals===end
 
-	// fix top-menu
-	/*var shrinkHeader = 250;
-	var head = $('.header');
-	var heightHeader = head.height();
-	$(window).scroll(function() {
-		var scroll = $(this).scrollTop();
-		if ( scroll >= shrinkHeader ) {
-				$('body').css('paddingTop',heightHeader);
-				head.addClass('shrink');
-			}
-			else {
-					$('body').css('paddingTop',0);
-					head.removeClass('shrink');
-			}
-	});
-
-	$(window).resize(function(){
-		heightHeader=head.height();
-	});*/
-	// fix top-menu === end
-
 	// slider
 		$('.slider-list').slick({
 			slidesToShow: 3,
@@ -144,6 +123,42 @@ $(document).ready(function () {
 			$(this).closest(".slider-wrap").find(".slider-item").slick('slickPrev');
 		});
 		// custom arrow el === end
+
+		// gallery
+			$('.gallery-slider').slick({
+				slidesToShow: 1,
+				speed: 500,
+				dots:false,
+				arrows:false,
+				asNavFor: '.gallery-slider-nav',
+
+			});
+		// gallery === end
+
+		// gallery nav
+		$('.gallery-slider-nav').slick({
+			slidesToShow: 5,
+			speed: 500,
+			dots:false,
+			arrows:false,
+			rows:0,
+			asNavFor: '.gallery-slider',
+			//centerMode: true,
+			focusOnSelect: true,
+
+			responsive: [
+
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 4
+					}
+				}
+			],
+		});
+		// gallery nav === end
+	// SLIDERS === end
+
 	// slider === end
 
 	// SWITCHERS
@@ -245,5 +260,67 @@ $(document).ready(function () {
 			$('.filter').slideToggle();
 	});
 	// toggle mobile filter === end
+
+	// range row
+	if($(".range").length>0){
+		$(".range").ionRangeSlider({
+			//postfix: " баллов",
+			//prefix: "Списать "
+		});
+	}
+	// range row === end
+	
+	// dropdown
+	$('.dropdown').click(function () {
+		$(this).attr('tabindex', 1).focus();
+		$(this).toggleClass('active');
+		$(this).find('.dropdown-menu').slideToggle(300);
+	});
+	$('.dropdown').focusout(function () {
+		$(this).removeClass('active');
+		$(this).find('.dropdown-menu').slideUp(300);
+	});
+	$('.dropdown .dropdown-menu__el').click(function () {
+		var parent = $(this).parents('.dropdown')
+		parent.find('.dropdown-current__val').html($(this).html());
+		parent.find('input').attr('value', $(this).data('value'));
+	});
+	// dropdown === end
+
+	//increment field
+	$('.incr__minus').click(function (e) {
+		var $input = $(this).parent().find('.incr__val span');
+		var count = parseInt($input.html()) - 1;
+		if (count < 1) {
+			count = 1;
+		}
+		$input.html(count);
+	});
+
+	$('.incr__plus').click(function () {
+		var $input = $(this).parent().find('.incr__val span');
+		var count = parseInt($input.html()) + 1;
+		count = count > 100 ? 100 : count;
+		$input.html(count);
+	});
+	//increment field end
+	
+	// fancybox
+	$('.fancybox').fancybox();
+	// fancybox === end
+
+	//history accord
+	$('.history-card__wrap').click(function () {
+		var current = $(this).closest('.history-card');
+		if(current.hasClass("history-card--active")){
+			current.removeClass("history-card--active")
+			current.find('.history-info').removeClass("show");
+			current.find('.history-info').slideUp();
+		}else{
+			current.addClass("history-card--active")
+			current.find('.history-info').slideDown();
+		}
+	});
+	//history accord===end
 
 });

@@ -8,6 +8,7 @@
 	text-align: center
 	font-family "Handbook"
 	font-weight: 300
+	line-height: 1
 	&:hover
 		cursor pointer
 
@@ -70,6 +71,9 @@
 	background-color #ffffff
 	color #000000
 
+.btn--md.btn--light
+	padding: 10px 45px
+
 .btn--light
 	@extend .btn
 	border 2px solid $mark
@@ -78,6 +82,8 @@
 	&:hover
 		color white
 		background: $mark
+		.nav-icon
+			fill white
 	.nav-icon
 		fill $mark
 
@@ -109,7 +115,7 @@
 	size 20px
 	display inline-block
 
-.btn--icon--left
+.btn--icon-left
 	.nav-icon
 		margin-left: 0
 		margin-right: 10px
@@ -117,6 +123,14 @@
 .btn-row-mid
 	flex(mid)
 	margin: 30px 0
+	.btn--md
+		&:first-child
+			margin-right: 10px
+		&:last-child
+			margin-right: 0
+
+.btn-row-mid--clear
+	margin: 0
 
 .btn--full
 	width: 100%

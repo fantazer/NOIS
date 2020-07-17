@@ -1,0 +1,205 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.content--clear
+		.main-cont
+			+bread()
+			.title.title--xxl Складной подьемник aventos hf28
+			.card-art Артикул: №12333992
+			.card-wrap
+				.card-img
+					.gallery-slider-wrap
+						.gallery-slider
+								.gallery__el(style="background-image:url('img/item-1.jpg')")
+								.gallery__el(style="background-image:url('img/item-2.jpg')")
+								.gallery__el(style="background-image:url('img/item-3.jpg')")
+								.gallery__el(style="background-image:url('img/item-4.jpg')")
+								.gallery__el(style="background-image:url('img/item-5.jpg')")
+						.slider-wrap
+							.slider-item.gallery-slider-nav
+								- for (var i=0;i<2;i++)
+									.gallery__el-nav-wrap
+										.gallery__el-nav(style="background-image:url('img/item-1.jpg')")
+									.gallery__el-nav-wrap
+										.gallery__el-nav(style="background-image:url('img/item-2.jpg')")
+									.gallery__el-nav-wrap
+										.gallery__el-nav(style="background-image:url('img/item-3.jpg')")
+									.gallery__el-nav-wrap
+										.gallery__el-nav(style="background-image:url('img/item-4.jpg')")
+									.gallery__el-nav-wrap
+										.gallery__el-nav(style="background-image:url('img/item-5.jpg')")
+							.slider-control-wrap--sm
+								.slider-control.slider-control--right
+									+icon("arrow-right","icon")
+								.slider-control.slider-control--left
+									+icon("arrow-left","icon")
+				.card-descr
+					.card-logo
+						img(src="img/blum.svg", alt="")
+					.card-description.text
+						.card-description__title Описание
+						p Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации модели развития. Равным образом сложившаяся структура организации в
+						.card-description__title Характеристики
+						p Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации модели развития. Равным образом сложившаяся структура организации в значительной степени обуславливает создание существенных финансовых и административных условий.
+					.card-cost от 1800 руб./шт
+					.btn--md.btn--mark Нужна помощь с подбором
+			// calc
+			.calc
+				.title.title--xl.type--center.type--mark Калькулятор расчета комплектующих
+				.input-cont.input-cont--three
+					.input-row
+						.input-row__title Цвет
+						.dropdown
+							input(type="hidden" placeholder="" value="0")
+							.dropdown-current
+								.dropdown-current__val Выберите цвет
+								+icon("arrow-up","icon")
+							.dropdown-menu
+								.dropdown-menu__el(data-value="1")
+									.choose-color
+										.choose-color__el(style="background:red")
+										span Красный
+								.dropdown-menu__el(data-value="2")
+									.choose-color
+										.choose-color__el(style="background:green")
+										span Зеленый
+								.dropdown-menu__el(data-value="3")
+									.choose-color
+										.choose-color__el(style="background:blue")
+										span Синий
+					.input-row
+						.input-row__title Высота корпуса (мм):
+						input(type="text" placeholder="от 480 до 1040 мм" class="input")
+					.input-row
+						.input-row__title Ширина корпуса (мм):
+						input(type="text" placeholder="от 240 до 1800" class="input")
+					.input-row
+						.input-row__title Тип материала фасада:
+						select.select-beauty
+							option ДСП (680 кг/м3) = 680
+							option ДСП (230 кг/м3) = 230
+							option ДСП (130 кг/м3) = 130
+							option ДСП (3680 кг/м3) = 3680
+					.input-row
+						.input-row__title Вес ручки (г):
+						input(type="text" placeholder="0" class="input")
+					.input-row
+						.input-row__title Тип конструкции:
+						select.select-beauty
+							option Накладная 1
+							option Накладная 2
+							option Накладная 3
+					.input-row
+						.input-row__title Ответные планки для петель:
+						select.select-beauty
+							option Крестообразная под саморезы 1
+							option Крестообразная под саморезы 2
+							option Крестообразная под саморезы 3
+							option Крестообразная под саморезы 4
+					.input-row
+						.input-row__title Вид крепления к фасаду:
+						select.select-beauty
+							option Саморезы 1
+							option Саморезы 2
+							option Саморезы 3
+							option Саморезы 4
+
+				.input-row__title Сопуствующие товары:
+				.input-cont.input-cont--three
+					.input-row
+						+checkbox("Ограничитель угла открывания 83 градуса")
+					.input-row
+						+checkbox("Ограничитель угла открывания 104 градуса")
+
+				.calc-get
+					.btn--md.btn--mark Применить
+					.btn--md.btn--light Сбросить фильтр
+
+
+
+			// calc === end
+
+			.tab-wrap
+				.tab-head
+					.tab-head__el.active Состав комплекта
+					.tab-head__el Cиловой механизм
+					.tab-head__el Рычаги
+					.tab-head__el Петли
+				.tab-cont
+					.tab-cont__el.active
+						// order-list
+						.order__el-wrap
+							- for (var i=0;i<5;i++)
+								.order__el
+									.order__el-info
+										a(href="#" style="background-image:url('img/tools-1.png')" ).order__img
+										.order__name
+											.order__adds
+												.order__art Арт: 6788798
+												.condition
+													.condition__icon
+													span В наличии
+											a(href="#").order__name-text HF Силовой механизм 22 Коэфф. мощн. 2600-5500
+									.order__el-change
+										.order__inc
+											+incr()
+										.order__price 1999 руб.
+										.order__get
+											.btn--sm.btn--mark.order__get-basket в корзину
+											.btn--sm.btn--empty купить в один клик
+
+			.order-total
+				.order-total__sub-title Стоимость комплекта
+				.order-total__title 34 566 ₽
+			.btn-row-mid.btn-row-mid--clear
+				.btn--md.btn--mark.btn--mobile
+					.btn--icon.btn--icon-left
+						+icon("cart","nav-icon")
+						span В корзину
+				.btn--md.btn--light.btn--mobile Купить в один клик
+			// order-list === end
+
+			// docs
+			.section
+				.title.title--xl Инструкции
+				.row.row--3
+					- for (var i=0;i<6;i++)
+						a(href="#").doc-el
+							+icon("pdf--color","icon")
+							span Инструкция по установке
+			// docs === end
+
+		.section.section--snow
+			.main-cont
+				.section-title Видеоинструкции
+				.slider-wrap.slider-wrap--arrow.slider-wrap--arrow-out
+					.slider-item.slider-item--extend.slider-list
+						- for (var i=0;i<6;i++)
+							.slider-card-el
+								.news-el
+									a(href="https://youtu.be/TWAgV_JfN0I" style="background-image:url('img/item-1.jpg')").news-el__img.fancybox
+										.filter-layer
+										.news-el__img-inner
+											+icon("play","icon")
+									.news-el-wrap
+										a(href="#").news-el__title Как правильно подготовить столешницу
+					.slider-control-wrap
+						.slider-control.slider-control--right
+							+icon("arrow-right","icon")
+						.slider-control.slider-control--left
+							+icon("arrow-left","icon")
+		.section
+			.main-cont
+				.section-title Рекомендуем
+				.item-list.item-list--full
+					- for (var i=0;i<4;i++)
+						+item()
+				.section-title Раннее вы смотрели
+				.item-list.item-list--full
+					- for (var i=0;i<4;i++)
+						+item()
+		+orderForm()
++footer()
+include ./block_html/_script.pug

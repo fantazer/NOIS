@@ -49,3 +49,45 @@ mixin orderForm()
     .info-form
       input(type="text" placeholder="Введите ваш e-mail" class="input")
       .btn--sm.btn--mark.btn--mid Подписаться
+
+mixin item()
+  .item
+    a(href="#" style="background-image:url('img/item-3.jpg')").item-img
+    .item-info
+      .rating
+        - for (var j=0;j<4;j++)
+          +icon("star","icon")
+        +icon("star","icon icon--disable")
+      .like.js-choose
+        +icon("heart","icon")
+      a(href="#").item-title Granite&Quartz (кварц)
+      .item-cost
+        .item-cost__val 8700
+        span руб/шт
+
+      .item-toggle
+        span Подробнее
+        +icon("arrow-down","icon")
+      .item-config
+        .item-condition
+          //toggle class .item-condition--false есть товара нет
+          .item-condition__icon
+          span В наличии
+        .item-config__el
+          .item-config__title Цвет ( Ваш Выбор)
+          .color.js-choose-group
+            .color-el.js-choose-group-el.active(style="background:#ca0088")
+            .color-el.js-choose-group-el(style="background:#6cb962")
+            .color-el.js-choose-group-el(style="background:#0026ca")
+            .color-el.js-choose-group-el(style="background:#f6c415")
+        .item-config-edit
+          .item-config__el
+            .item-config__title Тип Фасада
+            select.select-beauty
+              option Большой
+              option Средний
+              option Маленький
+          .btn--md.btn--mark.btn--full.item-get В корзину
+          .item-choose
+            .btn--xs.btn--empty Купить в 1 клик
+            .btn--xs.btn--empty Сравнить

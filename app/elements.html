@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
     <link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
     <link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css" />
-    <!--link(rel="stylesheet", href="bower/ion.rangeSlider/css/ion.rangeSlider.css")-->
+    <link rel="stylesheet" href="bower/fancybox/dist/jquery.fancybox.css" />
     <!--endbuild-->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/style-edit.css" />
@@ -357,9 +357,21 @@
             </div>
             <div class="element-list-svg__icon">
                 <svg class="icon-el">
+                    <use xlink:href="#quote"></use>
+                </svg>
+                <div class="element-list-svg__name">quote</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
                     <use xlink:href="#reading"></use>
                 </svg>
                 <div class="element-list-svg__name">reading</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#refresh"></use>
+                </svg>
+                <div class="element-list-svg__name">refresh</div>
             </div>
             <div class="element-list-svg__icon">
                 <svg class="icon-el">
@@ -378,6 +390,12 @@
                     <use xlink:href="#search"></use>
                 </svg>
                 <div class="element-list-svg__name">search</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#send"></use>
+                </svg>
+                <div class="element-list-svg__name">send</div>
             </div>
             <div class="element-list-svg__icon">
                 <svg class="icon-el">
@@ -535,7 +553,8 @@
     <script src="bower/jquery/dist/jquery.js"></script>
     <script src="bower/slick-carousel/slick/slick.js"></script>
     <script src="bower/jquery.nicescroll/jquery.nicescroll.min.js"></script>
-    <script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="bower/jquery-nice-select/js/jquery.nice-select.js"></script>
+    <script src="bower/fancybox/dist/jquery.fancybox.js"></script>
     <!-- endbuild-->
     <script src="./js/add-on.js"></script>
     <script src="./js/script.js"></script>

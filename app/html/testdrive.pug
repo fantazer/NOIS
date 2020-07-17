@@ -1,0 +1,125 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.content--clear
+		.banner(style="background-image:url('img/banner-2.jpg')")
+			.filter-layer
+			.main-cont
+				.banner-wrap
+					.banner-title Планируете приобрести кухню?
+					.banner-text С другой стороны рамки и место обучения кадров в значительной степени обуславливает создание существенных финансовых и административных условий.
+					.btn--md.btn--mark Записаться на обучение
+
+		.section.section--hidden
+			.unit.unit--mark.unit--left
+			.main-cont
+				.row.row--2
+					.col
+						.title.title--xxl Что такое «Тест-драйв» кухни»
+						.text
+							p С другой стороны рамки и место обучения кадров в значительной степени обуславливает создание существенных финансовых и административных условий. Равным образом консультация с широким активом в значительной степени обуславливает создание направлений прогрессивного развития.
+
+							p Идейные соображения высшего порядка, а также рамки и место обучения кадров требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. Разнообразный и богатый опыт реализация намеченных плановых заданий позволяет оценить значение соответствующий условий активизации. Таким образом реализация намеченных плановых заданий способствует подготовки и реализации систем массового участия.
+					.col
+						a(href="https://youtu.be/TWAgV_JfN0I" style="background-image:url('img/banner-4.jpg')").video.fancybox
+							.filter-layer
+							.video-inner
+								+icon("play","icon")
+		.section.section--snow.section--hidden
+			.unit.unit--dark.unit--right
+			.main-cont
+				.title.title--xxl Зачем нужен тест-драйв?
+				.box-list
+					.box
+						.box__icon
+							+icon("teach","icon")
+						.box__title Практические опыт
+						.box__text Не следует, однако забывать, что рамки и место обучения кадров позволяет выполнять важные задания по разработке модели развития. Задача организации
+					.box
+						.box__icon
+							+icon("checklist","icon")
+						.box__title Осмотр материалов
+						.box__text Не следует, однако забывать, что рамки и место обучения кадров позволяет выполнять важные задания по разработке модели развития. Задача организации
+					.box
+						.box__icon
+							+icon("reading","icon")
+						.box__title Подготовка монтажа
+						.box__text Не следует, однако забывать, что рамки и место обучения кадров позволяет выполнять важные задания по разработке модели развития. Задача организации
+					.box
+						.box__icon
+							+icon("pos-terminal","icon")
+						.box__title Расчет стоимости
+						.box__text Не следует, однако забывать, что рамки и место обучения кадров позволяет выполнять важные задания по разработке модели развития. Задача организации
+					.box
+						.box__icon
+							+icon("delivery-box","icon")
+						.box__title Выбор цветового решения
+						.box__text Не следует, однако забывать, что рамки и место обучения кадров позволяет выполнять важные задания по разработке модели развития. Задача организации
+		.section.section--mark
+			.main-cont
+				.title.title--xxl Как проходит тест-драйв?
+				.step
+					- for (var i=1;i<6;i++)
+						.step__el
+							.step__el-title
+								span #{i}
+								| Выбор цветового решения
+							.step__el-text Идейные соображения высшего порядка, а также рамки и место обучения кадров играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач
+		.section
+			.main-cont
+				.callback
+					.callback__info(style="background-image:url('img/banner-1.jpg')")
+					.callback__form
+						.title.title--xl Уже прошли у нас тестдрайв ?
+						.text
+							p Не следует, однако забывать, что рамки и место обучения кадров позволяет выполнять важные задания по разработке модели развития. Задача организации, в особенности же новая модель организационной деятельности требуют от нас анализа соответствующий условий активизации.
+						.input-cont
+							.input-row
+								input(type="text" placeholder="Ваше имя" class="input")
+						.input-cont
+							.input-row
+								textarea(name="text", cols="30", rows="10" placeholder="Ваш комментарий" class="input")
+						.btn--md.btn--mark Отправить отзыв
+		.section.section--snow
+			.main-cont
+				.title.title--xxl Отзывы о нашей работе
+				.review
+					- for (var i=0;i<4;i++)
+						.review__el
+							+icon("quote","icon")
+							.review__el-head
+								.review__el-img(style="background-image:url('img/user.jpg')")
+								.review__el-info
+									.review__el-date 20.08.2020
+									.review__el-name Антон попов
+							.review__el-text Задача организации, в особенности же постоянный количественный рост и сфера нашей активности требуют от нас анализа дальнейших направлений развития. Товарищи! начало повседневной работы по формированию позиции в значительной степени обуславливает создание модели развития.
+				.btn-row-mid
+					.btn--md.btn--light
+						.btn--icon.btn--icon-left
+							+icon("refresh","nav-icon")
+							span Посмотреть еще
+		.section
+			.main-cont
+				.title.title--xxl Где мы находимся?
+				.location
+					.map
+						.map__el
+							//положи код карты сюда
+					.location__info
+						.location-row
+							.location-title Адрес:
+							.location-val г.Новосибирск ул. Зорге 23
+						.location-row
+							.location-title Телефон:
+							.location-val +7(384) 325-12-21 доб 125
+						.location-row
+							.location-title E-mail:
+							.location-val info@nois.ru
+						.location-row
+							.location-title Режим работы:
+							.location-val пн-пт с 9:00 до 18:00
+		+orderForm()
++footer()
+include ./block_html/_script.pug

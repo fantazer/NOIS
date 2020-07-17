@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html>
+<!--create by ANATOLY KUZNETSOV-->
+<!--contact mail:kuznecovs45@gmail.com skype:an_kuznetcov-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--colors-tabs-->
+    <meta name="theme-color" content="#000" />
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <!--SEO-->
+    <title>Document</title>
+    <meta name="description" itemprop="description" content="" />
+    <link rel="stylesheet" href="./css/vendor.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style-edit.css" />
+</head>
+
+<body>
+    <div class="page">
+        <!--block header-->
+        <div class="header">
+            <div class="header-top-wrap">
+                <div class="main-cont">
+                    <div class="header-top">
+                        <div class="header-top-nav">
+                            <a class="header-top-nav__el" href="#">О компании</a>
+                            <a class="header-top-nav__el" href="#">Акции</a>
+                            <a class="header-top-nav__el" href="#">Бонусная программа</a>
+                            <a class="header-top-nav__el" href="#">Дилерская сеть</a>
+                            <a class="header-top-nav__el" href="#">База знаний</a>
+                            <a class="header-top-nav__el" href="#">Контакты</a>
+                            <a class="header-top-nav__el" href="#">Отзывы</a>
+                        </div>
+                        <div class="header-tool">
+                            <div class="header-tool__el">
+                                <svg class="icon">
+                                    <use xlink:href="#user"></use>
+                                </svg>
+                                <span>Войти</span>
+                            </div>
+                            <a class="header-tool__el header-tool__el--mark" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#cart"></use>
+                                </svg>
+                                <span>Корзина</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-cont">
+                <div class="header-main">
+                    <div class="header-nav-toggle js-slide-block-toggle" data-menu="nav">
+                        <svg class="icon is-close">
+                            <use xlink:href="#menu"></use>
+                        </svg>
+                        <svg class="icon is-open">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+                    <a class="logo" href="/">
+                        <img class="logo--desktop" src="img/logo.svg" alt="" />
+                        <img class="logo--mobile" src="img/logo--mobile.svg" alt="" />
+                    </a>
+                    <a class="logo-partner" href="#">
+                        <img src="img/blum.svg" alt="" />
+                    </a>
+                    <div class="header-contact">
+                        <a class="header-phone" href="tel:8 800 000 00 00">8 800 000 00 00</a>
+                        <div class="header-loc">
+                            <svg class="icon">
+                                <use xlink:href="#location"></use>
+                            </svg>
+                            <span>Новосибирск</span>
+                        </div>
+                    </div>
+                    <div class="btn--sm btn--light header-get">Заказать звонок</div>
+                    <div class="catalog-mobile js-slide-block-toggle" data-menu="catalog">
+                        <svg class="icon is-close">
+                            <use xlink:href="#catalog"></use>
+                        </svg>
+                        <svg class="icon is-open">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom-wrap">
+                <div class="main-cont">
+                    <div class="header-bottom">
+                        <div class="get-cat">
+                            <div class="get-cat-wrap">
+                                <svg class="icon">
+                                    <use xlink:href="#menu"></use>
+                                </svg>
+                                <span>Каталог</span>
+                            </div>
+                            <div class="navigation slide-block slide-block--menu" data-menu="catalog">
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Мебельная фурнитура Blum</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Подъемные механизмы</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Системы выдвижения</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Системы направляющих</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Системы петель</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">SERVO-DRIVE для TANDEM, TANDEMBOX, MOVENTO и LEGRABOX</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">SERVO-DRIVE flex для холодильников, морозильных камер и посудомоечных машин</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Станки, шаблоны и приспособления для сборки</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Журнал &quot;Вдохновение на кухне&quot;</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Мебельная фурнитура и аксессуары Vauth-Sagel</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Решения для высоких шкафов</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Решения для нижних тумб</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Решения для угловых тумб</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Решения для сбора мусора</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Аксессуары</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Дополнительная фурнитура</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Мебельные ручки PAMAR</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Ручки скобы</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Ручки кнопки</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Крючки, Менсолодержатели, кабельные каналы</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Ручки врезные</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Мебельная фурнитура и аксессуары VIBO</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Посудосушители</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Выдвижные корзины и сетчатые емкости для кухни</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Выдвижные колонны</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Выдвижные поворотные колонны</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Механизмы для угловых тумб</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Карусели</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Наборы для сбора мусора</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Наполнение шкафов</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Мебельные ручки FOX ART</a>
+                                    <ul class="navigation-list">
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Фурнитура Volpato</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Лотки для столовых приборов</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Опоры (ножки кухонные)</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Вентиляционная база для холодильника</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Алюминиевые поддоны</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Мебельные фасады из массива ценных пород древесины</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Фасадные системы VENETO</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Мебельные фасады FIERAMOSCA</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Мебельные фасады РУССТА</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Пластик FENIX</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">FENIX NTM</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Декоративные плиты TSS Cleaf</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Geta (NEW)</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Talco (NEW)</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Penelope</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Spigato и PrimoFiore</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Tranche</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Yosemite</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Azimut</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Engadina</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Sherwood</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Millenium</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Pembroke</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Ares</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Sable</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Esperia и Tivoli</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Matrix</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">HPL пластик Cleaf</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Минералы</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Древесные декоры</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Фантазийные декоры</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Однотонные декоры</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Декоративные панели FunderMax</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Глянцевые панели LUXOS</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Суперматовые панели LOTOS</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Панели TSS Superfront</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Акриловый камень LG HI-MACS</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Aurora (NEW)</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Intense (NEW)</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Solid</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Lucent</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Sand&amp;Pearl</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Granite&amp;Quartz</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Lucia</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Volcanics</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Galaxy</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Marmo</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Изготовление изделий из HI-MACS</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Комплектующие для шкафов-купе raumplus</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система распашных дверей RPS</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система раздвижных дверей</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система навесных дверей FLUA</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Безрамные деревянные двери и межкомнатные перегородки</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система дверей с верхним подвесом AIR (последовательное и синхронное открывание)</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система складных дверей</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система распашных дверей</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Межкомнатная дверь SWING SLIM LINE</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система мансардных дверей</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Интерьерная система RIMA</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Гардеробная система UNO</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Гардеробная система CORNICE</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Стационарные перегородки</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search">
+                            <input class="input" type="text" placeholder="Поиск" />
+                            <svg class="icon">
+                                <use xlink:href="#search"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-block slide-block--left slide-block--menu" data-menu="nav">
+                <div class="slide-block-wrap">
+                    <a class="slide-phone" href="tel:8 800 000 00 00">8 800 000 00 00</a>
+                    <div class="header-tool slide-cart">
+                        <a class="header-tool__el header-tool__el--mark" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#cart"></use>
+                            </svg>
+                            <span>Корзина</span>
+                        </a>
+                    </div>
+                    <div class="search">
+                        <input class="input" type="text" placeholder="Поиск" />
+                        <svg class="icon">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </div>
+                    <div class="slider-menu">
+                        <a class="slider-menu__el" href="#">О компании</a>
+                        <a class="slider-menu__el" href="#">Акции</a>
+                        <a class="slider-menu__el" href="#">Бонусная программа</a>
+                        <a class="slider-menu__el" href="#">Дилерская сеть</a>
+                        <a class="slider-menu__el" href="#">База знаний</a>
+                        <a class="slider-menu__el" href="#">Контакты</a>
+                        <a class="slider-menu__el" href="#">Отзывы</a>
+                    </div>
+                    <div class="header-tool__el slide-auth">
+                        <svg class="icon">
+                            <use xlink:href="#user"></use>
+                        </svg>
+                        <span>Войти</span>
+                    </div>
+                    <div class="header-loc">
+                        <svg class="icon">
+                            <use xlink:href="#location"></use>
+                        </svg>
+                        <span>Новосибирск</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block header end-->
+        <div class="content content--gray content--clear">
+            <div class="main-cont">
+                <div class="bread">
+                    <a class="bread__el" href="#">Главная</a>
+                    <a class="bread__el" href="#">Название раздела</a>
+                    <div class="bread__el">Название товара</div>
+                </div>
+                <div class="lk">
+                    <div class="lk-toolbar">
+                        <div class="profile">
+                            <div class="profile__img">
+                                <div class="profile__img-el hidden" style="background-image:url('img/user.jpg')"></div>
+                                <div class="profile__img-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#user"></use>
+                                    </svg>
+                                </div>
+                                <div class="profile__img-load">
+                                    <div class="profile__img-load-icon">
+                                        <svg class="icon">
+                                            <use xlink:href="#upload"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-wrap">
+                                <div class="profile__name">ООО "Вектор"</div>
+                                <div class="profile-row">
+                                    <div class="profile-row__name">ИНН</div>
+                                    <div class="profile-row__val">12392293</div>
+                                </div>
+                                <div class="profile-row">
+                                    <div class="profile-row__name">ОГРН</div>
+                                    <div class="profile-row__val">2134 32023 03230 3233</div>
+                                </div>
+                                <div class="profile-row">
+                                    <div class="profile-row__name">КПП</div>
+                                    <div class="profile-row__val">032303233</div>
+                                </div>
+                                <div class="profile-row">
+                                    <div class="profile-row__name">Юр.Адрес</div>
+                                    <div class="profile-row__val">ул Ленина д82</div>
+                                </div>
+                                <div class="profile-row">
+                                    <div class="profile-row__name">Сотрудники компании</div>
+                                    <div class="profile-row__val">Ольга Иванова</div>
+                                    <div class="profile-row__val">Виктор Смирнов</div>
+                                    <div class="profile-row__val">Антон Повоп</div>
+                                </div>
+                                <a class="profile-change" href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="#edit"></use>
+                                    </svg>
+                                    <span>изменить информацию</span>
+                                </a>
+                                <div class="profile-footer">
+                                    <div class="profile-footer-info">
+                                        <div class="profile-footer__text hidden">у вас нет бонусов
+                                            <!-- for bonus = 0-->
+                                        </div>
+                                        <div class="profile-footer__text">мои бонусы:</div>
+                                        <div class="profile-footer__val">2500</div>
+                                    </div>
+                                    <div class="profile-footer__icon">
+                                        <svg class="icon">
+                                            <use xlink:href="#info"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="exit" href="#">
+                            <div class="icon-block icon-block--mark">
+                                <svg class="icon">
+                                    <use xlink:href="#exit"></use>
+                                </svg>
+                            </div>
+                            <span>Выйти</span>
+                        </a>
+                    </div>
+                    <div class="lk-info">
+                        <div class="lk-info__el">
+                            <div class="title title--lg">История заказов</div>
+                            <div class="search">
+                                <input class="input" type="text" placeholder="Поиск по заказам" />
+                                <svg class="icon">
+                                    <use xlink:href="#search"></use>
+                                </svg>
+                            </div>
+                            <div class="history">
+                                <div class="history-card history-card--active">
+                                    <div class="history-card__wrap">
+                                        <div class="history-card__info">
+                                            <div class="history-card__numb">№ 43576</div>
+                                            <div class="history-card__date">28 Сентября, 2017</div>
+                                        </div>
+                                        <div class="history-card__state history-card__state--true">Оплачен</div>
+                                        <!-- add class .history-card__state--true for delivered-->
+                                        <div class="history-card__condition">
+                                            <div class="history-card__size">3 товара</div>
+                                            <div class="history-card__price_val">5430 р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info show">
+                                        <div class="history-info-wrap">
+                                            <div class="history-info__el">
+                                                <div class="history-info__el-title">Состав заказа</div>
+                                                <div class="goods-list">
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                </div>
+                                                <!--.history-info-total
+											.history-info-total__text Сумма:
+											.history-info-total__val 1 184р
+											
+											-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="history-card">
+                                    <div class="history-card__wrap">
+                                        <div class="history-card__info">
+                                            <div class="history-card__numb">№ 43576</div>
+                                            <div class="history-card__date">28 Сентября, 2017</div>
+                                        </div>
+                                        <div class="history-card__state">В обработке</div>
+                                        <!-- add class .history-card__state--true for delivered-->
+                                        <div class="history-card__condition">
+                                            <div class="history-card__size">3 товара</div>
+                                            <div class="history-card__price_val">5430 р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info">
+                                        <div class="history-info-wrap">
+                                            <div class="history-info__el">
+                                                <div class="history-info__el-title">Состав заказа</div>
+                                                <div class="goods-list">
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                </div>
+                                                <!--.history-info-total
+											.history-info-total__text Сумма:
+											.history-info-total__val 1 184р
+											
+											-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="history-card">
+                                    <div class="history-card__wrap">
+                                        <div class="history-card__info">
+                                            <div class="history-card__numb">№ 43576</div>
+                                            <div class="history-card__date">28 Сентября, 2017</div>
+                                        </div>
+                                        <div class="history-card__state">В обработке</div>
+                                        <!-- add class .history-card__state--true for delivered-->
+                                        <div class="history-card__condition">
+                                            <div class="history-card__size">3 товара</div>
+                                            <div class="history-card__price_val">5430 р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info">
+                                        <div class="history-info-wrap">
+                                            <div class="history-info__el">
+                                                <div class="history-info__el-title">Состав заказа</div>
+                                                <div class="goods-list">
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                </div>
+                                                <!--.history-info-total
+											.history-info-total__text Сумма:
+											.history-info-total__val 1 184р
+											
+											-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="history-card">
+                                    <div class="history-card__wrap">
+                                        <div class="history-card__info">
+                                            <div class="history-card__numb">№ 43576</div>
+                                            <div class="history-card__date">28 Сентября, 2017</div>
+                                        </div>
+                                        <div class="history-card__state history-card__state--true">Оплачен</div>
+                                        <!-- add class .history-card__state--true for delivered-->
+                                        <div class="history-card__condition">
+                                            <div class="history-card__size">3 товара</div>
+                                            <div class="history-card__price_val">5430 р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info">
+                                        <div class="history-info-wrap">
+                                            <div class="history-info__el">
+                                                <div class="history-info__el-title">Состав заказа</div>
+                                                <div class="goods-list">
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                </div>
+                                                <!--.history-info-total
+											.history-info-total__text Сумма:
+											.history-info-total__val 1 184р
+											
+											-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="history-card">
+                                    <div class="history-card__wrap">
+                                        <div class="history-card__info">
+                                            <div class="history-card__numb">№ 43576</div>
+                                            <div class="history-card__date">28 Сентября, 2017</div>
+                                        </div>
+                                        <div class="history-card__state history-card__state--true">Оплачен</div>
+                                        <!-- add class .history-card__state--true for delivered-->
+                                        <div class="history-card__condition">
+                                            <div class="history-card__size">3 товара</div>
+                                            <div class="history-card__price_val">5430 р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info">
+                                        <div class="history-info-wrap">
+                                            <div class="history-info__el">
+                                                <div class="history-info__el-title">Состав заказа</div>
+                                                <div class="goods-list">
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                    <div class="goods-list__el">
+                                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                        <div class="goods-list__el-val">x 2</div>
+                                                        <div class="goods-list__el-cost">1003 р.</div>
+                                                    </div>
+                                                </div>
+                                                <!--.history-info-total
+											.history-info-total__text Сумма:
+											.history-info-total__val 1 184р
+											
+											-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="history-more">
+                                    <svg class="icon">
+                                        <use xlink:href="#refresh"></use>
+                                    </svg>
+                                    <span>показать еще</span>
+                                </div>
+                                <div class="order-empty hidden">
+                                    <div class="order-empty-title">Ваша история пуста =(</div>
+                                    <div class="order-empty-text">Сделайте заказ</div>
+                                    <div class="btn--md btn--mark">Посмотреть каталог</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lk-info__el">
+                            <div class="title title--lg">Мои персональные скидки</div>
+                            <div class="lk-sale">
+                                <div class="lk-sale__el">
+                                    <div class="lk-sale__val">-5%</div>
+                                    <div class="lk-sale__name">На столешницы из искусственного камня</div>
+                                </div>
+                                <div class="lk-sale__el">
+                                    <div class="lk-sale__val">-25%</div>
+                                    <div class="lk-sale__name">На петли фирмы Bulma</div>
+                                </div>
+                                <div class="lk-sale__el">
+                                    <div class="lk-sale__val">-40%</div>
+                                    <div class="lk-sale__name">На фасады ручной работы из Италии</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lk-info__el">
+                            <div class="title title--lg">История списания баллов</div>
+                            <div class="bonus-condition">
+                                <div class="bonus-condition__el">
+                                    <div class="bonus-condition__date">
+                                        <svg class="icon icon--sm icon--mark">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                        <span>12.06.2020</span>
+                                    </div>
+                                    <a class="bonus-condition__type" href="#">№129329</a>
+                                    <div class="bonus-condition__val">23 000 руб</div>
+                                </div>
+                                <div class="bonus-condition__el">
+                                    <div class="bonus-condition__date">
+                                        <svg class="icon icon--sm icon--mark">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                        <span>12.06.2020</span>
+                                    </div>
+                                    <a class="bonus-condition__type" href="#">№129329</a>
+                                    <div class="bonus-condition__val">23 000 руб</div>
+                                </div>
+                                <div class="bonus-condition__el">
+                                    <div class="bonus-condition__date">
+                                        <svg class="icon icon--sm icon--mark">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                        <span>12.06.2020</span>
+                                    </div>
+                                    <a class="bonus-condition__type" href="#">№129329</a>
+                                    <div class="bonus-condition__val">23 000 руб</div>
+                                </div>
+                                <div class="bonus-condition__el">
+                                    <div class="bonus-condition__date">
+                                        <svg class="icon icon--sm icon--mark">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                        <span>12.06.2020</span>
+                                    </div>
+                                    <a class="bonus-condition__type" href="#">№129329</a>
+                                    <div class="bonus-condition__val">23 000 руб</div>
+                                </div>
+                                <div class="bonus-condition__el">
+                                    <div class="bonus-condition__date">
+                                        <svg class="icon icon--sm icon--mark">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                        <span>12.06.2020</span>
+                                    </div>
+                                    <a class="bonus-condition__type" href="#">№129329</a>
+                                    <div class="bonus-condition__val">23 000 руб</div>
+                                </div>
+                                <div class="bonus-condition__el">
+                                    <div class="bonus-condition__date">
+                                        <svg class="icon icon--sm icon--mark">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                        <span>12.06.2020</span>
+                                    </div>
+                                    <a class="bonus-condition__type" href="#">№129329</a>
+                                    <div class="bonus-condition__val">23 000 руб</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lk-info__el">
+                            <div class="title title--lg">Мои менеджеры</div>
+                            <div class="manager-list">
+                                <div class="manager__el">
+                                    <div class="manager__el-photo" style="background-image:url('img/manager.jpg')"></div>
+                                    <div class="manager__el-cont">
+                                        <div class="manager__el-name">Ольга Иванова</div>
+                                        <div class="manager__el-staff">Менеджер производства</div>
+                                        <div class="manager__el-info">тел: +7(925)123-43-24</div>
+                                        <div class="manager__el-info">info@mail.ru</div>
+                                    </div>
+                                </div>
+                                <div class="manager__el">
+                                    <div class="manager__el-photo" style="background-image:url('img/manager.jpg')"></div>
+                                    <div class="manager__el-cont">
+                                        <div class="manager__el-name">Ольга Иванова</div>
+                                        <div class="manager__el-staff">Менеджер производства</div>
+                                        <div class="manager__el-info">тел: +7(925)123-43-24</div>
+                                        <div class="manager__el-info">info@mail.ru</div>
+                                    </div>
+                                </div>
+                                <div class="manager__el">
+                                    <div class="manager__el-photo" style="background-image:url('img/manager.jpg')"></div>
+                                    <div class="manager__el-cont">
+                                        <div class="manager__el-name">Ольга Иванова</div>
+                                        <div class="manager__el-staff">Менеджер производства</div>
+                                        <div class="manager__el-info">тел: +7(925)123-43-24</div>
+                                        <div class="manager__el-info">info@mail.ru</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-form-wrap info-form-wrap--dark">
+                <div class="title title--xxl type--up">подпишитесь на новости</div>
+                <div class="subscr-text">Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа форм развития. С другой стороны сложившаяся структура организации требуют от нас анализа существенных финансовых и административных
+                    условий.</div>
+                <div class="info-form">
+                    <input class="input" type="text" placeholder="Введите ваш e-mail" />
+                    <div class="btn--sm btn--mark btn--mid">Подписаться</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--block footer-->
+    <div class="footer-wrap">
+        <div class="main-cont">
+            <div class="footer-top">
+                <a class="footer-logo" href="/">
+                    <img src="img/logo--white.svg" alt="" />
+                </a>
+                <div class="soc-row">
+                    <a class="soc-row__el" href="#">
+                        <img src="img/inst--color.svg" alt="" />
+                    </a>
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#facebook--color"></use>
+                        </svg>
+                    </a>
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#youtube--color"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <a class="footer-nav__el" href="#">О компании</a>
+                <a class="footer-nav__el" href="#">Акции</a>
+                <a class="footer-nav__el" href="#">Бонусная программа</a>
+                <a class="footer-nav__el" href="#">Дилерская сеть</a>
+                <a class="footer-nav__el" href="#">База знаний</a>
+                <a class="footer-nav__el" href="#">Контакты</a>
+                <a class="footer-nav__el" href="#">Отзывы</a>
+            </div>
+        </div>
+    </div>
+    <!--block footer end-->
+    <script src="./js/combined.js"></script>
+    <script src="./js/add-on.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/script-edit.js"></script>
+</body>
+
+</html>
