@@ -121,15 +121,14 @@ include block_html/_include.pug
 
 			// calc === end
 
-			.tab-wrap
+			.tab-wrap.js-tab-wrap
 				.tab-head
-					.tab-head__el.active Состав комплекта
-					.tab-head__el Cиловой механизм
-					.tab-head__el Рычаги
-					.tab-head__el Петли
-				.tab-cont
-					.tab-cont__el.active
-						// order-list
+					.tab-head__el.js-tab-head.active Состав комплекта
+					.tab-head__el.js-tab-head Cиловой механизм
+					.tab-head__el.js-tab-head Рычаги
+					.tab-head__el.js-tab-head Петли
+				.tab-info-wrap
+					.js-tab-info.active
 						.order__el-wrap
 							- for (var i=0;i<5;i++)
 								.order__el
@@ -149,6 +148,26 @@ include block_html/_include.pug
 										.order__get
 											.btn--sm.btn--mark.order__get-basket в корзину
 											.btn--sm.btn--empty купить в один клик
+					.js-tab-info.active
+						.order-dop
+							.order-dop__img(style="background-image:url('img/tools-1.png')")
+							.order-dop__info
+								.title.title--xl PC15: CLIP top стандартная петля 120°,накладная, чашка петли: INSERTA
+								.title.title--lg.type--gray Характеристики
+								.order-dop__descr
+									.book-row
+										.book-row__title Код комплекта:
+										.book-row__dot
+										.book-row__value PC15
+									.book-row
+										.book-row__title Заводской код:
+										.book-row__dot
+										.book-row__value 06863453
+									.book-row
+										.book-row__title Артикул:
+										.book-row__dot
+										.book-row__value 71T5590B
+								.card-cost от 1800 руб./шт
 
 			.order-total
 				.order-total__sub-title Стоимость комплекта

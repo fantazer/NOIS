@@ -323,4 +323,20 @@ $(document).ready(function () {
 	});
 	//history accord===end
 
+	// tab
+	$('.js-tab-head').click(function(){
+		var index = $(this).index();
+		var parent = $(this).closest('.js-tab-wrap');
+		parent.find('.js-tab-head').removeClass('active');
+		$(this).addClass('active');
+		parent.find('.js-tab-info').each(function(){
+			if($(this).index()===index){
+				$(this).addClass('active')
+			}else{
+				$(this).removeClass('active')
+			}
+		})
+	});
+	// tab === end
+
 });

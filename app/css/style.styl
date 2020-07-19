@@ -672,6 +672,8 @@ body
 			width: 100%
 		width: calc(100% - 100px)
 .slider-wrap--arrow-in
+	+below(768px)
+		margin-bottom: 30px
 	position relative
 	margin-bottom: 70px
 	.slider-control-wrap
@@ -726,7 +728,7 @@ body
 		right -20px
 .slick-dots
 	+below(720px)
-		bottom 0
+		bottom -30px
 	width: 100%
 	display: flex !important
 	align-items: center
@@ -1172,6 +1174,10 @@ select.select-beauty
 	margin-bottom: 50px
 
 .item-list--full
+	+below(1024px)
+		grid-template-columns: repeat(2, 1fr)
+	+below(640px)
+		grid-template-columns: 1fr
 	grid-template-columns: repeat(4, 1fr)
 
 .item-list--line
@@ -1599,11 +1605,19 @@ select.select-beauty
 		color white
 
 .row
+	+below(640px)
+		grid-gap 10px
 	display: grid
 	grid-gap 30px
 .row--2
+	+below(640px)
+		grid-template-columns: 1fr
 	grid-template-columns: repeat(2,1fr)
 .row--3
+	+below(640px)
+		grid-template-columns: repeat(2,1fr)
+	+below(480px)
+		grid-template-columns: 1fr
 	grid-template-columns: repeat(3,1fr)
 
 .partner-img
@@ -1677,6 +1691,9 @@ select.select-beauty
 	margin-bottom: 30px
 	margin-top: -10px
 .calc
+	+below(768px)
+		padding: 20px
+
 	border 1px solid $border-color
 	padding: 50px
 	margin: 50px 0
@@ -1787,6 +1804,13 @@ select.select-beauty
 	margin-right: 10px
 
 .calc-get
+	+below(768px)
+		fl()
+		.btn--md
+			width: 100%
+			margin-right: 0!important
+			&:first-child
+				margin-bottom: 10px
 	flex(mid)
 	margin-top: 40px
 	.btn--md
@@ -1795,8 +1819,11 @@ select.select-beauty
 // order
 
 .order__el-info
+	+below(1024px)
+		width: 40%
 	+below(640px)
 		fl()
+		width: 100%
 		justify-content center
 	f()
 	align-items center
@@ -1831,6 +1858,7 @@ select.select-beauty
 	display block*/
 
 .order__name-text
+
 	+below(640px)
 			font-size: 20px
 			margin-bottom: 20px
@@ -1844,12 +1872,20 @@ select.select-beauty
 	&:hover
 			color $mark
 .order__adds
+	+below(640px)
+		fl()
+		align-items center
 	f()
 	margin-bottom: 5px
 .order__art
+	+below(640px)
+		margin-right: 0
+		margin-bottom: 10px
 	color $dark
 	margin-right: 10px
 .order__el-change
+	+below(1024px)
+		width: 55%
 	+below(640px)
 		width: 100%
 		fl()
@@ -1943,9 +1979,16 @@ select.select-beauty
 // incr === end
 
 .order__get
+	+below(640px)
+		width: 100%
+		margin: 0
 	width: 30%
 	margin-left: auto
 	.btn--sm
+		+below(1024px)
+			font-size: 14px
+		+below(640px)
+			font-size: 16px
 		padding: 8px
 		width: 100%
 .order__get-basket
@@ -1965,6 +2008,8 @@ select.select-beauty
 	f()
 	align-items center
 	.icon
+		+below(640px)
+			size 34px
 		size 60px
 		margin-right: 20px
 
@@ -1977,6 +2022,8 @@ select.select-beauty
 	background:rgba(17, 17, 17, 0.65)
 
 .tab-head
+	+below(640px)
+		margin-bottom: 10px
 	f()
 	fw()
 	margin-bottom: 30px
@@ -1995,16 +2042,25 @@ select.select-beauty
 	border 1px solid $mark
 
 .banner
+	+below(1024px)
+		margin-top: -30px
 	position relative
 	margin-top: -50px
 	bg-full()
 .banner-wrap
+	+below(1280px)
+		width: 80%
+		padding: 10% 0
+	+below(640px)
+		width: 100%
 	padding: 18% 0
 	width: 60%
 .banner-title
+	+below(640px)
+		font-size: 32px
 	color white
 	margin-bottom: 20px
-	font-size: 80px
+	font-size: 4vw
 	font-weight: 700
 .banner-text
 	color white
@@ -2036,7 +2092,7 @@ select.select-beauty
 .box-list
 	display: grid
 	grid-gap 20px
-	grid-template-columns: repeat(3, 1fr)
+	grid-template-columns: repeat(auto-fill, minmax(18rem,1fr))
 
 .box
 	padding: 30px
@@ -2059,7 +2115,7 @@ select.select-beauty
 .step
 	display: grid
 	grid-gap 30px
-	grid-template-columns: repeat(2, 1fr)
+	grid-template-columns: repeat(auto-fill, minmax(18rem,1fr))
 .step__el
 	br(4px)
 	color white
@@ -2092,6 +2148,9 @@ select.select-beauty
 	padding-left: 30px
 
 .callback
+	+below(768px)
+		max-width 480px
+		margin 0 auto
 	f()
 	justify-content: space-between
 	align-items: stretch
@@ -2103,16 +2162,22 @@ select.select-beauty
 	margin-right auto
 	overflow hidden
 .callback__info
+	+below(768px)
+		display none
 	bg-full()
 	width: 50%
 .callback__form
+	+below(768px)
+		width: 100%
 	width: 50%
 	padding:40px
 
 .review
+	+below(640px)
+		grid-template-columns:repeat(auto-fill, minmax(16rem,1fr))
 	display: grid
 	grid-gap 20px
-	grid-template-columns: repeat(2, 1fr)
+	grid-template-columns:repeat(auto-fill, minmax(26rem,1fr))
 .review__el
 	padding: 30px
 	br(10px)
@@ -2150,9 +2215,14 @@ select.select-beauty
 	color $text-color
 
 .location
+	+below(640px)
+		display block
 	f()
 	justify-content: space-between
 	.map
+		+below(640px)
+			width: 100%
+			margin-bottom: 20px
 		width: 65%
 		padding: 20% 10%
 	.map__el
@@ -2170,6 +2240,8 @@ select.select-beauty
 		height: 100%
 
 .location__info
+	+below(640px)
+		width: 100%
 	width: 30%
 .location-row
 	margin-bottom: 20px
@@ -2184,6 +2256,7 @@ select.select-beauty
 .lk
 	+below(1024px)
 		fw()
+		margin: 30px 0
 	f()
 	justify-content space-between
 	margin: 100px 0
@@ -2196,6 +2269,7 @@ select.select-beauty
 		width: 70%
 	+below(640px)
 		width: 100%
+		min-width 100%
 	width: 320px
 	margin-right: 40px
 .lk-info
@@ -2568,6 +2642,8 @@ select.select-beauty
 		fill $mark
 
 .lk-sale
+	+below(640px)
+		grid-template-columns: 1fr
 	display: grid
 	grid-gap 20px
 	grid-template-columns: repeat(2, 1fr)
@@ -2594,6 +2670,9 @@ select.select-beauty
 	br(10px)
 	overflow hidden
 .bonus-condition__el
+	+below(640px)
+		padding: 10px
+		font-size: 12px
 	padding: 25px 30px
 	background: white
 	width: 100%
@@ -2611,6 +2690,10 @@ select.select-beauty
 	@extend .type--md
 
 .manager-list
+	+below(640px)
+		grid-template-columns: 1fr 1fr
+	+below(480px)
+		grid-template-columns: 1fr
 	display: grid
 	grid-gap 20px
 	grid-template-columns: repeat(3, 1fr)
@@ -2637,3 +2720,63 @@ select.select-beauty
 .manager__el-info
 	margin-bottom: 10px
 	font-size: 14px
+
+// tab
+.js-tab-info
+	position: absolute
+	top 0
+	left: -9999px
+	opacity:0
+.js-tab-head.active
+	color $mark
+.js-tab-info.active
+	opacity: 1
+	position: relative
+	top initial
+	left initial
+	transition opacity .6s
+// tab === end
+
+// book row
+.book-row
+	f()
+	fw()
+	align-items: flex-end
+.book-row__title
+	max-width: 80%
+	line-height: 1.6
+.book-row__dot
+	border-bottom 1px dashed #00000017
+	flex-grow 1
+.book-row__value
+	max-width: 20%
+	white-space nowrap
+	vertical-align: bottom
+// book row === end
+
+.order-dop
+	+below(640px)
+		display block
+	f()
+	justify-content space-between
+	align-items: flex-start
+	padding: 30px
+	border 1px solid $border-color
+	margin-bottom: 30px
+.order-dop__img
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
+		padding: 40% 10%
+	width: 45%
+	bg-full()
+	padding: 20% 10%
+
+.order-dop__info
+	+below(640px)
+		width: 100%
+	width: 45%
+
+
+.order-dop__descr
+	margin-bottom: 30px
