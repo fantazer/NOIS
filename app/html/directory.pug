@@ -1,0 +1,75 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			.main-grid
+				.card-el(style="background-image:url('img/pm.png')")
+					.card-el__title.card-el__title--lg Blum
+					.card-list.card-list--lg
+						a(href="#").card-list__el
+							span TANDEMBOX
+						a(href="#").card-list__el
+							span AVENTOS
+						a(href="#").card-list__el
+							span LEGRABOX
+						a(href="#").card-list__el
+							span НОВИНКА: Подъемный механизм AVENTOS HK top
+						a(href="#").card-list__el
+							span Система выдвижения TANDEMBOX
+						a(href="#").card-list__el
+							span Петли CLIP top BLUMOTION черный оникс
+				.card-el(style="background-image:url('img/card--vauth.jpg')")
+					.card-el__title Vauth-Sagel
+					.card-list
+						a(href="#").card-list__el
+							span Решения для высоких шкафов
+						a(href="#").card-list__el
+							span Решения для нижних тумб
+						a(href="#").card-list__el
+							span Решения для угловых тумб
+				.card-el(style="background-image:url('img/card--tss.jpg')")
+					.card-el__title TSS Cleaf
+					.card-list
+						a(href="#").card-list__el
+							span Решения для высоких шкафов
+						a(href="#").card-list__el
+							span Решения для нижних тумб
+						a(href="#").card-list__el
+							span Решения для угловых тумб
+				.card-el(style="background-image:url('img/card--veneto.jpg')")
+					.card-el__title VENETO
+					.card-list
+						a(href="#").card-list__el
+							span Кадоро
+						a(href="#").card-list__el
+							span Мейзон
+						a(href="#").card-list__el
+							span Венето Классико
+				.card-el(style="background-image:url('img/card--fundermax.jpg')")
+					.card-el__title FunderMax
+					.card-list
+						a(href="#").card-list__el
+							span Глянцевые LUXOS
+						a(href="#").card-list__el
+							span Матовые LOTOS
+						a(href="#").card-list__el
+							span Панели TSS Superfront
+				.card-el(style="background-image:url('img/card-hi-macs.jpg')")
+					.card-el__title HI-MACS
+					.card-list
+						a(href="#").card-list__el
+							span Aurora (новинка)
+						a(href="#").card-list__el
+							span Intense (новинка)
+						a(href="#").card-list__el
+							span Granite&Quartz (кварц и гранит)
+			.btn-row-mid.show-cat
+				a(href="#").btn--md.btn--mark Смотреть весь каталог
+
+
+
+	+footer()
+include ./block_html/_script.pug

@@ -1,0 +1,20 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.content--clear
+		.main-cont
+			+bread()
+			.title.title--xl Наши новости-акции
+			.news-list
+				- for (var i=0;i<8;i++)
+					.news-list__el
+						.news-list__img(style="background-image:url('img/card--fundermax.jpg')")
+						.news-list__info
+							.news-list__date 23.02.2020
+							.news-list__title При покупке навесов петли в подарок
+							.news-list__decr Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности позволя...
+		+orderForm()
++footer()
+include ./block_html/_script.pug

@@ -107,7 +107,7 @@ $(document).ready(function () {
 			speed: 500,
 			dots:true,
 			arrows:false,
-			rows:0,
+			rows:1,
 			customPaging : function(slider, i) {
 				return '<span class="dot"></span>';
 			}
@@ -322,5 +322,66 @@ $(document).ready(function () {
 		}
 	});
 	//history accord===end
+
+	// tab
+	$('.js-tab-head').click(function(){
+		var index = $(this).index();
+		var parent = $(this).closest('.js-tab-wrap');
+		parent.find('.js-tab-head').removeClass('active');
+		$(this).addClass('active');
+		parent.find('.js-tab-info').each(function(){
+			if($(this).index()===index){
+				$(this).addClass('active')
+			}else{
+				$(this).removeClass('active')
+			}
+		})
+	});
+	// tab === end
+
+
+		// toggle single
+	$('.js-toggle').click(function(){
+		$(this).toggleClass("active")
+	})
+	// toggle single === end
+
+	//toggle class + neighbor
+	$('.js-commutator-el').click(function(){
+		var thisItem = $(this).data("item");
+		var thisGroup = $(this).data("group") || false;
+		var isEach = $(this).data("each") || false;
+		var selector;
+		$(this).toggleClass("active")
+		if($('.js-commutator-cont').data('group')) {
+			selector = $(".js-commutator-cont[data-group=" + thisGroup + "");
+		}else{
+			selector = $(".js-commutator-cont");
+		}
+		selector.each(function(){
+			if($(this).data("item")=== thisItem){
+				$(this).toggleClass('active');
+			}else{
+				isEach ? $(this).removeClass("active") : false
+			}
+		})
+	})
+	//toggle class + neighbor === end
+
+	//toggle class + parent
+	$('.js-switch').click(function(){
+		var thisItem = $(this).data("item");
+		var isEach = $(this).data("each") || false;
+		var parrent = $(this).closest(".js-switch-parrent");
+		$(this).toggleClass("active")
+		var selector;
+		selector = $(".js-switch[data-item=" + thisItem + "")
+		if(isEach){
+			selector.not(this).removeClass('active')
+			selector.not(this).closest(".js-switch-parrent").find(".js-switch-cont").removeClass('active')
+		}
+		parrent.find(".js-switch-cont").toggleClass('active')
+	})
+	//toggle class + parent === end
 
 });

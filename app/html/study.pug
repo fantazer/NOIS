@@ -1,0 +1,114 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.content--clear
+		.banner(style="background-image:url('img/banner-3.jpg')")
+			.filter-layer
+			.main-cont
+				.banner-wrap
+					.banner-title Пройдите обучение у специалистов
+					.banner-text С другой стороны рамки и место обучения кадров в значительной степени обуславливает создание существенных финансовых и административных условий.
+					.btn--md.btn--mark Оставить заявку
+
+		.section.section--hidden
+			.unit.unit--mark.unit--left
+			.main-cont
+				.title.title--xxl Наши учебные центры
+				.text
+					p С другой стороны рамки и место обучения кадров в значительной степени обуславливает создание существенных финансовых и административных условий. Равным образом консультация с широким активом в значительной степени обуславливает создание направлений прогрессивного развития.
+					.img-list
+						a(href="img/item-1.jpg" style="background-image:url('img/item-1.jpg')").img-list__el.fancybox
+						a(href="img/item-2.jpg" style="background-image:url('img/item-2.jpg')").img-list__el.fancybox
+						a(href="img/item-3.jpg" style="background-image:url('img/item-3.jpg')").img-list__el.fancybox
+						a(href="img/item-4.jpg" style="background-image:url('img/item-4.jpg')").img-list__el.fancybox
+						a(href="img/item-5.jpg" style="background-image:url('img/item-5.jpg')").img-list__el.fancybox
+						a(href="img/item-5.jpg" style="background-image:url('img/item-6.jpg')").img-list__el.fancybox
+						a(href="img/item-5.jpg" style="background-image:url('img/item-7.jpg')").img-list__el.fancybox
+						a(href="img/item-5.jpg" style="background-image:url('img/item-8.jpg')").img-list__el.fancybox
+					p Идейные соображения высшего порядка, а также рамки и место обучения кадров требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. Разнообразный и богатый опыт реализация намеченных плановых заданий позволяет оценить значение соответствующий условий активизации. Таким образом реализация намеченных плановых заданий способствует подготовки и реализации систем массового участия.
+					.btn--md.btn--mark Записаться на обучение
+
+
+		.section.section--snow.section--hidden
+			.unit.unit--dark.unit--right
+			.main-cont
+				.title.title--xxl Програмы обучения
+				.box-list
+					.box
+						.box-wrap
+							.box__icon
+								+icon("teach","icon")
+							.box__title Для дизайнеров
+							.box__text Равным образом реализация намеченных плановых заданий позволяет оценить значение форм развития. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание модели
+							.btn--md.btn--mark.btn--full Записаться
+					.box
+						.box-wrap
+							.box__icon
+								+icon("checklist","icon")
+							.box__title Для руководителей
+							.box__text Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки форм развития. Разнообразный и богатый опыт сложившаяся структура организации требуют от нас анализа дальнейших направлений развит
+							.btn--md.btn--mark.btn--full Записаться
+					.box
+						.box-wrap
+							.box__icon
+								+icon("reading","icon")
+							.box__title Для сборщиков
+							.box__text Значимость этих проблем настолько очевидна, что рамки и место обучения кадров в значительной степени обуславливает создание дальнейших направлений развития. Равным образом укрепление и развитие структуры позволяет выполнять важные задания по разработке новых предложений.
+							.btn--md.btn--mark.btn--full Записаться
+
+		.section.section--gray
+			.main-cont
+				.title.title--xxl Кураторы учебных центров
+				.manager-list.manager-list--sm
+					- for (var i=0;i<6;i++)
+						.manager__el
+							.manager__el-photo(style="background-image:url('img/manager.jpg')")
+							.manager__el-cont
+								.manager__el-name Ольга Иванова
+								.manager__el-staff Менеджер производства
+								.manager__el-info тел: +7(925)123-43-24
+								.manager__el-info info@mail.ru
+
+		.section.section--snow
+			.main-cont
+				.title.title--xxl Отзывы о нашем обучении
+				.review
+					- for (var i=0;i<4;i++)
+						.review__el
+							+icon("quote","icon")
+							.review__el-head
+								.review__el-img(style="background-image:url('img/user.jpg')")
+								.review__el-info
+									.review__el-date 20.08.2020
+									.review__el-name Антон попов
+							.review__el-text Задача организации, в особенности же постоянный количественный рост и сфера нашей активности требуют от нас анализа дальнейших направлений развития. Товарищи! начало повседневной работы по формированию позиции в значительной степени обуславливает создание модели развития.
+				.btn-row-mid
+					.btn--md.btn--light
+						.btn--icon.btn--icon-left
+							+icon("refresh","nav-icon")
+							span Посмотреть еще
+		.section
+			.main-cont
+				.title.title--xxl Где мы находимся?
+				.location
+					.map
+						.map__el
+							//положи код карты сюда
+					.location__info
+						.location-row
+							.location-title Адрес:
+							.location-val г.Новосибирск ул. Зорге 23
+						.location-row
+							.location-title Телефон:
+							.location-val +7(384) 325-12-21 доб 125
+						.location-row
+							.location-title E-mail:
+							.location-val info@nois.ru
+						.location-row
+							.location-title Режим работы:
+							.location-val пн-пт с 9:00 до 18:00
+		+orderForm()
++footer()
+include ./block_html/_script.pug

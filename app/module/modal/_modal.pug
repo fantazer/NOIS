@@ -2,36 +2,226 @@ mixin modal()
 	.modal-layer
 		.modal-filter
 		.modal-wrap
-			.modal(data-modal="order")
+			// enter
+			.modal(data-modal="reg")
 				.modal-content
 					.modal-close
 						+icon("close","icon")
-					.modal-title Оставьте заявку
-					.modal-text Обращаетесь к нам впервые? <br> Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!
-					form.validate-form( action="javascript:void(null);")
+					.modal-title Регистрация
+					.modal-text Заполните необходимые поля для регистрации в личном кабинете
+					.input-cont
 						.input-row
-							input(type="text" name="name" placeholder="Ваше имя").input
+							input(type="text" name="name" placeholder="Ваш логин").input
+					.input-cont
 						.input-row
-							input(type="text" name="phone" placeholder="Ваш телефон").input
+							input(type="text" name="name" placeholder="Ваша почта").input
+					.input-cont
 						.input-row
-							textarea(name="info", cols="30", rows="5" placeholder="Сообщение").input
-						.agree-row
-							.check-el
-								label.style-label.style-label--checkbox
-									input(type="checkbox" name="agree").sytle-input
-									.sytle-input-element
-										+icon("checked","icon-check")
-									.sytle-input-text=text
-							.agree-row__text Согласен с
-								a(href="#") условиями обработки персональных данных
-						input(type="submit" value="Отправить заявку").modal-send
-			//success message
-			.modal(data-modal="true")
-				.modal-content.modal-content--true
-					.modal-close
-						+icon("close-fat","icon")
-					+icon("check-round","icon icon-msg")
-					.modal-text-true Сообщение отправленно
+							input(type="text" name="name" placeholder="Пароль").input
+					.login-remember
+						.check-el
+							label.style-label.style-label--checkbox
+								input(type="checkbox").style-input
+								.style-input-element
+									+icon("checked","icon-check")
+								.style-input-text Cогласен с #[a(href="#") условиями обработки]&nbsp;персональных данных
 
-	a(href="#" data-modal="order").modal-get Открыть модальное окно
+					input(type="submit" value="Войти").modal-send
+			// enter === end
+
+			// enter
+			.modal(data-modal="enter")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Вход в личный кабинет
+					.input-cont
+						.input-row
+							input(type="text" name="name" placeholder="Ваш логин").input
+					.input-cont
+						.input-row
+							input(type="text" name="name" placeholder="Пароль").input
+					input(type="submit" value="Войти").modal-send
+					.modal-link Забыл пароль
+			// enter === end
+
+
+
+			// location
+			.modal(data-modal="location")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Ваш город
+					.modal-text Выберите свой город для отображения актуальных товаров и цен
+					.location-list-wrap
+						.location-list.scroll
+							.location-list__el.location-list__el--active Кемерово
+							- for(var i=0;i<4;i++)
+								.location-list__el Москва
+								.location-list__el Санкт-Петербург
+								.location-list__el Волгоград
+			// location === end
+
+			// bad-action
+			.modal(data-modal="bad-action")
+				.modal-content.modal-content--mid
+					.modal-close
+						+icon("close","icon")
+					.modal-img
+						img(src="img/bad--color.svg", alt="")
+					.modal-title.modal-title--clear Что-то пошло не так
+					.modal-text.type--center Мы откроемся завтра в 9 утра. Вы можете оформить заказ на завтра и получить его в определённое вами время
+					input(type="submit" value="Хорошо").btn--md.btn--mark.btn--full.modal-hide
+			// bad-action === end
+
+			// true-action
+			.modal(data-modal="true-action")
+				.modal-content.modal-content--mid
+					.modal-close
+						+icon("close","icon")
+					.modal-img
+						img(src="img/dinosaur--color.svg", alt="")
+					.modal-title.modal-title--clear Отзыв отправлен
+					.modal-text.type--center Спасибо за ваш отзыв, мы ценим внимание каждого клиента
+					input(type="submit" value="Хорошо").btn--md.btn--mark.btn--full.modal-hide
+			// true-action === end
+
+
+			// profile
+			.modal(data-modal="profile")
+				.modal-content.modal-content--md
+					.modal-close
+						+icon("close","icon")
+					.modal-title Личные данные
+					.modal-text Личные данные позволяют быстрее совершать оформление заказа
+					.input-cont
+						.input-row
+							input(type="text" name="name" placeholder="Имя").input
+					.input-cont
+						.input-row
+							input(type="text" name="name" placeholder="E-mail").input
+					.login-remember
+						.check-el
+							label.style-label.style-label--checkbox
+								input(type="checkbox").style-input
+								.style-input-element
+									+icon("checked","icon-check")
+								.style-input-text информировать о скидках и акциях
+					.input-cont.input-cont--two
+						.input-row
+							select.select-beauty
+								option(data-display="Число") Не выбрано
+								- for (var i=0;i<20;i++)
+									option 25
+						.input-row
+							select.select-beauty
+								option(data-display="Месяц") Не выбрано
+								- for (var i=0;i<20;i++)
+									option Январь
+					.input-cont.input-cont--two
+						.input-row
+							select.select-beauty
+								option(data-display="Год") Не выбрано
+								- for (var i=0;i<20;i++)
+									option 1984
+						.input-row.input-row--middle
+							.type--sm будьте внимательны, день рождения нельзя изменить
+					input(type="submit" value="Сохранить").modal-send
+					.modal-link Отмена
+			// profile === end
+
+			// bonus
+			.modal.modal--lg(data-modal="bonus")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Бонусные баллы
+					.modal-text.type--mark.type--bold 1 бонусный балл = 1 рубль
+					.modal-bonus.text.scroll
+						p Бонусными баллами можно оплатить до 50% от стоимости вашего заказа. Для этого нужно при оформлении заказа выбрать количество баллов, которые вы готовы потратить.
+
+						p Бонусные баллы не начисляются на акционные товары.
+						h3 Что это значит?
+
+						p Еда, приготовленная с душой, всегда только свежие продукты, увлечённые своим делом повара, интересное и разнообразное меню для гурманов и ценителей классики — мы предлагаем попробовать блюда разных кухонь мира и оценить преимущества.
+
+						p Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.
+
+						p Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то доставка готовой еды на дом клиенту или в офис для корпоративного праздника.
+						h3 На что можно потратить баллы?
+
+						p Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.
+
+						p Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то доставка готовой еды на дом клиенту или в офис для корпоративного праздника.
+						p Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.
+
+						p Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то доставка готовой еды на дом клиенту или в офис для корпоративного праздника.
+						p Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.
+
+							p Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то доставка готовой еды на дом клиенту или в офис для корпоративного праздника.
+							p Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.
+
+							p Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то доставка готовой еды на дом клиенту или в офис для корпоративного праздника.
+			// bonus === end
+
+			// address
+			.modal(data-modal="address")
+				.modal-content.modal-content--md
+					.modal-close
+						+icon("close","icon")
+					.modal-title Адрес доставки
+					.modal-text Добавленный адрес помогает заполнять форму оформления заказа быстрее
+					.input-cont
+						.input-row
+							input(type="text" name="name" placeholder="Название адреса (дом, работа)" ).input
+					.input-cont
+						.input-row
+							input(type="text" name="name" placeholder="Имя").input
+					.input-cont
+						.input-row
+							input(type="text" name="name" placeholder="E-mail").input
+					.input-cont.input-cont--two
+						.input-row
+							input(type="text" name="name" placeholder="Дом").input
+						.input-row
+							input(type="text" name="name" placeholder="№ кв, офис").input
+					.input-cont.input-cont--two
+						.input-row
+							input(type="text" name="name" placeholder="Подъезд").input
+						.input-row
+							input(type="text" name="name" placeholder="Этаж").input
+
+					input(type="submit" value="Сохранить адрес").modal-send
+					.modal-link Отмена
+			// address === end
+
+			// review
+			.modal(data-modal="review")
+				.modal-content.modal-content--md
+					.modal-close
+						+icon("close","icon")
+					.modal-title Добавление отзыва
+					.input-cont
+						.input-row
+							input(type="text" name="name" placeholder="Имя").input
+					.input-cont
+						.input-row
+							input(type="text" name="name" placeholder="Телефон или e-mail").input
+					.input-cont
+						.input-row
+							textarea(name="text", cols="30", rows="10" class="input" placeholder="Ваш отзыв")
+					.login-remember
+						.check-el
+							label.style-label.style-label--checkbox
+								input(type="checkbox").style-input
+								.style-input-element
+									+icon("checked","icon-check")
+								.style-input-text Cогласен с #[a(href="#") условиями обработки]&nbsp;персональных данных
+					input(type="submit" value="Отправить").modal-send
+			// review === end
+
+
+
+
 

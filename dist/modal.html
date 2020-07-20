@@ -21,7 +21,7 @@
 
 <body>
     <style type="text/css">
-        .btn--md {
+        .btn-wrap .btn--md {
         		display: inline-block;
         		margin-bottom: 20px;
         	}
@@ -33,108 +33,890 @@
         		align-items: baseline;
         	}
     </style>
-    <div class="main-cont">
-        <p>Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"</p>
-        <p>Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send</p>
-        <div class="btn-wrap">
-            <div class="btn--md btn--mark modal-get" data-modal="order">Заявка | data-modal="code "</div>
-        </div>
-    </div>
-    <!--block footer-->
-    <div class="footer-wrap">
-        <div class="main-cont">
-            <div class="footer-top">
-                <a class="footer-logo" href="/">
-                    <img src="img/logo--white.svg" alt="" />
-                </a>
-                <div class="soc-row">
-                    <a class="soc-row__el" href="#">
-                        <img src="img/inst--color.svg" alt="" />
-                    </a>
-                    <a class="soc-row__el" href="#">
-                        <svg class="icon">
-                            <use xlink:href="#facebook--color"></use>
-                        </svg>
-                    </a>
-                    <a class="soc-row__el" href="#">
-                        <svg class="icon">
-                            <use xlink:href="#youtube--color"></use>
-                        </svg>
-                    </a>
+    <div class="page">
+        <!--block header-->
+        <div class="header">
+            <div class="header-top-wrap">
+                <div class="main-cont">
+                    <div class="header-top">
+                        <div class="header-top-nav">
+                            <a class="header-top-nav__el" href="#">О компании</a>
+                            <a class="header-top-nav__el" href="#">Акции</a>
+                            <a class="header-top-nav__el" href="#">Бонусная программа</a>
+                            <a class="header-top-nav__el" href="#">Дилерская сеть</a>
+                            <a class="header-top-nav__el" href="#">База знаний</a>
+                            <a class="header-top-nav__el" href="#">Контакты</a>
+                            <a class="header-top-nav__el" href="#">Отзывы</a>
+                        </div>
+                        <div class="header-tool">
+                            <div class="header-tool__el">
+                                <svg class="icon">
+                                    <use xlink:href="#user"></use>
+                                </svg>
+                                <span>Войти</span>
+                            </div>
+                            <a class="header-tool__el header-tool__el--mark" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#cart"></use>
+                                </svg>
+                                <span>Корзина</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="footer-nav">
-                <a class="footer-nav__el" href="#">О компании</a>
-                <a class="footer-nav__el" href="#">Акции</a>
-                <a class="footer-nav__el" href="#">Бонусная программа</a>
-                <a class="footer-nav__el" href="#">Дилерская сеть</a>
-                <a class="footer-nav__el" href="#">База знаний</a>
-                <a class="footer-nav__el" href="#">Контакты</a>
-                <a class="footer-nav__el" href="#">Отзывы</a>
-            </div>
-        </div>
-    </div>
-    <!--block footer end-->
-    <div class="modal-layer">
-        <div class="modal-filter"></div>
-        <div class="modal-wrap">
-            <div class="modal" data-modal="order">
-                <div class="modal-content">
-                    <div class="modal-close">
-                        <svg class="icon">
+            <div class="main-cont">
+                <div class="header-main">
+                    <div class="header-nav-toggle js-slide-block-toggle" data-menu="nav">
+                        <svg class="icon is-close">
+                            <use xlink:href="#menu"></use>
+                        </svg>
+                        <svg class="icon is-open">
                             <use xlink:href="#close"></use>
                         </svg>
                     </div>
-                    <div class="modal-title">Оставьте заявку</div>
-                    <div class="modal-text">Обращаетесь к нам впервые?
-                        <br>Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!</div>
-                    <form class="validate-form" action="javascript:void(null);">
-                        <div class="input-row">
-                            <input class="input" type="text" name="name" placeholder="Ваше имя" />
+                    <a class="logo" href="/">
+                        <img class="logo--desktop" src="img/logo.svg" alt="" />
+                        <img class="logo--mobile" src="img/logo--mobile.svg" alt="" />
+                    </a>
+                    <a class="logo-partner" href="#">
+                        <img src="img/blum.svg" alt="" />
+                    </a>
+                    <div class="header-contact">
+                        <a class="header-phone" href="tel:8 800 000 00 00">8 800 000 00 00</a>
+                        <div class="header-loc">
+                            <svg class="icon">
+                                <use xlink:href="#location"></use>
+                            </svg>
+                            <span>Новосибирск</span>
                         </div>
-                        <div class="input-row">
-                            <input class="input" type="text" name="phone" placeholder="Ваш телефон" />
+                    </div>
+                    <div class="btn--sm btn--light header-get">Заказать звонок</div>
+                    <div class="catalog-mobile js-slide-block-toggle" data-menu="catalog">
+                        <svg class="icon is-close">
+                            <use xlink:href="#catalog"></use>
+                        </svg>
+                        <svg class="icon is-open">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom-wrap">
+                <div class="main-cont">
+                    <div class="header-bottom">
+                        <div class="get-cat">
+                            <div class="get-cat-wrap">
+                                <svg class="icon">
+                                    <use xlink:href="#menu"></use>
+                                </svg>
+                                <span>Каталог</span>
+                            </div>
+                            <div class="navigation slide-block slide-block--menu" data-menu="catalog">
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Мебельная фурнитура Blum</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Подъемные механизмы</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Системы выдвижения</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Системы направляющих</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Системы петель</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">SERVO-DRIVE для TANDEM, TANDEMBOX, MOVENTO и LEGRABOX</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">SERVO-DRIVE flex для холодильников, морозильных камер и посудомоечных машин</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Станки, шаблоны и приспособления для сборки</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Журнал &quot;Вдохновение на кухне&quot;</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Мебельная фурнитура и аксессуары Vauth-Sagel</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Решения для высоких шкафов</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Решения для нижних тумб</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Решения для угловых тумб</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Решения для сбора мусора</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Аксессуары</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Дополнительная фурнитура</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Мебельные ручки PAMAR</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Ручки скобы</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Ручки кнопки</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Крючки, Менсолодержатели, кабельные каналы</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Ручки врезные</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Мебельная фурнитура и аксессуары VIBO</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Посудосушители</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Выдвижные корзины и сетчатые емкости для кухни</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Выдвижные колонны</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Выдвижные поворотные колонны</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Механизмы для угловых тумб</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Карусели</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Наборы для сбора мусора</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Наполнение шкафов</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Мебельные ручки FOX ART</a>
+                                    <ul class="navigation-list">
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Фурнитура Volpato</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Лотки для столовых приборов</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Опоры (ножки кухонные)</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Вентиляционная база для холодильника</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Алюминиевые поддоны</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Мебельные фасады из массива ценных пород древесины</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Фасадные системы VENETO</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Мебельные фасады FIERAMOSCA</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Мебельные фасады РУССТА</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Пластик FENIX</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">FENIX NTM</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Декоративные плиты TSS Cleaf</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Geta (NEW)</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Talco (NEW)</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Penelope</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Spigato и PrimoFiore</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Tranche</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Yosemite</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Azimut</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Engadina</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Sherwood</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Millenium</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Pembroke</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Ares</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Sable</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Esperia и Tivoli</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Matrix</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">HPL пластик Cleaf</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Минералы</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Древесные декоры</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Фантазийные декоры</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Однотонные декоры</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Декоративные панели FunderMax</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Глянцевые панели LUXOS</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Суперматовые панели LOTOS</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Панели TSS Superfront</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Акриловый камень LG HI-MACS</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Aurora (NEW)</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Intense (NEW)</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Solid</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Lucent</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Sand&amp;Pearl</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Granite&amp;Quartz</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Lucia</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Volcanics</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Galaxy</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Marmo</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Изготовление изделий из HI-MACS</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Комплектующие для шкафов-купе raumplus</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система распашных дверей RPS</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система раздвижных дверей</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система навесных дверей FLUA</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Безрамные деревянные двери и межкомнатные перегородки</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система дверей с верхним подвесом AIR (последовательное и синхронное открывание)</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система складных дверей</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система распашных дверей</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Межкомнатная дверь SWING SLIM LINE</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система мансардных дверей</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Интерьерная система RIMA</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Гардеробная система UNO</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Гардеробная система CORNICE</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Стационарные перегородки</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="input-row">
-                            <textarea class="input" name="info" cols="30" rows="5" placeholder="Сообщение"></textarea>
+                        <div class="search">
+                            <input class="input" type="text" placeholder="Поиск" />
+                            <svg class="icon">
+                                <use xlink:href="#search"></use>
+                            </svg>
                         </div>
-                        <div class="agree-row">
+                    </div>
+                </div>
+            </div>
+            <div class="slide-block slide-block--left slide-block--menu" data-menu="nav">
+                <div class="slide-block-wrap">
+                    <a class="slide-phone" href="tel:8 800 000 00 00">8 800 000 00 00</a>
+                    <div class="header-tool slide-cart">
+                        <a class="header-tool__el header-tool__el--mark" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#cart"></use>
+                            </svg>
+                            <span>Корзина</span>
+                        </a>
+                    </div>
+                    <div class="search">
+                        <input class="input" type="text" placeholder="Поиск" />
+                        <svg class="icon">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </div>
+                    <div class="slider-menu">
+                        <a class="slider-menu__el" href="#">О компании</a>
+                        <a class="slider-menu__el" href="#">Акции</a>
+                        <a class="slider-menu__el" href="#">Бонусная программа</a>
+                        <a class="slider-menu__el" href="#">Дилерская сеть</a>
+                        <a class="slider-menu__el" href="#">База знаний</a>
+                        <a class="slider-menu__el" href="#">Контакты</a>
+                        <a class="slider-menu__el" href="#">Отзывы</a>
+                    </div>
+                    <div class="header-tool__el slide-auth">
+                        <svg class="icon">
+                            <use xlink:href="#user"></use>
+                        </svg>
+                        <span>Войти</span>
+                    </div>
+                    <div class="header-loc">
+                        <svg class="icon">
+                            <use xlink:href="#location"></use>
+                        </svg>
+                        <span>Новосибирск</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block header end-->
+        <div class="content">
+            <div class="main-cont">
+                <p>Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"</p>
+                <p>Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send</p>
+                <div class="btn-wrap">
+                    <div class="btn--md btn--mark modal-get" data-modal="reg">Вход | data-modal="reg"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="enter">Вход | data-modal="enter"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="location">Выбор города | data-modal="location"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="bad-action">Неудачное действие | data-modal="bad-action"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="true-action">Успешное действие | data-modal="true-action"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="profile">Личные данные | data-modal="profile"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="bonus">Бонусные баллы | data-modal="bonus"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="address">Адрес доставки | data-modal="address"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="review">Отзыв | data-modal="review"</div>
+                    <!--.btn--md.btn--mark.modal-get(data-modal="order") Заявка | data-modal="code "-->
+                </div>
+            </div>
+        </div>
+        <!--block footer-->
+        <div class="footer-wrap">
+            <div class="main-cont">
+                <div class="footer-top">
+                    <a class="footer-logo" href="/">
+                        <img src="img/logo--white.svg" alt="" />
+                    </a>
+                    <div class="soc-row">
+                        <a class="soc-row__el" href="#">
+                            <img src="img/inst--color.svg" alt="" />
+                        </a>
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#facebook--color"></use>
+                            </svg>
+                        </a>
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#youtube--color"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <a class="footer-nav__el" href="#">О компании</a>
+                    <a class="footer-nav__el" href="#">Акции</a>
+                    <a class="footer-nav__el" href="#">Бонусная программа</a>
+                    <a class="footer-nav__el" href="#">Дилерская сеть</a>
+                    <a class="footer-nav__el" href="#">База знаний</a>
+                    <a class="footer-nav__el" href="#">Контакты</a>
+                    <a class="footer-nav__el" href="#">Отзывы</a>
+                </div>
+            </div>
+        </div>
+        <!--block footer end-->
+        <div class="modal-layer">
+            <div class="modal-filter"></div>
+            <div class="modal-wrap">
+                <!-- enter-->
+                <div class="modal" data-modal="reg">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Регистрация</div>
+                        <div class="modal-text">Заполните необходимые поля для регистрации в личном кабинете</div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Ваш логин" />
+                            </div>
+                        </div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Ваша почта" />
+                            </div>
+                        </div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Пароль" />
+                            </div>
+                        </div>
+                        <div class="login-remember">
                             <div class="check-el">
                                 <label class="style-label style-label--checkbox">
-                                    <input class="sytle-input" type="checkbox" name="agree" />
-                                    <div class="sytle-input-element">
+                                    <input class="style-input" type="checkbox" />
+                                    <div class="style-input-element">
                                         <svg class="icon-check">
                                             <use xlink:href="#checked"></use>
                                         </svg>
                                     </div>
-                                    <div class="sytle-input-text"></div>
+                                    <div class="style-input-text">Cогласен с
+                                        <a href="#">условиями обработки</a>&nbsp;персональных данных</div>
                                 </label>
                             </div>
-                            <div class="agree-row__text">Согласен с
-                                <a href="#">условиями обработки персональных данных</a>
+                        </div>
+                        <input class="modal-send" type="submit" value="Войти" />
+                    </div>
+                </div>
+                <!-- enter === end-->
+                <!-- enter-->
+                <div class="modal" data-modal="enter">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Вход в личный кабинет</div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Ваш логин" />
                             </div>
                         </div>
-                        <input class="modal-send" type="submit" value="Отправить заявку" />
-                    </form>
-                </div>
-            </div>
-            <!--success message-->
-            <div class="modal" data-modal="true">
-                <div class="modal-content modal-content--true">
-                    <div class="modal-close">
-                        <svg class="icon">
-                            <use xlink:href="#close-fat"></use>
-                        </svg>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Пароль" />
+                            </div>
+                        </div>
+                        <input class="modal-send" type="submit" value="Войти" />
+                        <div class="modal-link">Забыл пароль</div>
                     </div>
-                    <svg class="icon icon-msg">
-                        <use xlink:href="#check-round"></use>
-                    </svg>
-                    <div class="modal-text-true">Сообщение отправленно</div>
                 </div>
+                <!-- enter === end-->
+                <!-- location-->
+                <div class="modal" data-modal="location">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Ваш город</div>
+                        <div class="modal-text">Выберите свой город для отображения актуальных товаров и цен</div>
+                        <div class="location-list-wrap">
+                            <div class="location-list scroll">
+                                <div class="location-list__el location-list__el--active">Кемерово</div>
+                                <div class="location-list__el">Москва</div>
+                                <div class="location-list__el">Санкт-Петербург</div>
+                                <div class="location-list__el">Волгоград</div>
+                                <div class="location-list__el">Москва</div>
+                                <div class="location-list__el">Санкт-Петербург</div>
+                                <div class="location-list__el">Волгоград</div>
+                                <div class="location-list__el">Москва</div>
+                                <div class="location-list__el">Санкт-Петербург</div>
+                                <div class="location-list__el">Волгоград</div>
+                                <div class="location-list__el">Москва</div>
+                                <div class="location-list__el">Санкт-Петербург</div>
+                                <div class="location-list__el">Волгоград</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- location === end-->
+                <!-- bad-action-->
+                <div class="modal" data-modal="bad-action">
+                    <div class="modal-content modal-content--mid">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-img">
+                            <img src="img/bad--color.svg" alt="" />
+                        </div>
+                        <div class="modal-title modal-title--clear">Что-то пошло не так</div>
+                        <div class="modal-text type--center">Мы откроемся завтра в 9 утра. Вы можете оформить заказ на завтра и получить его в определённое вами время</div>
+                        <input class="btn--md btn--mark btn--full modal-hide" type="submit" value="Хорошо" />
+                    </div>
+                </div>
+                <!-- bad-action === end-->
+                <!-- true-action-->
+                <div class="modal" data-modal="true-action">
+                    <div class="modal-content modal-content--mid">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-img">
+                            <img src="img/dinosaur--color.svg" alt="" />
+                        </div>
+                        <div class="modal-title modal-title--clear">Отзыв отправлен</div>
+                        <div class="modal-text type--center">Спасибо за ваш отзыв, мы ценим внимание каждого клиента</div>
+                        <input class="btn--md btn--mark btn--full modal-hide" type="submit" value="Хорошо" />
+                    </div>
+                </div>
+                <!-- true-action === end-->
+                <!-- profile-->
+                <div class="modal" data-modal="profile">
+                    <div class="modal-content modal-content--md">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Личные данные</div>
+                        <div class="modal-text">Личные данные позволяют быстрее совершать оформление заказа</div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Имя" />
+                            </div>
+                        </div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="E-mail" />
+                            </div>
+                        </div>
+                        <div class="login-remember">
+                            <div class="check-el">
+                                <label class="style-label style-label--checkbox">
+                                    <input class="style-input" type="checkbox" />
+                                    <div class="style-input-element">
+                                        <svg class="icon-check">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="style-input-text">информировать о скидках и акциях</div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="input-cont input-cont--two">
+                            <div class="input-row">
+                                <select class="select-beauty">
+                                    <option data-display="Число">Не выбрано</option>
+                                    <option>25</option>
+                                    <option>25</option>
+                                    <option>25</option>
+                                    <option>25</option>
+                                    <option>25</option>
+                                    <option>25</option>
+                                    <option>25</option>
+                                    <option>25</option>
+                                    <option>25</option>
+                                    <option>25</option>
+                                    <option>25</option>
+                                    <option>25</option>
+                                    <option>25</option>
+                                    <option>25</option>
+                                    <option>25</option>
+                                    <option>25</option>
+                                    <option>25</option>
+                                    <option>25</option>
+                                    <option>25</option>
+                                    <option>25</option>
+                                </select>
+                            </div>
+                            <div class="input-row">
+                                <select class="select-beauty">
+                                    <option data-display="Месяц">Не выбрано</option>
+                                    <option>Январь</option>
+                                    <option>Январь</option>
+                                    <option>Январь</option>
+                                    <option>Январь</option>
+                                    <option>Январь</option>
+                                    <option>Январь</option>
+                                    <option>Январь</option>
+                                    <option>Январь</option>
+                                    <option>Январь</option>
+                                    <option>Январь</option>
+                                    <option>Январь</option>
+                                    <option>Январь</option>
+                                    <option>Январь</option>
+                                    <option>Январь</option>
+                                    <option>Январь</option>
+                                    <option>Январь</option>
+                                    <option>Январь</option>
+                                    <option>Январь</option>
+                                    <option>Январь</option>
+                                    <option>Январь</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-cont input-cont--two">
+                            <div class="input-row">
+                                <select class="select-beauty">
+                                    <option data-display="Год">Не выбрано</option>
+                                    <option>1984</option>
+                                    <option>1984</option>
+                                    <option>1984</option>
+                                    <option>1984</option>
+                                    <option>1984</option>
+                                    <option>1984</option>
+                                    <option>1984</option>
+                                    <option>1984</option>
+                                    <option>1984</option>
+                                    <option>1984</option>
+                                    <option>1984</option>
+                                    <option>1984</option>
+                                    <option>1984</option>
+                                    <option>1984</option>
+                                    <option>1984</option>
+                                    <option>1984</option>
+                                    <option>1984</option>
+                                    <option>1984</option>
+                                    <option>1984</option>
+                                    <option>1984</option>
+                                </select>
+                            </div>
+                            <div class="input-row input-row--middle">
+                                <div class="type--sm">будьте внимательны, день рождения нельзя изменить</div>
+                            </div>
+                        </div>
+                        <input class="modal-send" type="submit" value="Сохранить" />
+                        <div class="modal-link">Отмена</div>
+                    </div>
+                </div>
+                <!-- profile === end-->
+                <!-- bonus-->
+                <div class="modal modal--lg" data-modal="bonus">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Бонусные баллы</div>
+                        <div class="modal-text type--mark type--bold">1 бонусный балл = 1 рубль</div>
+                        <div class="modal-bonus text scroll">
+                            <p>Бонусными баллами можно оплатить до 50% от стоимости вашего заказа. Для этого нужно при оформлении заказа выбрать количество баллов, которые вы готовы потратить.</p>
+                            <p>Бонусные баллы не начисляются на акционные товары.</p>
+                            <h3>Что это значит?</h3>
+                            <p>Еда, приготовленная с душой, всегда только свежие продукты, увлечённые своим делом повара, интересное и разнообразное меню для гурманов и ценителей классики — мы предлагаем попробовать блюда разных кухонь мира и оценить преимущества.</p>
+                            <p>Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.</p>
+                            <p>Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то
+                                доставка готовой еды на дом клиенту или в офис для корпоративного праздника.</p>
+                            <h3>На что можно потратить баллы?</h3>
+                            <p>Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.</p>
+                            <p>Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то
+                                доставка готовой еды на дом клиенту или в офис для корпоративного праздника.</p>
+                            <p>Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.</p>
+                            <p>Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то
+                                доставка готовой еды на дом клиенту или в офис для корпоративного праздника.</p>
+                            <p>Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.
+                                <p>Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь
+                                    то доставка готовой еды на дом клиенту или в офис для корпоративного праздника.</p>
+                                <p>Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.</p>
+                                <p>Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь
+                                    то доставка готовой еды на дом клиенту или в офис для корпоративного праздника.</p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- bonus === end-->
+                <!-- address-->
+                <div class="modal" data-modal="address">
+                    <div class="modal-content modal-content--md">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Адрес доставки</div>
+                        <div class="modal-text">Добавленный адрес помогает заполнять форму оформления заказа быстрее</div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Название адреса (дом, работа)" />
+                            </div>
+                        </div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Имя" />
+                            </div>
+                        </div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="E-mail" />
+                            </div>
+                        </div>
+                        <div class="input-cont input-cont--two">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Дом" />
+                            </div>
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="№ кв, офис" />
+                            </div>
+                        </div>
+                        <div class="input-cont input-cont--two">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Подъезд" />
+                            </div>
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Этаж" />
+                            </div>
+                        </div>
+                        <input class="modal-send" type="submit" value="Сохранить адрес" />
+                        <div class="modal-link">Отмена</div>
+                    </div>
+                </div>
+                <!-- address === end-->
+                <!-- review-->
+                <div class="modal" data-modal="review">
+                    <div class="modal-content modal-content--md">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Добавление отзыва</div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Имя" />
+                            </div>
+                        </div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Телефон или e-mail" />
+                            </div>
+                        </div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <textarea class="input" name="text" cols="30" rows="10" placeholder="Ваш отзыв"></textarea>
+                            </div>
+                        </div>
+                        <div class="login-remember">
+                            <div class="check-el">
+                                <label class="style-label style-label--checkbox">
+                                    <input class="style-input" type="checkbox" />
+                                    <div class="style-input-element">
+                                        <svg class="icon-check">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="style-input-text">Cогласен с
+                                        <a href="#">условиями обработки</a>&nbsp;персональных данных</div>
+                                </label>
+                            </div>
+                        </div>
+                        <input class="modal-send" type="submit" value="Отправить" />
+                    </div>
+                </div>
+                <!-- review === end-->
             </div>
         </div>
     </div>
-    <a class="modal-get" href="#" data-modal="order">Открыть модальное окно</a>
+    <div class="cookie">
+        <!-- to show add class .cookie + .cookie--active-->
+        <div class="main-cont">
+            <div class="cookie-wrap">
+                <div class="cookie-text">Мы используем cookies для быстрой и удобной работы сайта. Продолжая пользоваться сайтом, вы принимаете
+                    <a class="link--mark" href="#">условия обработки</a>&nbsp;персональных данных</div>
+                <svg class="icon">
+                    <use xlink:href="#close"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
     <script src="./js/combined.js"></script>
     <script src="./js/add-on.js"></script>
     <script src="./js/script.js"></script>

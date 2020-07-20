@@ -2,7 +2,7 @@ include block_html/_style.pug
 include block_html/_include.pug
 
 style(type='text/css').
-	.btn--md {
+	.btn-wrap .btn--md {
 		display: inline-block;
 		margin-bottom: 20px;
 	}
@@ -14,14 +14,32 @@ style(type='text/css').
 		align-items: baseline;
 	}
 
+.page
+	+header()
+	.content
+		.main-cont
+			p Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"
+			p Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send
+			.btn-wrap
+				.btn--md.btn--mark.modal-get(data-modal="reg") Вход | data-modal="reg"
+				.btn--md.btn--mark.modal-get(data-modal="enter") Вход | data-modal="enter"
 
-.main-cont
-	p Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"
-	p Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send
-	.btn-wrap
-		.btn--md.btn--mark.modal-get(data-modal="order") Заявка | data-modal="code "
+				.btn--md.btn--mark.modal-get(data-modal="location") Выбор города | data-modal="location"
+				.btn--md.btn--mark.modal-get(data-modal="bad-action") Неудачное действие | data-modal="bad-action"
+				.btn--md.btn--mark.modal-get(data-modal="true-action") Успешное действие | data-modal="true-action"
+				.btn--md.btn--mark.modal-get(data-modal="profile") Личные данные | data-modal="profile"
+				.btn--md.btn--mark.modal-get(data-modal="bonus") Бонусные баллы | data-modal="bonus"
+				.btn--md.btn--mark.modal-get(data-modal="address") Адрес доставки | data-modal="address"
+				.btn--md.btn--mark.modal-get(data-modal="review") Отзыв | data-modal="review"
+				//.btn--md.btn--mark.modal-get(data-modal="order") Заявка | data-modal="code "
 
-+footer()
-+modal()
+	+footer()
+	+modal()
 
+.cookie
+	// to show add class .cookie + .cookie--active
+	.main-cont
+		.cookie-wrap
+			.cookie-text Мы используем cookies для быстрой и удобной работы сайта. Продолжая пользоваться сайтом, вы принимаете #[a(href="#").link--mark условия обработки]&nbsp;персональных данных
+			+icon("close","icon")
 include ./block_html/_script.pug

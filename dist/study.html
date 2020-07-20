@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+<!--create by ANATOLY KUZNETSOV-->
+<!--contact mail:kuznecovs45@gmail.com skype:an_kuznetcov-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--colors-tabs-->
+    <meta name="theme-color" content="#000" />
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <!--SEO-->
+    <title>Document</title>
+    <meta name="description" itemprop="description" content="" />
+    <link rel="stylesheet" href="./css/vendor.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style-edit.css" />
+</head>
+
+<body>
+    <div class="page">
+        <!--block header-->
+        <div class="header">
+            <div class="header-top-wrap">
+                <div class="main-cont">
+                    <div class="header-top">
+                        <div class="header-top-nav">
+                            <a class="header-top-nav__el" href="#">О компании</a>
+                            <a class="header-top-nav__el" href="#">Акции</a>
+                            <a class="header-top-nav__el" href="#">Бонусная программа</a>
+                            <a class="header-top-nav__el" href="#">Дилерская сеть</a>
+                            <a class="header-top-nav__el" href="#">База знаний</a>
+                            <a class="header-top-nav__el" href="#">Контакты</a>
+                            <a class="header-top-nav__el" href="#">Отзывы</a>
+                        </div>
+                        <div class="header-tool">
+                            <div class="header-tool__el">
+                                <svg class="icon">
+                                    <use xlink:href="#user"></use>
+                                </svg>
+                                <span>Войти</span>
+                            </div>
+                            <a class="header-tool__el header-tool__el--mark" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#cart"></use>
+                                </svg>
+                                <span>Корзина</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-cont">
+                <div class="header-main">
+                    <div class="header-nav-toggle js-slide-block-toggle" data-menu="nav">
+                        <svg class="icon is-close">
+                            <use xlink:href="#menu"></use>
+                        </svg>
+                        <svg class="icon is-open">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+                    <a class="logo" href="/">
+                        <img class="logo--desktop" src="img/logo.svg" alt="" />
+                        <img class="logo--mobile" src="img/logo--mobile.svg" alt="" />
+                    </a>
+                    <a class="logo-partner" href="#">
+                        <img src="img/blum.svg" alt="" />
+                    </a>
+                    <div class="header-contact">
+                        <a class="header-phone" href="tel:8 800 000 00 00">8 800 000 00 00</a>
+                        <div class="header-loc">
+                            <svg class="icon">
+                                <use xlink:href="#location"></use>
+                            </svg>
+                            <span>Новосибирск</span>
+                        </div>
+                    </div>
+                    <div class="btn--sm btn--light header-get">Заказать звонок</div>
+                    <div class="catalog-mobile js-slide-block-toggle" data-menu="catalog">
+                        <svg class="icon is-close">
+                            <use xlink:href="#catalog"></use>
+                        </svg>
+                        <svg class="icon is-open">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom-wrap">
+                <div class="main-cont">
+                    <div class="header-bottom">
+                        <div class="get-cat">
+                            <div class="get-cat-wrap">
+                                <svg class="icon">
+                                    <use xlink:href="#menu"></use>
+                                </svg>
+                                <span>Каталог</span>
+                            </div>
+                            <div class="navigation slide-block slide-block--menu" data-menu="catalog">
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Мебельная фурнитура Blum</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Подъемные механизмы</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Системы выдвижения</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Системы направляющих</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Системы петель</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">SERVO-DRIVE для TANDEM, TANDEMBOX, MOVENTO и LEGRABOX</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">SERVO-DRIVE flex для холодильников, морозильных камер и посудомоечных машин</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Станки, шаблоны и приспособления для сборки</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Журнал &quot;Вдохновение на кухне&quot;</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Мебельная фурнитура и аксессуары Vauth-Sagel</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Решения для высоких шкафов</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Решения для нижних тумб</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Решения для угловых тумб</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Решения для сбора мусора</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Аксессуары</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Дополнительная фурнитура</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Мебельные ручки PAMAR</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Ручки скобы</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Ручки кнопки</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Крючки, Менсолодержатели, кабельные каналы</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Ручки врезные</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Мебельная фурнитура и аксессуары VIBO</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Посудосушители</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Выдвижные корзины и сетчатые емкости для кухни</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Выдвижные колонны</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Выдвижные поворотные колонны</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Механизмы для угловых тумб</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Карусели</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Наборы для сбора мусора</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Наполнение шкафов</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Мебельные ручки FOX ART</a>
+                                    <ul class="navigation-list">
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Фурнитура Volpato</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Лотки для столовых приборов</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Опоры (ножки кухонные)</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Вентиляционная база для холодильника</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Алюминиевые поддоны</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Мебельные фасады из массива ценных пород древесины</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Фасадные системы VENETO</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Мебельные фасады FIERAMOSCA</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Мебельные фасады РУССТА</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Пластик FENIX</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">FENIX NTM</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Декоративные плиты TSS Cleaf</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Geta (NEW)</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Talco (NEW)</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Penelope</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Spigato и PrimoFiore</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Tranche</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Yosemite</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Azimut</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Engadina</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Sherwood</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Millenium</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Pembroke</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Ares</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Sable</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Esperia и Tivoli</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Matrix</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">HPL пластик Cleaf</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Минералы</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Древесные декоры</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Фантазийные декоры</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Однотонные декоры</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Декоративные панели FunderMax</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Глянцевые панели LUXOS</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Суперматовые панели LOTOS</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Панели TSS Superfront</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Акриловый камень LG HI-MACS</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Aurora (NEW)</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Intense (NEW)</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Solid</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Lucent</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Sand&amp;Pearl</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Granite&amp;Quartz</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Lucia</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Volcanics</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Galaxy</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Marmo</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Изготовление изделий из HI-MACS</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="navigation-el">
+                                    <a class="navigation-el-title" href="#">Комплектующие для шкафов-купе raumplus</a>
+                                    <ul class="navigation-list">
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система распашных дверей RPS</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система раздвижных дверей</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система навесных дверей FLUA</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Безрамные деревянные двери и межкомнатные перегородки</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система дверей с верхним подвесом AIR (последовательное и синхронное открывание)</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система складных дверей</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система распашных дверей</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Межкомнатная дверь SWING SLIM LINE</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Система мансардных дверей</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Интерьерная система RIMA</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Гардеробная система UNO</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Гардеробная система CORNICE</a>
+                                        </li>
+                                        <li class="navigation-list__el">
+                                            <a href="#">Стационарные перегородки</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search">
+                            <input class="input" type="text" placeholder="Поиск" />
+                            <svg class="icon">
+                                <use xlink:href="#search"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-block slide-block--left slide-block--menu" data-menu="nav">
+                <div class="slide-block-wrap">
+                    <a class="slide-phone" href="tel:8 800 000 00 00">8 800 000 00 00</a>
+                    <div class="header-tool slide-cart">
+                        <a class="header-tool__el header-tool__el--mark" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#cart"></use>
+                            </svg>
+                            <span>Корзина</span>
+                        </a>
+                    </div>
+                    <div class="search">
+                        <input class="input" type="text" placeholder="Поиск" />
+                        <svg class="icon">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </div>
+                    <div class="slider-menu">
+                        <a class="slider-menu__el" href="#">О компании</a>
+                        <a class="slider-menu__el" href="#">Акции</a>
+                        <a class="slider-menu__el" href="#">Бонусная программа</a>
+                        <a class="slider-menu__el" href="#">Дилерская сеть</a>
+                        <a class="slider-menu__el" href="#">База знаний</a>
+                        <a class="slider-menu__el" href="#">Контакты</a>
+                        <a class="slider-menu__el" href="#">Отзывы</a>
+                    </div>
+                    <div class="header-tool__el slide-auth">
+                        <svg class="icon">
+                            <use xlink:href="#user"></use>
+                        </svg>
+                        <span>Войти</span>
+                    </div>
+                    <div class="header-loc">
+                        <svg class="icon">
+                            <use xlink:href="#location"></use>
+                        </svg>
+                        <span>Новосибирск</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block header end-->
+        <div class="content content--clear">
+            <div class="banner" style="background-image:url('img/banner-3.jpg')">
+                <div class="filter-layer"></div>
+                <div class="main-cont">
+                    <div class="banner-wrap">
+                        <div class="banner-title">Пройдите обучение у специалистов</div>
+                        <div class="banner-text">С другой стороны рамки и место обучения кадров в значительной степени обуславливает создание существенных финансовых и административных условий.</div>
+                        <div class="btn--md btn--mark">Оставить заявку</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section--hidden">
+                <div class="unit unit--mark unit--left"></div>
+                <div class="main-cont">
+                    <div class="title title--xxl">Наши учебные центры</div>
+                    <div class="text">
+                        <p>С другой стороны рамки и место обучения кадров в значительной степени обуславливает создание существенных финансовых и административных условий. Равным образом консультация с широким активом в значительной степени обуславливает
+                            создание направлений прогрессивного развития.</p>
+                        <div class="img-list">
+                            <a class="img-list__el fancybox" href="img/item-1.jpg" style="background-image:url('img/item-1.jpg')"></a>
+                            <a class="img-list__el fancybox" href="img/item-2.jpg" style="background-image:url('img/item-2.jpg')"></a>
+                            <a class="img-list__el fancybox" href="img/item-3.jpg" style="background-image:url('img/item-3.jpg')"></a>
+                            <a class="img-list__el fancybox" href="img/item-4.jpg" style="background-image:url('img/item-4.jpg')"></a>
+                            <a class="img-list__el fancybox" href="img/item-5.jpg" style="background-image:url('img/item-5.jpg')"></a>
+                            <a class="img-list__el fancybox" href="img/item-5.jpg" style="background-image:url('img/item-6.jpg')"></a>
+                            <a class="img-list__el fancybox" href="img/item-5.jpg" style="background-image:url('img/item-7.jpg')"></a>
+                            <a class="img-list__el fancybox" href="img/item-5.jpg" style="background-image:url('img/item-8.jpg')"></a>
+                        </div>
+                        <p>Идейные соображения высшего порядка, а также рамки и место обучения кадров требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. Разнообразный и богатый опыт реализация намеченных плановых
+                            заданий позволяет оценить значение соответствующий условий активизации. Таким образом реализация намеченных плановых заданий способствует подготовки и реализации систем массового участия.</p>
+                        <div class="btn--md btn--mark">Записаться на обучение</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section--snow section--hidden">
+                <div class="unit unit--dark unit--right"></div>
+                <div class="main-cont">
+                    <div class="title title--xxl">Програмы обучения</div>
+                    <div class="box-list">
+                        <div class="box">
+                            <div class="box-wrap">
+                                <div class="box__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#teach"></use>
+                                    </svg>
+                                </div>
+                                <div class="box__title">Для дизайнеров</div>
+                                <div class="box__text">Равным образом реализация намеченных плановых заданий позволяет оценить значение форм развития. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной
+                                    степени обуславливает создание модели</div>
+                                <div class="btn--md btn--mark btn--full">Записаться</div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-wrap">
+                                <div class="box__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#checklist"></use>
+                                    </svg>
+                                </div>
+                                <div class="box__title">Для руководителей</div>
+                                <div class="box__text">Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки форм развития. Разнообразный и богатый опыт сложившаяся
+                                    структура организации требуют от нас анализа дальнейших направлений развит</div>
+                                <div class="btn--md btn--mark btn--full">Записаться</div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-wrap">
+                                <div class="box__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#reading"></use>
+                                    </svg>
+                                </div>
+                                <div class="box__title">Для сборщиков</div>
+                                <div class="box__text">Значимость этих проблем настолько очевидна, что рамки и место обучения кадров в значительной степени обуславливает создание дальнейших направлений развития. Равным образом укрепление и развитие структуры позволяет выполнять
+                                    важные задания по разработке новых предложений.</div>
+                                <div class="btn--md btn--mark btn--full">Записаться</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section--gray">
+                <div class="main-cont">
+                    <div class="title title--xxl">Кураторы учебных центров</div>
+                    <div class="manager-list manager-list--sm">
+                        <div class="manager__el">
+                            <div class="manager__el-photo" style="background-image:url('img/manager.jpg')"></div>
+                            <div class="manager__el-cont">
+                                <div class="manager__el-name">Ольга Иванова</div>
+                                <div class="manager__el-staff">Менеджер производства</div>
+                                <div class="manager__el-info">тел: +7(925)123-43-24</div>
+                                <div class="manager__el-info">info@mail.ru</div>
+                            </div>
+                        </div>
+                        <div class="manager__el">
+                            <div class="manager__el-photo" style="background-image:url('img/manager.jpg')"></div>
+                            <div class="manager__el-cont">
+                                <div class="manager__el-name">Ольга Иванова</div>
+                                <div class="manager__el-staff">Менеджер производства</div>
+                                <div class="manager__el-info">тел: +7(925)123-43-24</div>
+                                <div class="manager__el-info">info@mail.ru</div>
+                            </div>
+                        </div>
+                        <div class="manager__el">
+                            <div class="manager__el-photo" style="background-image:url('img/manager.jpg')"></div>
+                            <div class="manager__el-cont">
+                                <div class="manager__el-name">Ольга Иванова</div>
+                                <div class="manager__el-staff">Менеджер производства</div>
+                                <div class="manager__el-info">тел: +7(925)123-43-24</div>
+                                <div class="manager__el-info">info@mail.ru</div>
+                            </div>
+                        </div>
+                        <div class="manager__el">
+                            <div class="manager__el-photo" style="background-image:url('img/manager.jpg')"></div>
+                            <div class="manager__el-cont">
+                                <div class="manager__el-name">Ольга Иванова</div>
+                                <div class="manager__el-staff">Менеджер производства</div>
+                                <div class="manager__el-info">тел: +7(925)123-43-24</div>
+                                <div class="manager__el-info">info@mail.ru</div>
+                            </div>
+                        </div>
+                        <div class="manager__el">
+                            <div class="manager__el-photo" style="background-image:url('img/manager.jpg')"></div>
+                            <div class="manager__el-cont">
+                                <div class="manager__el-name">Ольга Иванова</div>
+                                <div class="manager__el-staff">Менеджер производства</div>
+                                <div class="manager__el-info">тел: +7(925)123-43-24</div>
+                                <div class="manager__el-info">info@mail.ru</div>
+                            </div>
+                        </div>
+                        <div class="manager__el">
+                            <div class="manager__el-photo" style="background-image:url('img/manager.jpg')"></div>
+                            <div class="manager__el-cont">
+                                <div class="manager__el-name">Ольга Иванова</div>
+                                <div class="manager__el-staff">Менеджер производства</div>
+                                <div class="manager__el-info">тел: +7(925)123-43-24</div>
+                                <div class="manager__el-info">info@mail.ru</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section--snow">
+                <div class="main-cont">
+                    <div class="title title--xxl">Отзывы о нашем обучении</div>
+                    <div class="review">
+                        <div class="review__el">
+                            <svg class="icon">
+                                <use xlink:href="#quote"></use>
+                            </svg>
+                            <div class="review__el-head">
+                                <div class="review__el-img" style="background-image:url('img/user.jpg')"></div>
+                                <div class="review__el-info">
+                                    <div class="review__el-date">20.08.2020</div>
+                                    <div class="review__el-name">Антон попов</div>
+                                </div>
+                            </div>
+                            <div class="review__el-text">Задача организации, в особенности же постоянный количественный рост и сфера нашей активности требуют от нас анализа дальнейших направлений развития. Товарищи! начало повседневной работы по формированию позиции в значительной
+                                степени обуславливает создание модели развития.</div>
+                        </div>
+                        <div class="review__el">
+                            <svg class="icon">
+                                <use xlink:href="#quote"></use>
+                            </svg>
+                            <div class="review__el-head">
+                                <div class="review__el-img" style="background-image:url('img/user.jpg')"></div>
+                                <div class="review__el-info">
+                                    <div class="review__el-date">20.08.2020</div>
+                                    <div class="review__el-name">Антон попов</div>
+                                </div>
+                            </div>
+                            <div class="review__el-text">Задача организации, в особенности же постоянный количественный рост и сфера нашей активности требуют от нас анализа дальнейших направлений развития. Товарищи! начало повседневной работы по формированию позиции в значительной
+                                степени обуславливает создание модели развития.</div>
+                        </div>
+                        <div class="review__el">
+                            <svg class="icon">
+                                <use xlink:href="#quote"></use>
+                            </svg>
+                            <div class="review__el-head">
+                                <div class="review__el-img" style="background-image:url('img/user.jpg')"></div>
+                                <div class="review__el-info">
+                                    <div class="review__el-date">20.08.2020</div>
+                                    <div class="review__el-name">Антон попов</div>
+                                </div>
+                            </div>
+                            <div class="review__el-text">Задача организации, в особенности же постоянный количественный рост и сфера нашей активности требуют от нас анализа дальнейших направлений развития. Товарищи! начало повседневной работы по формированию позиции в значительной
+                                степени обуславливает создание модели развития.</div>
+                        </div>
+                        <div class="review__el">
+                            <svg class="icon">
+                                <use xlink:href="#quote"></use>
+                            </svg>
+                            <div class="review__el-head">
+                                <div class="review__el-img" style="background-image:url('img/user.jpg')"></div>
+                                <div class="review__el-info">
+                                    <div class="review__el-date">20.08.2020</div>
+                                    <div class="review__el-name">Антон попов</div>
+                                </div>
+                            </div>
+                            <div class="review__el-text">Задача организации, в особенности же постоянный количественный рост и сфера нашей активности требуют от нас анализа дальнейших направлений развития. Товарищи! начало повседневной работы по формированию позиции в значительной
+                                степени обуславливает создание модели развития.</div>
+                        </div>
+                    </div>
+                    <div class="btn-row-mid">
+                        <div class="btn--md btn--light">
+                            <div class="btn--icon btn--icon-left">
+                                <svg class="nav-icon">
+                                    <use xlink:href="#refresh"></use>
+                                </svg>
+                                <span>Посмотреть еще</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="main-cont">
+                    <div class="title title--xxl">Где мы находимся?</div>
+                    <div class="location">
+                        <div class="map">
+                            <div class="map__el">
+                                <!--положи код карты сюда-->
+                            </div>
+                        </div>
+                        <div class="location__info">
+                            <div class="location-row">
+                                <div class="location-title">Адрес:</div>
+                                <div class="location-val">г.Новосибирск ул. Зорге 23</div>
+                            </div>
+                            <div class="location-row">
+                                <div class="location-title">Телефон:</div>
+                                <div class="location-val">+7(384) 325-12-21 доб 125</div>
+                            </div>
+                            <div class="location-row">
+                                <div class="location-title">E-mail:</div>
+                                <div class="location-val">info@nois.ru</div>
+                            </div>
+                            <div class="location-row">
+                                <div class="location-title">Режим работы:</div>
+                                <div class="location-val">пн-пт с 9:00 до 18:00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-form-wrap info-form-wrap--dark">
+                <div class="title title--xxl type--up">подпишитесь на новости</div>
+                <div class="subscr-text">Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа форм развития. С другой стороны сложившаяся структура организации требуют от нас анализа существенных финансовых и административных
+                    условий.</div>
+                <div class="info-form">
+                    <input class="input" type="text" placeholder="Введите ваш e-mail" />
+                    <div class="btn--sm btn--mark btn--mid">Подписаться</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--block footer-->
+    <div class="footer-wrap">
+        <div class="main-cont">
+            <div class="footer-top">
+                <a class="footer-logo" href="/">
+                    <img src="img/logo--white.svg" alt="" />
+                </a>
+                <div class="soc-row">
+                    <a class="soc-row__el" href="#">
+                        <img src="img/inst--color.svg" alt="" />
+                    </a>
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#facebook--color"></use>
+                        </svg>
+                    </a>
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#youtube--color"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <a class="footer-nav__el" href="#">О компании</a>
+                <a class="footer-nav__el" href="#">Акции</a>
+                <a class="footer-nav__el" href="#">Бонусная программа</a>
+                <a class="footer-nav__el" href="#">Дилерская сеть</a>
+                <a class="footer-nav__el" href="#">База знаний</a>
+                <a class="footer-nav__el" href="#">Контакты</a>
+                <a class="footer-nav__el" href="#">Отзывы</a>
+            </div>
+        </div>
+    </div>
+    <!--block footer end-->
+    <script src="./js/combined.js"></script>
+    <script src="./js/add-on.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/script-edit.js"></script>
+</body>
+
+</html>

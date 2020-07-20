@@ -1,0 +1,16 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.content--clear
+		.main-cont
+			+bread()
+			.title.title--xxl Результаты поиска по запросу "крепеж"
+			.item-list.item-list--full
+				- for (var i=0;i<6;i++)
+					+item()
+
+		+orderForm()
++footer()
+include ./block_html/_script.pug

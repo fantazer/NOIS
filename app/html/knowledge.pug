@@ -1,0 +1,77 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.content--clear
+		.main-cont
+			+bread()
+			.title.title--xxl Дилерская сеть
+			.container
+				.toolbar
+					.toolbar-toggle.js-commutator-el(data-item="category")
+						+icon("menu","icon icon--close")
+						+icon("close","icon icon--open")
+						span Категория
+
+					.menu-wrap.menu-wrap--mobile.js-commutator-cont(data-item="category")
+						-
+							var items = [
+								'Blum',
+								'Vaunth-sagel',
+								'Veneto',
+								'Cleaf',
+								'Raumplus',
+								'Hi macs',
+								'FunderMax',
+								'Vido',
+								'Arpa&Fenix',
+								];
+						each item,i in items
+
+							a(href="#" class=i===0?'menu-el--mark':'').menu-el.menu-el--link
+								.menu-el__title #{item}
+
+				.info
+					.title.title--xl Презентации
+					.row.row--3
+						- for (var i=0;i<6;i++)
+							a(href="#").doc-el
+								+icon("pdf--color","icon")
+								span Инструкция по установке
+					.section
+						.title.title--xl Прайсы
+						.row.row--3
+							- for (var i=0;i<6;i++)
+								a(href="#").doc-el
+									+icon("excel--color","icon")
+									span Прайс на Blum
+
+					.title.title--xl Видеоинструкции
+					.slider-wrap.slider-wrap--arrow.slider-wrap--arrow-out
+						.slider-item.slider-item--extend.slider-list
+							- for (var i=0;i<6;i++)
+								.slider-card-el
+									.news-el
+										a(href="https://youtu.be/TWAgV_JfN0I" style="background-image:url('img/item-1.jpg')").news-el__img.fancybox
+											.filter-layer
+											.news-el__img-inner
+												+icon("play","icon")
+										.news-el-wrap
+											a(href="#").news-el__title Как правильно подготовить столешницу
+						.slider-control-wrap
+							.slider-control.slider-control--right
+								+icon("arrow-right","icon")
+							.slider-control.slider-control--left
+								+icon("arrow-left","icon")
+
+					.section
+						.title.title--xl Сертификаты
+						.row.row--3
+							- for (var i=0;i<6;i++)
+								a(href="#").doc-el
+									+icon("pdf--color","icon")
+									span Сертификат о пожарной безопасности
+		+orderForm()
++footer()
+include ./block_html/_script.pug
