@@ -1316,8 +1316,8 @@ body {
   .modal-content {
     height: 100%;
     padding: 20px;
-    overflow-y: scroll;
     width: 95% !important;
+    border-radius: 20px;
   }
 }
 .modal-content--mid {
@@ -2027,6 +2027,36 @@ body {
     margin-bottom: 0;
   }
 }
+.main-grid--directory {
+  grid-template-columns: repeat(3, 1fr);
+}
+.main-grid--directory .card-el__title {
+  font-size: 20px;
+}
+@media only screen and (max-width: 640px) {
+  .main-grid--directory .card-el__title {
+    font-size: 18px;
+  }
+}
+.main-grid--directory .card-el:nth-child(1) {
+  grid-column: span 2;
+}
+@media only screen and (max-width: 640px) {
+  .main-grid--directory .card-el {
+    grid-column: span 1 !important;
+  }
+}
+.main-grid--directory .card-list {
+  display: block;
+}
+.main-grid--directory .card-list__el {
+  display: inline-block;
+  width: 100%;
+}
+.card-el--two-col .card-list {
+  -webkit-column-count: 2;
+          column-count: 2;
+}
 .card-el {
   padding: 30px;
   display: -webkit-box;
@@ -2078,6 +2108,9 @@ body {
   width: 100%;
   height: 100%;
 }
+.card-el--lg {
+  grid-column: span 2;
+}
 .card-el__title {
   margin-bottom: 20px;
   font-weight: 700;
@@ -2094,6 +2127,12 @@ body {
     font-size: 24px;
     min-width: 150px;
   }
+}
+.card-el--clear {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .card-list {
   display: -webkit-box;
@@ -3742,16 +3781,21 @@ select.select-beauty {
 @media only screen and (max-width: 640px) {
   .show-cat {
     margin: 0;
+    margin-bottom: -10px;
   }
   .show-cat .btn--md {
-    width: -webkit-calc(100% + 20px);
-    width: calc(100% + 20px);
+    width: -webkit-calc(100% + 30px);
+    width: calc(100% + 30px);
     margin-left: -10px;
-    margin-right: -10px;
     border-radius: 0;
     padding: 20px;
     font-size: 20px;
     font-weight: 700;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .show-cat--clear {
+    margin-bottom: -40px;
   }
 }
 @media only screen and (max-width: 640px) {
@@ -4812,6 +4856,7 @@ select.select-beauty {
 }
 @media only screen and (max-width: 768px) {
   .callback__form {
+    padding: 20px;
     width: 100%;
   }
 }
@@ -5737,6 +5782,7 @@ select.select-beauty {
             align-items: flex-start;
     background: #fff;
     padding: 20px;
+    border: 1px solid #f1f1f1;
   }
 }
 .manager__el-photo {
