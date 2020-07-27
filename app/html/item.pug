@@ -7,7 +7,7 @@ include block_html/_include.pug
 		.main-cont
 			+bread()
 			.title.title--xxl Складной подьемник aventos hf28
-			.card-art Артикул: №12333992
+			//.card-art Артикул: №12333992
 			.card-wrap
 				.card-img
 					.gallery-slider-wrap
@@ -55,7 +55,7 @@ include block_html/_include.pug
 							input(type="hidden" placeholder="" value="0")
 							.dropdown-current
 								.dropdown-current__val Выберите цвет
-								+icon("arrow-up","icon")
+								+icon("arrow-down","icon")
 							.dropdown-menu
 								.dropdown-menu__el(data-value="1")
 									.choose-color
@@ -143,12 +143,12 @@ include block_html/_include.pug
 											a(href="#").order__name-text HF Силовой механизм 22 Коэфф. мощн. 2600-5500
 									.order__el-change
 										.order__inc
-											+incr()
+											+incr(0,"incr--one")
 										.order__price 1999 руб.
 										.order__get
 											.btn--sm.btn--mark.order__get-basket в корзину
 											.btn--sm.btn--empty купить в один клик
-					.js-tab-info.active
+					.js-tab-info
 						.order-dop
 							.order-dop__img(style="background-image:url('img/tools-1.png')")
 							.order-dop__info
@@ -163,10 +163,7 @@ include block_html/_include.pug
 										.book-row__title Заводской код:
 										.book-row__dot
 										.book-row__value 06863453
-									.book-row
-										.book-row__title Артикул:
-										.book-row__dot
-										.book-row__value 71T5590B
+
 								.card-cost от 1800 руб./шт
 
 			.order-total

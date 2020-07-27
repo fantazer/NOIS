@@ -1,11 +1,186 @@
 include block_html/_style.pug
 include block_html/_include.pug
 
+-
+	var items = [
+			{
+				"name": "Blum",
+				"class": "card-el--lg",
+				"img": "pm.png",
+				"list": [
+					'TANDEMBOX',
+					'AVENTOS',
+					'LEGRABOX',
+					'НОВИНКА: Подъемный механизм AVENTOS HK top',
+					'Система выдвижения TANDEMBOX',
+					'Петли CLIP top BLUMOTION черный оникс',
+				]
+			},
+			{
+				"name": "Vauth-Sagel",
+				"class": "card-el--md",
+				"img": "card--vauth.jpg",
+				"list": [
+					'Решения для высоких шкафов',
+					'Решения для нижних тумб',
+					'Решения для угловых тумб',
+				]
+			},
+			{
+				"name": "Vauth-Sagel",
+				"class": "card-el--md",
+				"img": "card--tss.jpg",
+				"list": [
+					'Geta(новинка)',
+					'Ares(бетон)',
+					'Engadina(сосна)',
+				]
+			},
+			{
+				"name": "VENETO",
+				"class": "card-el--md",
+				"img": "card--veneto.jpg",
+				"list": [
+					'Кадоро',
+					'Мейзон',
+					'Венето Классико',
+				]
+			},
+			{
+				"name": "FunderMax",
+				"img": "card--fundermax.jpg",
+				"list": [
+					'Глянцевые панели LUXOS',
+					'Суперматовые панели LOTOS',
+					'Панели TSS Superfront',
+				]
+			},
+		{
+			"name": "LG HI-MACS",
+			"class": '',
+			"img": "card-hi-macs.jpg",
+			"list": [
+				'Aurora (NEW)',
+				'Intense (NEW)',
+				'Granite&Quartz',
+			]
+		},
+			{
+				"name": "Мебельные ручки PAMAR",
+				"img": "card--fundermax.jpg",
+				"list": [
+					'Ручки скобы',
+					'Ручки кнопки',
+					'Крючки, Менсолодержатели, кабельные каналы',
+					'Ручки врезные',
+				]
+			},
+			{
+				"name": "Мебельная фурнитура и аксессуары VIBO",
+				"class": 'card-el--lg card-el--two-col',
+				"img": "card-hi-macs.jpg",
+				"list": [
+					'Посудосушители',
+					'Выдвижные корзины и сетчатые емкости для кухни',
+					'Выдвижные колонны',
+					'Выдвижные поворотные колонны',
+					'Механизмы для угловых тумб',
+					'Карусели',
+					'Наборы для сбора мусора',
+					'Наполнение шкафов',
+				]
+			},
+
+			{
+				"name": "Фурнитура Volpato",
+				"class": 'card-el--lg',
+				"img": "card--veneto.jpg",
+				"list": [
+					'Лотки для столовых приборов',
+					'Опоры (ножки кухонные)',
+					'Вентиляционная база для холодильника',
+					'Алюминиевые поддоны',
+				]
+			},
+			{
+				"name": "Мебельные фасады из массива ценных пород древесины",
+				"img": "item-7.jpg",
+				"list": [
+					'Фасадные системы VENETO',
+					'Мебельные фасады FIERAMOSCA',
+					'Мебельные фасады РУССТА',
+				]
+			},
+			{
+				"name": "HPL пластик Cleaf",
+				"img": "item-4.jpg",
+				"list": [
+					'Минералы',
+					'Древесные декоры',
+					'Фантазийные декоры',
+					'Однотонные декоры',
+				]
+			},
+			{
+				"name": "Декоративные плиты TSS Cleaf",
+				"class": 'card-el--lg card-el--two-col',
+				"img": "card--tss.jpg",
+				"list": [
+					'Geta (NEW)',
+					'Talco (NEW)',
+					'Penelope',
+					'Spigato и PrimoFiore',
+					'Tranche',
+					'Yosemite',
+					'Azimut',
+					'Engadina',
+					'Sherwood',
+					'Millenium',
+					'Pembroke',
+					'Ares',
+					'Sable',
+					'Esperia и Tivoli',
+					'Matrix',
+				]
+			},
+
+
+			{
+				"name": "Комплектующие для шкафов-купе raumplus",
+				"class": 'card-el--lg card-el--two-col',
+				"img": "banner-lg-1.jpg",
+				"list": [
+					'Система распашных дверей RPS',
+					'Система раздвижных дверей',
+					'Система навесных дверей FLUA',
+					'Безрамные деревянные двери и межкомнатные перегородки',
+					'Система дверей с верхним подвесом AIR (последовательное и синхронное открывание)',
+					'Система складных дверей',
+					'Система распашных дверей',
+					'Межкомнатная дверь SWING SLIM LINE',
+					'Система мансардных дверей',
+					'Интерьерная система RIMA',
+					'Гардеробная система UNO',
+					'Гардеробная система CORNICE',
+					'Стационарные перегородки',
+				]
+			},
+			{
+				"name": "Пластик FENIX",
+				"class": 'card-el--clear',
+				"img": "banner-4.jpg",
+				"list": [
+					'FENIX NTM',
+				]
+		},
+	]
+
 .page
 	+header()
 	.content
 		.main-cont
-			.main-grid
+
+			//.main-grid
 				.card-el(style="background-image:url('img/pm.png')")
 					.card-el__title.card-el__title--lg Blum
 					.card-list.card-list--lg
@@ -66,24 +241,52 @@ include block_html/_include.pug
 							span Intense (новинка)
 						a(href="#").card-list__el
 							span Granite&Quartz (кварц и гранит)
+
+			.main-grid.main-grid--directory
+				each item,i in items
+					if(i<6)
+						.card-el(style="background-image:url('img/" + item.img + "')" class = item.class ? item.class : '')
+							.card-el__title.card-el__title--lg #{item.name}
+							.card-list.card-list--lg
+								if(item.list.length > 0)
+									each list in item.list
+										a(href="#").card-list__el
+											span #{list}
+			.main-grid-slide
+				.main-grid.main-grid--directory
+					each item,i in items
+						if(i>=6)
+							.card-el(style="background-image:url('img/" + item.img + "')" class = item.class ? item.class : '')
+								.card-el__title.card-el__title--lg #{item.name}
+								.card-list.card-list--lg
+									if(item.list.length > 0)
+										each list in item.list
+											a(href="#").card-list__el
+												span #{list}
 			.btn-row-mid.show-cat
-				a(href="#").btn--md.btn--mark Смотреть весь каталог
+				.btn--md.btn--mark
+					span.false Смотреть весь каталог
+					span.true Скрыть каталог
 		.section.section--gray
 			.main-cont
 				.section-title Товар недели
 				.slider-wrap.slider-wrap--arrow.slider-wrap--arrow-out
-					.slider-item.slider-item--extend.slider-list
+					.slider-item.slider-item--extend.slider-list.slider-list-items
 						- for (var i=0;i<6;i++)
 							.slider-card-el
-								.card-el(style="background-image:url('img/card--vauth.jpg')")
-									.card-el__title Vauth-Sagel
-									.card-list
-										a(href="#").card-list__el
-											span Решения для высоких шкафов
-										a(href="#").card-list__el
-											span Решения для нижних тумб
-										a(href="#").card-list__el
-											span Решения для угловых тумб
+								// item
+								.item.item--lg
+									a(href="#" style="background-image:url('img/item-3.jpg')").item-img
+									.item-info.item-info--white
+										.item-condition
+											//toggle class .item-condition--false есть товара нет
+											.item-condition__icon
+											span В наличии
+										a(href="#").item-title Granite&Quartz (кварц)
+										.item-cost
+											.item-cost__val 8700
+											span руб/шт
+									// item === end
 					.slider-control-wrap
 						.slider-control.slider-control--right
 							+icon("arrow-right","icon")
@@ -94,11 +297,11 @@ include block_html/_include.pug
 			.main-cont
 				.section-title акции и новости
 				.slider-wrap.slider-wrap--arrow.slider-wrap--arrow-out
-					.slider-item.slider-item--extend.slider-list
+					.slider-item.slider-item--extend.slider-list.slider-list-news
 						- for (var i=0;i<6;i++)
 							.slider-card-el
 								.news-el
-									.news-el__img(style="background-image:url('img/item-1.jpg')")
+									.news-el__img(style="background-image:url('img/item-4.jpg')")
 									.news-el-wrap
 										.news-el__date 18.03.2020
 										a(href="#").news-el__title Как правильно подготовить столешницу
@@ -136,6 +339,8 @@ include block_html/_include.pug
 					.slider-item.slider-banner
 						- for (var i=0;i<4;i++)
 							.slider-banner__el
+								.slider-banner__el-location
+									span Новосибирск #{i+1}
 								.slider-banner__el-img(style="background-image:url('img/banner-lg-1.jpg')")
 								.slider-banner-nav
 									a(href="#").slider-banner-nav__el Записаться на обучения
@@ -167,13 +372,15 @@ include block_html/_include.pug
 							+icon("data-protection","icon")
 						.info-cont__el-title Влияние цвета фасада на долговечность
 						.info-cont__el-text У кухонного гарнитура есть несколько поверхностей: дверцы шкафов (фасады), мебельный каркас, полки и столешница. Разберём для общего развития какие они бывают, хотя на самом деле есть всего 1 верный вариант и его мы явно укажем.
-		.section.section--gray.section--mobile-hidden.slider-wrap--extend
+		.section.section--gray.section--mobile-hidden
 			.main-cont
 				.section-title “тест-драйв” кухни
 				.slider-wrap.slider-wrap--arrow-in
 					.slider-item.slider-banner
 						- for (var i=0;i<4;i++)
 							.slider-banner__el
+								.slider-banner__el-location
+									span Владивосток #{i+1}
 								.slider-banner__el-img(style="background-image:url('img/banner-lg-2.jpg')")
 								.slider-banner-nav
 									a(href="#").slider-banner-nav__el Записаться на обучения
@@ -210,12 +417,13 @@ include block_html/_include.pug
 			.main-cont
 				.bonus
 					.bonus-img
+						.bonus-title.hidden-desktop Бонусная программа НОИС
 						img(src="img/nois-card.jpg", alt="")
 						.info-form
 							input(type="text" placeholder="Ваш номер карты" class="input")
 							.btn--sm.btn--mark.btn--mid Проверить баланс
 					.bonus-info
-						.bonus-title Бонусная программа НОИС
+						.bonus-title.hidden-mobile Бонусная программа НОИС
 						.bonus-text У кухонного гарнитура есть несколько поверхностей: дверцы шкафов (фасады), мебельный каркас, п
 						ul.mark-list
 							li  Таким образом дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание систем массового участия.

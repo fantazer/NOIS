@@ -1,0 +1,66 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.content--clear
+		.main-cont
+			+bread()
+			.title.title--xxl Корзина
+			.order
+				.order-cont
+					.order-item
+						.input-cont.input-cont--two
+							.input-row
+								.input-row__title Название компании
+								input(type="text" placeholder="Введите название" class="input")
+							.input-row
+								.input-row__title ИНН
+								input(type="text" placeholder="Введите ИНН" class="input")
+							.input-row
+								.input-row__title Выберите город <sup class="type--mark ">*</sup>
+								select.select-beauty
+									option Москва
+									option Волгоград
+									option Новгород
+									option Ижевск
+							.input-row
+								.input-row__title Ваше ФИО <sup class="type--mark ">*</sup>
+								input(type="text" placeholder="Введите Ваше ФИО" class="input")
+							.input-row
+								.input-row__title Ваш телефон <sup class="type--mark ">*</sup>
+								input(type="text" placeholder="Введите Ваш телефон" class="input")
+							.input-row
+								.input-row__title Ваш Ваш e-mail <sup class="type--mark ">*</sup>
+								input(type="text" placeholder="Введите Ваш Ваш e-mail" class="input")
+						- for (var i=0;i<5;i++)
+							.order__el
+								.order__el-info
+									a(href="#" style="background-image:url('img/tools-1.png')" ).order__img
+									.order__name
+										.order__adds
+											.order__art Арт: 6788798
+											.condition
+												span + 200 баллов
+										a(href="#").order__name-text HF Силовой механизм 22 Коэфф. мощн. 2600-5500
+								.order__el-change
+									.order__inc
+										+incr()
+									.order__price 1999 руб.
+
+					.total
+						.stick
+							.total-title Мой заказ
+							.total-row
+								.total-row__type Кол-во
+								.total-row__val 26 шт
+							.total-row
+								.total-row__type Баллов
+								.total-row__val 1250 б
+							.total-cost
+								.total-cost__text К оплате
+								.total-cost__val 2 650 р
+							.total-get Оформить заказ
+		+orderForm()
++footer()
+include ./block_html/_script.pug

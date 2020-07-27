@@ -19,11 +19,67 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33fc4985-0812-4917-a972-022b8742b981" name="Default" comment="deploy version">
+    <list default="true" id="33fc4985-0812-4917-a972-022b8742b981" name="Default" comment="deploy version fix">
+      <change afterPath="$PROJECT_DIR$/app/html/basket.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/html/catalog-part.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/html/history.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/about.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/about.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bonus.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/bonus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/style.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.styl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/variable/config/_input.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/config/_input.styl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dealer.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/dealer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/directory.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/directory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/elements.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/error-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/error-404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/error-500.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/error-500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/block_html/_const.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_const.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/block_html/_script.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_script.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/catalog.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/catalog.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/contact.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/contact.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/dealer.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/dealer.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/directory.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/directory.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/item.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/item.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/main.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/main.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/modal.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/modal.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/catalog.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/catalog.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/contact.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/contact.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/dealer.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/dealer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/directory.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/directory.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/index.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/index.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/item.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/item.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/main.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/main.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/modal.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/modal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/knowledge.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/knowledge.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lk.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/lk.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/modal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/module/modal/_modal.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/modal/_modal.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/news-item.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/news-item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/news-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/news-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/study.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/study.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/testdrive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/testdrive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/bower.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/catalog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/screen/app/item.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/screen/app/item.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/style-min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style-min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/dealer.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/dealer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/directory.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/directory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/combined.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/combined.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/script-min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/script-min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/modal.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,15 +107,15 @@
     <property name="SearchEverywhereHistoryKey" value="clone&#9;ACTION&#9;Git.Clone" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="add_unversioned_files" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/img/svg" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/bower" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\PROJECT\WORK\NOIS\app\bower" />
       <recent name="E:\PROJECT\WORK\NOIS\app\img\svg" />
       <recent name="E:\PROJECT\WORK\NOIS\app\img" />
-      <recent name="E:\PROJECT\WORK\NOIS\app\bower" />
       <recent name="E:\PROJECT\WORK\NOIS\app\fonts" />
       <recent name="E:\PROJECT\WORK\NOIS\dist\img" />
     </key>
@@ -168,21 +224,11 @@
       <workItem from="1595161380564" duration="43000" />
       <workItem from="1595185985998" duration="4876000" />
       <workItem from="1595229837324" duration="19594000" />
-      <workItem from="1595334492082" duration="8904000" />
-    </task>
-    <task id="LOCAL-00001" summary="fix browsersynk">
-      <created>1515935102048</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1515935102048</updated>
-    </task>
-    <task id="LOCAL-00002" summary="fix css variable + mozjpg">
-      <created>1520847111442</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1520847111443</updated>
+      <workItem from="1595334492082" duration="9369000" />
+      <workItem from="1595414756024" duration="861000" />
+      <workItem from="1595589370997" duration="6126000" />
+      <workItem from="1595690242921" duration="602000" />
+      <workItem from="1595841347078" duration="13403000" />
     </task>
     <task id="LOCAL-00003" summary="add modal + slick + some fixes">
       <created>1538413870583</created>
@@ -513,7 +559,21 @@
       <option name="project" value="LOCAL" />
       <updated>1595345310391</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="deploy version">
+      <created>1595346586348</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1595346586348</updated>
+    </task>
+    <task id="LOCAL-00051" summary="deploy version fix">
+      <created>1595346627304</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1595346627305</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,7 +611,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="fix hrefs" />
     <MESSAGE value="fix transition" />
     <MESSAGE value="add soc icon" />
     <MESSAGE value="fix input style" />
@@ -576,18 +635,19 @@
     <MESSAGE value="add mobile version" />
     <MESSAGE value="add all pages" />
     <MESSAGE value="deploy version" />
-    <option name="LAST_COMMIT_MESSAGE" value="deploy version" />
+    <MESSAGE value="deploy version fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="deploy version fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1600" y="179" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1594760498392">
       <screen x="-2560" y="-256" width="2560" height="1400" />
     </state>
     <state x="-1600" y="179" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-2560.-256.2560.1400/0.0.1920.1040/1920.166.1280.984@-2560.-256.2560.1400" timestamp="1594760498392" />
-    <state x="-1753" y="-103" width="899" height="1061" key="CommitChangelistDialog2" timestamp="1595346392002">
+    <state x="-1753" y="-103" width="899" height="1061" key="CommitChangelistDialog2" timestamp="1595346626252">
       <screen x="-2560" y="-256" width="2560" height="1400" />
     </state>
     <state x="-1753" y="-103" key="CommitChangelistDialog2/-2560.-256.2560.1400/0.0.1920.1040/1920.166.1280.984@-2560.-256.2560.1400" timestamp="1594737730981" />
-    <state x="-1753" y="-103" width="899" height="1061" key="CommitChangelistDialog2/0.0.1920.1040/1920.166.1280.984/-2560.-256.2560.1400@-2560.-256.2560.1400" timestamp="1595346392002" />
+    <state x="-1753" y="-103" width="899" height="1061" key="CommitChangelistDialog2/0.0.1920.1040/1920.166.1280.984/-2560.-256.2560.1400@-2560.-256.2560.1400" timestamp="1595346626252" />
     <state x="-1500" y="199" key="FileChooserDialogImpl" timestamp="1589364217162">
       <screen x="-2560" y="-256" width="2560" height="1400" />
     </state>
@@ -605,24 +665,24 @@
     </state>
     <state x="-1779" y="87" key="SettingsEditor/-2560.-256.2560.1400/0.0.1920.1040/1920.166.1280.984@-2560.-256.2560.1400" timestamp="1594760368352" />
     <state x="-1779" y="87" width="1397" height="962" key="SettingsEditor/0.0.1920.1040/1920.166.1280.984/-2560.-256.2560.1400@-2560.-256.2560.1400" timestamp="1594919749138" />
-    <state x="-2187" y="120" key="Vcs.Push.Dialog.v2" timestamp="1595345316683">
+    <state x="-2187" y="120" key="Vcs.Push.Dialog.v2" timestamp="1595346629219">
       <screen x="-2560" y="-256" width="2560" height="1400" />
     </state>
     <state x="-2560" y="-256" key="Vcs.Push.Dialog.v2/-2560.-256.2560.1400/0.0.1920.1040/1920.166.1280.984@-2560.-256.2560.1400" timestamp="1594737757168" />
-    <state x="-2187" y="120" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.166.1280.984/-2560.-256.2560.1400@-2560.-256.2560.1400" timestamp="1595345316683" />
+    <state x="-2187" y="120" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.166.1280.984/-2560.-256.2560.1400@-2560.-256.2560.1400" timestamp="1595346629219" />
     <state x="-1478" y="353" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594213757910">
       <screen x="-2560" y="-256" width="2560" height="1400" />
     </state>
     <state x="-1478" y="353" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-2560.-256.2560.1400/0.0.1920.1040/1920.166.1280.984@-2560.-256.2560.1400" timestamp="1594213757910" />
-    <state x="-1566" y="181" width="571" height="526" key="find.popup" timestamp="1595341958462">
+    <state x="-1566" y="181" width="571" height="526" key="find.popup" timestamp="1595854510461">
       <screen x="-2560" y="-256" width="2560" height="1400" />
     </state>
-    <state x="-1566" y="181" width="571" height="526" key="find.popup/-2560.-256.2560.1400/0.0.1920.1040/1920.166.1280.984@-2560.-256.2560.1400" timestamp="1594741792909" />
-    <state x="-1566" y="181" width="571" height="526" key="find.popup/0.0.1920.1040/1920.166.1280.984/-2560.-256.2560.1400@-2560.-256.2560.1400" timestamp="1595341958462" />
-    <state x="-1617" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1595334978677">
+    <state x="-1566" y="181" width="571" height="526" key="find.popup/-2560.-256.2560.1400/0.0.1920.1040/1920.166.1280.984@-2560.-256.2560.1400" timestamp="1595605948567" />
+    <state x="-1566" y="181" width="571" height="526" key="find.popup/0.0.1920.1040/1920.166.1280.984/-2560.-256.2560.1400@-2560.-256.2560.1400" timestamp="1595854510461" />
+    <state x="-1617" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1595854149688">
       <screen x="-2560" y="-256" width="2560" height="1400" />
     </state>
-    <state x="-1617" y="59" width="672" height="678" key="search.everywhere.popup/-2560.-256.2560.1400/0.0.1920.1040/1920.166.1280.984@-2560.-256.2560.1400" timestamp="1594745039026" />
-    <state x="-1617" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.166.1280.984/-2560.-256.2560.1400@-2560.-256.2560.1400" timestamp="1595334978677" />
+    <state x="-1617" y="59" width="672" height="678" key="search.everywhere.popup/-2560.-256.2560.1400/0.0.1920.1040/1920.166.1280.984@-2560.-256.2560.1400" timestamp="1595605957553" />
+    <state x="-1617" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.166.1280.984/-2560.-256.2560.1400@-2560.-256.2560.1400" timestamp="1595854149688" />
   </component>
 </project>

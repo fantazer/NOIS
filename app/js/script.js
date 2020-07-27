@@ -9,6 +9,11 @@ $(document).ready(function () {
 		"isModalShow": false, //state show modal
 		"scrollPos": 0
 	};
+
+	$('.modal-content').click(function (event) {
+		event.stopPropagation();
+	});
+
 	var scrollWidth= window.innerWidth - $(document).width();
 	var openModal = function () {
 		if (!$('.modal-layer').hasClass('modal-layer-show')) {
@@ -62,14 +67,14 @@ $(document).ready(function () {
 		initModal(currentModal);
 	});
 
-	$('.modal-close, .modal-hide').click(function () {
+	$('.modal-layer, .modal-close, .modal-hide').click(function () {
 		closeModal();
 	});
 	//modals===end
 
 	// slider
 		$('.slider-list').slick({
-			slidesToShow: 3,
+			slidesToShow: 4,
 			speed: 500,
 			dots:false,
 			arrows:false,
@@ -85,6 +90,14 @@ $(document).ready(function () {
 					breakpoint: 1024,
 					settings: {
 						arrows: false,
+						slidesToShow: 3,
+						dots:true,
+					}
+				},
+				{
+					breakpoint: 820,
+					settings: {
+						arrows: false,
 						slidesToShow: 2,
 						dots:true,
 					}
@@ -93,8 +106,8 @@ $(document).ready(function () {
 					breakpoint: 480,
 					settings: {
 						arrows: false,
-						centerMode: true,
-						centerPadding: '40px',
+						//centerMode: true,
+						//centerPadding: '20px',
 						slidesToShow: 1,
 						dots:true,
 					}
@@ -158,6 +171,16 @@ $(document).ready(function () {
 		});
 		// gallery nav === end
 	// SLIDERS === end
+	// === Выравнивание слайдов по высоте ===
+
+		var stHeightItems = $('.slider-list-items .slick-track').height();
+		$('.slider-list-items .slider-card-el').css('height', stHeightItems + 'px');
+
+		var stHeightInews = $('.slider-list-news .slick-track').height();
+		$('.slider-list-news .slider-card-el').css('height', stHeightInews + 'px');
+
+	// === Выравнивание слайдов по высоте end ===
+
 
 	// slider === end
 
@@ -291,8 +314,14 @@ $(document).ready(function () {
 	$('.incr__minus').click(function (e) {
 		var $input = $(this).parent().find('.incr__val span');
 		var count = parseInt($input.html()) - 1;
-		if (count < 1) {
-			count = 1;
+		if (!$(this).hasClass("incr--one")) { // add class incr--one for 1 always
+			if (count < 1) {
+				count = 0;
+			}
+		} else {
+			if (count < 1) {
+				count = 1;
+			}
 		}
 		$input.html(count);
 	});
@@ -383,5 +412,26 @@ $(document).ready(function () {
 		parrent.find(".js-switch-cont").toggleClass('active')
 	})
 	//toggle class + parent === end
+	$("a[rel='m_PageScroll2id']").mPageScroll2id({
+		offset:30,
+		highlightClass:"menu-el--active",
+		onComplete: function () {
+		}
+	});
+
+	// toggle slide category
+	$('.show-cat').click(function(){
+		$(this).toggleClass('active');
+		$('.main-grid-slide').slideToggle();
+	});
+	// toggle slide category === end
+
+	//stick scroll
+	if($(window).width() > 1025 ){
+		$(".stick").stick_in_parent({
+			'offset_top':120
+		});
+	}
+	//stick scroll
 
 });

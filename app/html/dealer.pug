@@ -15,9 +15,8 @@ include block_html/_include.pug
 						span Список городов
 
 					.menu-wrap.menu-wrap--mobile.js-commutator-cont(data-item="location")
-						a(href="#").menu-el.menu-el--mark.menu-el--link
-							.menu-el__title Краснодар
-						- for (var i=0;i<4;i++)
+							.menu-el.menu-el--mark.menu-el--link
+								.menu-el__title Выберите город
 							-
 								var items = [
 									'Абакан',
@@ -26,37 +25,52 @@ include block_html/_include.pug
 									'Владивосток',
 									'Москва',
 									];
-							each item in items
-								a(href="#").menu-el.menu-el--link
+							each item,i in items
+								a(href="#el-"+i+1 rel = 'm_PageScroll2id').menu-el.menu-el--link
 									.menu-el__title #{item}
 
 				.info
-					.location.location--sm
-						.map
-							.map__el
-								//положи код карты сюда
-						.location__info
-							.location-row
-								.location-title Адрес:
-								.location-val г.Новосибирск ул. Зорге 23
-							.location-row
-								.location-title Телефон:
-								.location-val +7(384) 325-12-21 доб 125
-							.location-row
-								.location-title E-mail:
-								.location-val info@nois.ru
-							.location-row
-								.location-title Режим работы:
-								.location-val пн-пт с 9:00 до 18:00
-					.text
-						p Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Не следует, однако забывать, что рамки и место обучения кадров способствует подготовки и реализации систем массового участия.
-						.img-list
-							a(href="img/item-1.jpg" style="background-image:url('img/item-1.jpg')").img-list__el.fancybox
-							a(href="img/item-2.jpg" style="background-image:url('img/item-2.jpg')").img-list__el.fancybox
-							a(href="img/item-3.jpg" style="background-image:url('img/item-3.jpg')").img-list__el.fancybox
-							a(href="img/item-4.jpg" style="background-image:url('img/item-4.jpg')").img-list__el.fancybox
-							a(href="img/item-5.jpg" style="background-image:url('img/item-5.jpg')").img-list__el.fancybox
-						p С другой стороны рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же реализация намеченных плановых заданий представляет собой интересный эксперимент проверки новых предложений. Товарищи! консультация с широким активом позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.
+					- for (var i=0;i<6;i++)
+						.dealer-el(id="el-"+i+1)
+							.title.title--xl Диллерский центр #{i+1}
+							.location.location--sm
+								.map
+									.map__el
+										//положи код карты сюда
+								.location__info
+									.location-row
+										.location-title Адрес:
+										.location-val г.Новосибирск ул. Зорге 23
+									.location-row
+										.location-title Телефон:
+										.location-val +7(384) 325-12-21 доб 125
+									.location-row
+										.location-title E-mail:
+										.location-val info@nois.ru
+									.location-row
+										.location-title Режим работы:
+										.location-val пн-пт с 9:00 до 18:00
+									.location-row
+										.location-title Сайт:
+										a(href="#").location-val noise-dealer.ru
+									.location-row
+										.location-title Соц. сети:
+										.soc-row.soc-row--sm.soc-row--mark
+											a(href="#").soc-row__el
+												+icon("soc-facebook-box","icon")
+											a(href="#").soc-row__el
+												+icon("soc-instagram","icon")
+											a(href="#").soc-row__el
+												+icon("soc-whatsapp","icon")
+							.text
+								p Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания
+								.img-list
+									a(href="img/item-1.jpg" style="background-image:url('img/item-1.jpg')").img-list__el.fancybox
+									a(href="img/item-2.jpg" style="background-image:url('img/item-2.jpg')").img-list__el.fancybox
+									a(href="img/item-3.jpg" style="background-image:url('img/item-3.jpg')").img-list__el.fancybox
+									a(href="img/item-4.jpg" style="background-image:url('img/item-4.jpg')").img-list__el.fancybox
+									a(href="img/item-5.jpg" style="background-image:url('img/item-5.jpg')").img-list__el.fancybox
+								p С другой стороны рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.
 		+orderForm()
 +footer()
 include ./block_html/_script.pug

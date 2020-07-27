@@ -55,12 +55,11 @@ mixin modal()
 					.modal-title Ваш город
 					.modal-text Выберите свой город для отображения актуальных товаров и цен
 					.location-list-wrap
-						.location-list.scroll
+						.location-list
 							.location-list__el.location-list__el--active Кемерово
-							- for(var i=0;i<4;i++)
-								.location-list__el Москва
-								.location-list__el Санкт-Петербург
-								.location-list__el Волгоград
+							.location-list__el Москва
+							.location-list__el Санкт-Петербург
+							.location-list__el Волгоград
 			// location === end
 
 			// bad-action
@@ -81,7 +80,7 @@ mixin modal()
 					.modal-close
 						+icon("close","icon")
 					.modal-img
-						img(src="img/dinosaur--color.svg", alt="")
+						img(src="img/work.svg", alt="")
 					.modal-title.modal-title--clear Отзыв отправлен
 					.modal-text.type--center Спасибо за ваш отзыв, мы ценим внимание каждого клиента и дорожим им
 					input(type="submit" value="Хорошо").btn--md.btn--mark.btn--full.modal-hide
@@ -101,6 +100,15 @@ mixin modal()
 					.input-cont
 						.input-row
 							input(type="text" name="name" placeholder="E-mail").input
+					.input-cont
+						.input-row
+							input(type="text" name="name" placeholder="Ваш ИНН").input
+					.input-cont
+						.input-row
+							input(type="text" name="name" placeholder="Ваш КПП").input
+					.input-cont
+						.input-row
+							input(type="text" name="name" placeholder="Ваш Юридический адрес").input
 					.login-remember
 						.check-el
 							label.style-label.style-label--checkbox
@@ -108,25 +116,6 @@ mixin modal()
 								.style-input-element
 									+icon("checked","icon-check")
 								.style-input-text информировать о скидках и акциях
-					.input-cont.input-cont--two
-						.input-row
-							select.select-beauty
-								option(data-display="Число") Не выбрано
-								- for (var i=0;i<20;i++)
-									option 25
-						.input-row
-							select.select-beauty
-								option(data-display="Месяц") Не выбрано
-								- for (var i=0;i<20;i++)
-									option Январь
-					.input-cont.input-cont--two
-						.input-row
-							select.select-beauty
-								option(data-display="Год") Не выбрано
-								- for (var i=0;i<20;i++)
-									option 1984
-						.input-row.input-row--middle
-							.type--sm будьте внимательны, день рождения нельзя изменить
 					input(type="submit" value="Сохранить").modal-send
 					.modal-link Отмена
 			// profile === end
@@ -165,36 +154,7 @@ mixin modal()
 							p Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то доставка готовой еды на дом клиенту или в офис для корпоративного праздника.
 			// bonus === end
 
-			// address
-			.modal(data-modal="address")
-				.modal-content.modal-content--md
-					.modal-close
-						+icon("close","icon")
-					.modal-title Адрес доставки
-					.modal-text Добавленный адрес помогает заполнять форму оформления заказа быстрее
-					.input-cont
-						.input-row
-							input(type="text" name="name" placeholder="Название адреса (дом, работа)" ).input
-					.input-cont
-						.input-row
-							input(type="text" name="name" placeholder="Имя").input
-					.input-cont
-						.input-row
-							input(type="text" name="name" placeholder="E-mail").input
-					.input-cont.input-cont--two
-						.input-row
-							input(type="text" name="name" placeholder="Дом").input
-						.input-row
-							input(type="text" name="name" placeholder="№ кв, офис").input
-					.input-cont.input-cont--two
-						.input-row
-							input(type="text" name="name" placeholder="Подъезд").input
-						.input-row
-							input(type="text" name="name" placeholder="Этаж").input
 
-					input(type="submit" value="Сохранить адрес").modal-send
-					.modal-link Отмена
-			// address === end
 
 			// review
 			.modal(data-modal="review")

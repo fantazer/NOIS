@@ -70,7 +70,11 @@ include block_html/_include.pug
 							.item
 								a(href="#" style="background-image:url('img/item-3.jpg')").item-img
 								.item-info
-									.rating
+									.item-condition
+										//toggle class .item-condition--false есть товара нет
+										.item-condition__icon
+										span В наличии
+									//.rating
 										- for (var j=0;j<4;j++)
 											+icon("star","icon")
 										+icon("star","icon icon--disable")
@@ -85,10 +89,7 @@ include block_html/_include.pug
 										span Подробнее
 										+icon("arrow-down","icon")
 									.item-config
-										.item-condition
-											//toggle class .item-condition--false есть товара нет
-											.item-condition__icon
-											span В наличии
+
 										.item-config__el
 											.item-config__title Цвет ( Ваш Выбор)
 											.color.js-choose-group

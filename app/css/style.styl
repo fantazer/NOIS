@@ -527,6 +527,15 @@ body
 	.icon
 		size 42px
 //.icon
+.soc-row--sm
+	.soc-row__el
+		margin-left: 0
+		margin-right: 15px
+	.icon
+		size 25px
+.soc-row--mark
+	.icon
+		fill $mark
 .footer-nav
 	+below(640px)
 		fw()
@@ -557,13 +566,13 @@ body
 	margin-bottom: 60px
 
 .main-grid--directory
-	grid-template-columns: repeat(3, 1fr)
+	grid-template-columns: repeat(4, 1fr)
 	.card-el__title
 		+below(640px)
 			font-size: 18px
 		font-size: 20px
-	.card-el:nth-child(1)
-		grid-column span 2
+	//.card-el:nth-child(1)
+	//	grid-column span 3
 	.card-el
 		+below(640px)
 			grid-column span 1!important
@@ -572,10 +581,16 @@ body
 	.card-list__el
 		display inline-block
 		width: 100%
+
+.main-grid-slide
+	display none
+	margin-top: -40px
 .card-el--two-col
 	.card-list
 		column-count 2
 .card-el
+	+below(1024px)
+		grid-column span 2
 	+below(640px)
 		border 0
 		border-bottom 3px solid $mark
@@ -592,10 +607,10 @@ body
 	border 1px solid $border-color
 	position relative
 	min-height 240px
-	&:nth-child(1)
+	/*&:nth-child(1)
 		+below(1024px)
 			grid-column initial
-		grid-column 1/4
+		grid-column 1/4*/
 	&:before
 		content ''
 		background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(161,161,161,0) 70%, rgba(255,255,255,0.25) 100%);
@@ -609,7 +624,14 @@ body
 
 
 .card-el--lg
-	grid-column span 2
+	+below(1024px)
+		grid-column span 4
+	grid-column span 3
+
+.card-el--md
+	+below(1024px)
+		grid-column span 2
+
 
 .card-el__title
 	+below(768px)
@@ -682,9 +704,13 @@ body
 .unit--dark
 	background: $dark
 .unit--left
+	+below(1600px)
+		left -15%
 	transform rotate(10deg)
 	left -10%
 .unit--right
+	+below(1600px)
+		right -8%
 	transform rotate(10deg)
 	right -5%
 
@@ -716,11 +742,14 @@ body
 	position relative
 
 .slider-wrap--arrow
+	+below(1024px)
+		fw()
 	flex(between)
 	position relative
 	.slider-item
 		+below(1024px)
 			width: 100%
+			order 2
 		width: calc(100% - 100px)
 .slider-wrap--arrow-in
 	+below(768px)
@@ -736,20 +765,32 @@ body
 
 .slider-control-wrap
 	+below(1024px)
-		display none
+		position: static
+		order 1
+		width: auto
+		flex-flow row
+		margin-top: -20px
 	f()
 	fl()
 	width: 40px
 	.slider-control
+		+below(1024px)
+			padding: 10px
+			margin-bottom: 10px
 		padding: 60px 10px
 		flex(mid)
 		cp()
 		.icon
 			size 18px
 	.slider-control--left
+		+below(1024px)
+			order 1
+			border 1px solid #dcdcdc
 		background: white
 		border 1px solid $gray
 	.slider-control--right
+		+below(1024px)
+			order 2
 		background: $mark
 		border 1px solid transparent
 		.icon
@@ -842,6 +883,15 @@ body
 	//color $text-color
 .news-el__get
 	color $mark
+	margin-top: auto
+.news-el
+	f()
+	fl()
+	height: 100%
+.news-el-wrap
+	flex-grow 1
+	f()
+	fl()
 
 // .knowledge
 .knowledge
@@ -883,6 +933,19 @@ body
 	bg-full()
 	padding: 25%
 
+.slider-banner__el-location
+	position absolute
+	top: 20px
+	left:20px
+	flex(mid)
+	padding: 10px
+	span
+		display inline-block
+		padding: 10px 25px
+		background: #ffffffd9
+		font-weight: 700
+		font-size: 18px
+		br(4px)
 .slider-banner-nav
 	position absolute
 	width: 100%
@@ -1079,6 +1142,10 @@ body
 .menu-el--drop
 	cp()
 
+.menu-el--active
+	background: $gray!important
+	color black
+
 .menu-el-wrap.active
 	.menu-el--drop
 		.menu-el__title
@@ -1228,6 +1295,7 @@ select.select-beauty
 .item
 	f()
 	fl()
+	height: 100%
 	+above(1025px)
 		&:hover
 			.item-config
@@ -1243,6 +1311,20 @@ select.select-beauty
 		width: 100%
 		margin-bottom: 0
 		position relative
+
+.item--lg
+	fl()
+	.item-img
+		width: 100%
+		padding: 40% 10%
+	.item-info
+		f()
+		fl()
+		width: 100%
+		border 1px solid $border-color
+		padding: 20px 10px
+	.item-cost
+		margin-top: auto
 .item-list
 	+below(1024px)
 		grid-template-columns: 1fr
@@ -1251,6 +1333,10 @@ select.select-beauty
 	grid-gap 20px
 	grid-template-columns: repeat(3, 1fr)
 	margin-bottom: 50px
+
+.item-list--lg
+	grid-template-columns: repeat(auto-fill, minmax(16rem,1fr))
+
 
 .item-list--full
 	+below(1024px)
@@ -1299,7 +1385,7 @@ select.select-beauty
 		position: static
 		display block
 		border 0
-		padding-top: 0
+		padding-top: 5px
 	+below(640px)
 		padding: 10px
 	padding: 20px 15px
@@ -1308,9 +1394,20 @@ select.select-beauty
 	flex-grow 1
 	f()
 	fl()
+.item-info--white
+	background: white
+.item-info--cat
+	f()
+	fl()
+	.item-title
+		+below(640px)
+			margin-bottom: 10px
+		margin: 0 0 30px 0
 .item-title
 	+below(1024px)
 		width: 100%
+	+below(640px)
+		font-size: 18px
 	font-weight: 700
 	margin: 10px 0
 	display inline-block
@@ -1617,6 +1714,14 @@ select.select-beauty
 			padding: 20px
 			font-size: 20px
 			font-weight: 700
+	.true
+		display none
+.show-cat.active
+	.false
+		display none
+	.true
+		display inline-block
+
 .show-cat--clear
 	+below(640px)
 		margin-bottom: -40px
@@ -1626,11 +1731,8 @@ select.select-beauty
 		display none
 
 .item-condition
-	+above(1025px)
-		margin-top: -10px
 	f()
 	align-items center
-	margin-bottom: 10px
 	span
 		color green
 		font-weight: 700
@@ -1646,6 +1748,12 @@ select.select-beauty
 		color red
 	.item-condition__icon
 		background: red
+.item-props
+	margin-top: auto
+.item-props_el
+	margin-bottom: 5px
+	&:last-child
+		margin-bottom: 0
 
 .condition
 	f()
@@ -1899,6 +2007,70 @@ select.select-beauty
 		margin-right: 20px
 
 // order
+.order
+	+below(968px)
+		fw()
+	f()
+	justify-content:space-between
+	align-items streth
+
+.order-cont
+	+below(960px)
+		fw()
+		margin-bottom: 50px
+	f()
+	justify-content space-between
+	align-items: stretch
+	width: 100%
+
+.total
+	+below(960px)
+		width: 100%
+		max-width 640px
+		margin: 0 auto
+	width: calc(30% - 20px)
+	margin-left auto
+	position relative
+.total-title
+	@extend .type--lg
+	font-weight: 700
+	margin-bottom: 30px
+.total-row
+	flex(between)
+	margin-bottom: 10px
+.total-row__val
+	font-weight: 700
+	@extend .type--md
+	white-space nowrap
+.total-text
+	@extend .type--md
+	margin-bottom: 10px
+	line-height: 1.6
+	font-size: 14px
+.total-cost
+	flex(between)
+	padding-top: 20px
+	margin-top: 20px
+	border-top 1px solid $border-color
+	margin-bottom: 30px
+
+.total-cost__text
+	font-weight 700
+	@extend .type--md
+.total-cost__val
+	font-weight 700
+	@extend .type--xl
+
+.total-get
+	@extend .btn--md
+	@extend .btn--mark
+	padding: 20px 50px
+	width: 100%
+.order-item
+	+below(1024px)
+		width: 100%
+		margin-bottom: 30px
+	width: 68%
 
 .order__el-info
 	+below(1024px)
@@ -1973,6 +2145,7 @@ select.select-beauty
 		fl()
 	f()
 	align-items center
+	justify-content space-between
 	width: 45%
 
 .order__inc
@@ -3077,15 +3250,7 @@ select.select-beauty
 
 .location-list-wrap
 	position relative
-	&:before
-		z-index 1100
-		content ""
-		position absolute
-		bottom -15px
-		left 0
-		background-image: linear-gradient(180deg, rgba(255, 255, 255, 0,5) 0%, #ffffff 100%);
-		width: 100%
-		height: 60px
+
 
 .location-list
 	max-height 300px
@@ -3095,16 +3260,44 @@ select.select-beauty
 	margin-right: -30px
 
 .location-list__el
-	@extend .btn--md
-	@extend .btn--light
-	font-size: 18px
+	font-size: 24px
 	display block
 	margin-bottom: 10px
+	font-weight: 700
+	font-family Handbook
+	cp()
+	tr()
+	&:hover
+		color $mark
+
 .location-list__el--active
-	background: $mark
-	color white
-	border 1px solid transparent
+	color $mark
 
 .modal-img
 	width: 100px
 	margin-bottom: 20px
+
+.hidden-desktop
+	+above(1025px)
+		display none
+.hidden-mobile
+	+below(1024px)
+		display none
+
+.title-time
+	+below(640px)
+		display block
+	f()
+	align-items: center
+.title-time__val
+	+below(640px)
+		margin 0 0 10px 0
+	font-weight: 700
+	@extend .type--xxl
+	color $mark
+	line-height: 1
+	margin-right: 20px
+.title-time__text
+	font-weight: 700
+	@extend .type--md
+	line-height: 1.4

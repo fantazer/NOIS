@@ -1,0 +1,29 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.content--clear
+		.main-cont
+			+bread()
+			.title.title--xxl Подъемные механизмы AVENTOS
+			.item-list.item-list--lg
+				- for (var i=0;i<12;i++)
+					.item.item--lg
+						a(href="#" style="background-image:url('img/catalog-part-1.jpg')").item-img
+						.item-info.item-info--cat
+							a(href="#").item-title Granite&Quartz (кварц и гранит)
+							.item-props
+								.item-props_el <strong>Внутренняя высота:&nbsp;</strong> от 150 мм.
+								.item-props_el <strong>Максимальная высота:&nbsp;</strong> 600 мм.
+								.item-props_el <strong>Ширина:&nbsp;</strong> зависит от коэффициента мощности.
+								.item-props_el <strong>Внутренняя глубина:&nbsp;</strong> от 240 мм.
+			.pag
+				.pag__el.pag__el--active 1
+				.pag__el 2
+				.pag__el 3
+				.pag__el ...
+				.pag__el 32
+		+orderForm()
++footer()
+include ./block_html/_script.pug
